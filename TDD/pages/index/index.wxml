@@ -7,4 +7,8 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+  <!-- This is our View -->
+  <view class="card"> Hello {{name}}! </view>
+  <button class="{{style}}" style="width:{{w}}px; color:{{color}};" bindtap="changeName"> Click me! </button>
 </view>

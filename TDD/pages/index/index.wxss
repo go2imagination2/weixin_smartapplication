@@ -1,0 +1,42 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.card {
+  width:100px;
+  height:100px;
+  color:yellow;
+	-webkit-transition:-webkit-transform 1s,opacity 1s,background 1s,width 1s,height 1s,font-size 1s,color 1s;
+	-webkit-border-radius:5px;
+	-o-transition-property:width,height,-o-transform,background,font-size,opacity;
+	-o-transition-duration:1s,1s,1s,1s,1s,1s;
+	-moz-transition-property:width,height,-o-transform,background,font-size,opacity;
+	-moz-transition-duration:1s,1s,1s,1s,1s,1s;
+	transition-property:width,height,transform,background,font-size,opacity,color;
+	transition-duration:1s,1s,1s,1s,1s,1s,1s;
+
+
+    -ms-transform:rotate(7deg); /* IE 9 */
+  -moz-transform:rotate(7deg); /* Firefox */
+  -webkit-transform:rotate(7deg); /* Safari and Chrome */
+  -o-transform:rotate(7deg); /* Opera */
+  transform:rotate(7deg);
+}

@@ -1,10 +1,23 @@
 //index.js
 //获取应用实例
 var app = getApp()
+
 Page({
   data: {
     motto: 'Hello World',
-    userInfo: {}
+    userInfo: {},
+    name: 'WeChat',
+    style: 'card',
+    w: 100
+  },
+  changeName: function(e) {
+    // sent data change to view
+
+    this.setData({
+      name: 'Poker-' + Math.round(Math.random()*10),
+      color: 'lightgreen',
+      w: 200
+    })
   },
   //事件处理函数
   bindViewTap: function() {
