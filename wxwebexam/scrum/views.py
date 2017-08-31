@@ -12,7 +12,7 @@ from django.core.cache import cache
 
 
 APP_ID = 'wx4a61d7aaa96ced25'
-APP_SECRET = 'aaa'
+APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
 def index(request):
     timestamp = int(time.time())
