@@ -1,0 +1,253 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="Keywords" content="Scrum exam 在线 考试 题库">
+    <meta name="Description" content="Scrum exam 在线 考试 题库">
+    <title>Scrum在线考试</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.min.css" %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style/h5.css' %}">
+    <link rel="stylesheet" type="text/css" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+</head>
+
+
+<body>
+    <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+    <div class="container" id="container">    
+
+        <form class="" action="./" method="POST">
+            {% csrf_token %}
+            <div class="page__hd">
+                <div class="weui-progress">
+                    <div class="weui-progress__bar">
+                        <div class="weui-progress__inner-bar js_progress" style="width: 80%;" id="progress"></div>
+                    </div>
+                    <span><i class="weui-icon-info"></i>59:06</span>
+
+                </div>
+                <h1 class="page__title">单选题</h1>
+                <p class="page__desc">Scrum中三大角色包括?</p>
+            </div>
+
+            <div class="page__bd page__bd_spacing">
+                <div class="weui-cells__title">单选列表项</div>
+                <div class="weui-cells weui-cells_radio">
+                    {% for option in 'ABCD' %}
+                    <label class="weui-cell weui-check__label" for="x11{{option}}">
+                        <div class="weui-cell__bd">
+                            <p>选项{{option}}</p>
+                        </div>
+                        <div class="weui-cell__ft">
+                            <input type="radio" class="weui-check" name="radio1" id="x11{{option}}" value="{{option}}">
+                            <span class="weui-icon-checked"></span>
+                        </div>
+                    </label>
+                    {% endfor %}
+                    <a href="javascript:void(0);" class="weui-cell weui-cell_link">
+                        <div class="weui-cell__bd" id="answerTips">正确答案是:A<br/>题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释</div>
+                    </a>
+                </div>
+
+                <div class="weui-cells__title">复选列表项</div>
+                <div class="weui-cells weui-cells_checkbox">
+                    {% for option in 'ABCDE' %}
+                    <label class="weui-cell weui-check__label" for="s11{{option}}">
+                        <div class="weui-cell__hd">
+                            <input type="checkbox" class="weui-check" name="checkbox1" id="s11{{option}}" value="{{option}}">
+                            <i class="weui-icon-checked"></i>
+                        </div>
+                        <div class="weui-cell__bd">
+                            <p>复选{{option}}</p>
+                        </div>
+                    </label>
+                    {% endfor %}
+                    <a href="javascript:void(0);" class="weui-cell weui-cell_link">
+                        <div class="weui-cell__bd">题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释</div>
+                    </a>
+                </div>
+
+                <a class="weui-btn-area">
+                    <a class="weui-btn weui-btn_primary" href="javascript:" id="submitAnswer" >提交答案</a>
+                    <input type="submit" class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion" value="下一题" />
+                </div>
+            </div>
+            <div class="weui-msg">
+                <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+                <div class="weui-msg__text-area">
+                    <h2 class="weui-msg__title">考试完成</h2>
+                    <p class="weui-msg__desc">分数内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a></p>
+                </div>
+                <div class="weui-msg__opr-area">
+                    <p class="weui-btn-area">
+                        <a href="javascript:history.back();" class="weui-btn weui-btn_primary">推荐操作</a>
+                        <a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>
+                    </p>
+                </div>
+                <!--<div class="weui-msg__extra-area">-->
+                    <!--<div class="weui-footer">-->
+                        <!--<p class="weui-footer__links">-->
+                            <!--<a href="javascript:void(0);" class="weui-footer__link">底部链接文本</a>-->
+                        <!--</p>-->
+                        <!--<p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+            <div class="page__ft">
+                <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
+                <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
+                <p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>
+            </div>
+        </form>
+
+
+    </div>
+
+    <!-- <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script> -->
+    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+
+    <script>
+
+        var progress = 15;
+        function next() {
+            if(progress > 100){
+                progress = 0;
+                return;
+            }
+            $('#progress').css({width: progress + '%'});
+            progress = ++progress;
+            setTimeout(next, 20);
+        }
+        next();
+
+
+        $('#answerTips').hide();
+        $('#submitAnswer').click(function(){
+            $('#answerTips').show();
+        });
+
+        function androidInputBugFix() {
+            // .container 设置了 overflow 属性, 导致 Android 手机下输入框获取焦点时, 输入法挡住输入框的 bug
+            // 相关 issue: https://github.com/weui/weui/issues/15
+            // 解决方法:
+            // 0. .container 去掉 overflow 属性, 但此 demo 下会引发别的问题
+            // 1. 参考 http://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element
+            //    Android 手机下, input 或 textarea 元素聚焦时, 主动滚一把
+            if (/Android/gi.test(navigator.userAgent)) {
+                window.addEventListener('resize', function () {
+                    if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+                        window.setTimeout(function () {
+                            document.activeElement.scrollIntoViewIfNeeded();
+                        }, 0);
+                    }
+                })
+            }
+        }
+
+
+    </script>
+    <script>
+        wx.config({
+            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+            appId: '{{ appId }}', // 必填，公众号的唯一标识
+            timestamp: '{{ timestamp }}', // 必填，生成签名的时间戳
+            nonceStr: '{{ nonceStr }}', // 必填，生成签名的随机串
+            signature: '{{ signature }}',// 必填，签名，见附录1
+            jsApiList: ['checkJsApi', 'onMenuShareTimeline', 'onMenuShareAppMessage', 'onMenuShareWeibo', 'onMenuShareQQ',
+                'chooseImage', 'hideOptionMenu', 'openLocation', 'getLocation', 'scanQRCode'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+        });
+        wx.ready(function () {
+            // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+            $('#msg').append('READY<br/>');
+            $('#msg').append('<br/>' + '{{ jsapi_ticket }}');
+
+            wx.checkJsApi({
+                jsApiList: ['chooseImage', 'onMenuShareTimeline', 'onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                success: function (res) {
+                    // 以键值对的形式返回，可用的api值true，不可用为false
+                    // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                    $('#msg').append('<br/>' + JSON.stringify(res));
+                    //console.warn(res);
+                }
+            });
+            wx.onMenuShareTimeline({
+                title: '17运动网', // 分享标题
+                link: '', // 分享链接
+                imgUrl: 'http://img01.sogoucdn.com/app/a/100520090/oIWsFtxa6I12PaFR-5TExdcSLF2g', // 分享图标
+                success: function (res) {
+                    // 用户确认分享后执行的回调函数
+                    $('#msg').append('<br/>' + '确认分享回调=' + JSON.stringify(res));
+                },
+                cancel: function (res) {
+                    // 用户取消分享后执行的回调函数
+                    $('#msg').append('<br/>' + '取消分享回调' + JSON.stringify(res));
+                }
+            });
+            wx.onMenuShareAppMessage({
+                title: '17运动网', // 分享标题
+                desc: '民间体育赛事活动的公众平台。', // 分享描述
+                link: 'http://1.17sportsappserver.sinaapp.com/sports/h5_main', // 分享链接
+                imgUrl: 'http://img01.sogoucdn.com/app/a/100520090/oIWsFtxa6I12PaFR-5TExdcSLF2g', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function (res) {
+                    // 用户确认分享后执行的回调函数
+                    $('#msg').append('<br/>' + '确认分享回调=' + JSON.stringify(res));
+                },
+                cancel: function (res) {
+                    // 用户取消分享后执行的回调函数
+                    $('#msg').append('<br/>' + '取消分享回调=' + JSON.stringify(res));
+                }
+            });
+            $('#chooseImage').click(function () {
+                wx.chooseImage({
+                    success: function (res) {
+                        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+                        $('#msg').append('<br/>' + '选取照片=' + JSON.stringify(res));
+                    }
+                });
+            });
+            $('#scanQRCode').click(function () {
+                wx.scanQRCode({
+                    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
+                    scanType: ["qrCode", "barCode"], // 可以指定扫二维码还是一维码，默认二者都有
+                    success: function (res) {
+                        var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
+                        $('#msg').append('<br/>' + '扫码=' + JSON.stringify(res));
+                    }
+                });
+            });
+            $('#openLocation').click(function () {
+                wx.getLocation({
+                    success: function (res) {
+                        var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
+                        var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
+                        var speed = res.speed; // 速度，以米/每秒计
+                        var accuracy = res.accuracy; // 位置精度
+                        $('#msg').append('<br/>' + '获取坐标=' + JSON.stringify(res));
+                        wx.openLocation({
+                            latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
+                            longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
+                            name: '介地界儿', // 位置名
+                            address: '瞎惹惹', // 地址详情说明
+                            scale: 15, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                            infoUrl: 'www.baidu.com' // 在查看位置界面底部显示的超链接,可点击跳转
+                        });
+                    }
+                });
+            });
+        });
+        wx.error(function (res) {
+            // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+            $('#msg').append('<br/>' + 'ERROR=' + JSON.stringify(res));
+        });
+    </script>
+
+</body>
+</html>

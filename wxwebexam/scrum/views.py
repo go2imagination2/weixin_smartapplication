@@ -10,20 +10,34 @@ from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
 
-
 APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
+
 
 def index(request):
     timestamp = int(time.time())
     noncestr = 'NONCE'
     jsapi_ticket = _get_jsapi_ticket()
-    s = 'jsapi_ticket=%s&noncestr=%s&timestamp=%s&url=%s' % (jsapi_ticket, noncestr, timestamp, request.build_absolute_uri())
+    s = 'jsapi_ticket=%s&noncestr=%s&timestamp=%s&url=%s' % (
+        jsapi_ticket, noncestr, timestamp, request.build_absolute_uri())  # 需要将服务器的IP添加到微信公众号白名单中
     return render(request, 'scrum/index.html', {
-                               'appId': APP_ID, 'timestamp': timestamp,
-                               'nonceStr': noncestr, 'jsapi_ticket': jsapi_ticket,
-                               'signature': hashlib.sha1(s).hexdigest(), 's': s})
+        'appId': APP_ID, 'timestamp': timestamp,
+        'nonceStr': noncestr, 'jsapi_ticket': jsapi_ticket,
+        'signature': hashlib.sha1(s).hexdigest(), 's': s})
 
+
+def single(request):
+    print request.POST
+    print request.POST.get('radio1')
+    print request.POST.get('checkbox1')
+    return render(request, 'scrum/single.html', {})
+
+
+def multi(request):
+    return render(request, 'scrum/multi.html', {})
+
+
+@DeprecationWarning
 def h5_mine(request):
     # # Fetch weixin oauth_access_token
     # code = request.GET.get('code', '')
@@ -35,11 +49,11 @@ def h5_mine(request):
     timestamp = int(time.time())
     noncestr = 'NONCE'
 
-    if nickname == '17Sports':   # for anonymous user
+    if nickname == '17Sports':  # for anonymous user
         url = 'http://1.17sportsappserver.sinaapp.com/sports/h5_mine'
     else:
         url = 'http://1.17sportsappserver.sinaapp.com/sports/h5_mine?nickname=%s&headimgurl=%s' \
-          % (urllib2.quote(smart_str(nickname), safe="%/:=&?~#+!$,;'@()*[]"), headimgurl)
+              % (urllib2.quote(smart_str(nickname), safe="%/:=&?~#+!$,;'@()*[]"), headimgurl)
 
     jsapi_ticket = _get_jsapi_ticket()
     s = 'jsapi_ticket=%s&noncestr=%s&timestamp=%s&url=%s' % (jsapi_ticket, noncestr, timestamp, url)
@@ -113,4 +127,3 @@ def _get_user_info(open_id):
         _get_access_token(), open_id)
     json_str = _url_request(url)
     return json.loads(json_str)
-    
