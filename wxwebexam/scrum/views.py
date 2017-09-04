@@ -4,17 +4,84 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
 import json
-import hashlib, time, re, urllib2, urllib
+import hashlib, re, urllib2, urllib
 from xml.etree import ElementTree as ET
+
+from django.utils.datetime_safe import time
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
+
+from models import *
 
 APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
 
 def index(request):
+    return render(request, 'scrum/index.html', {})
+
+
+def enroll(request):
+    print request.POST
+    print request.POST.get('email')
+    print request.POST.get('company')
+    print request.POST.get('wechat_id')
+
+    paper = Paper.objects.get(pk=0)
+    exam = Exam.objects.create(paper=paper)
+    entries = Entry.objects.all()
+
+    exam_record = ExamRecord.objects.create(exam=exam)
+    exam_record.answer = ','.join([''] * paper.count()) # use string to record answer and point to current entry
+
+    #TODO start the exam
+
+    return render(request, 'scrum/single.html', {'entry': entries[0]})
+
+
+def single(request):
+    print request.POST
+    print request.POST.get('radio1')
+    print request.POST.get('checkbox1')
+
+    # TODO check if it's answered then display desc and disable submit
+
+    # TODO
+    exam_record = ExamRecord.objects.get(0)
+    current_entry_idx = len(exam_record.answer.split(',')) - 1 # use string to calc current entry
+    entry = Entry.objects.get(current_entry_idx)
+
+    return render(request, 'scrum/single.html', {})
+
+
+def answerit(request):
+    if request.method != 'POST':
+        return render(request, 'scrum/single.html', {})
+
+    #TODO distinguish category: single or multi
+    print request.POST
+    print request.POST.get('radio1')
+    print request.POST.get('checkbox1')
+
+    entry = Entry.objects.get(0)
+    # TODO record the answer in exam record and not able to answer again
+    exam_record = ExamRecord.objects.get(0)
+    exam_record.answer = ','.join(exam_record.answer.split(',') + ['A'])
+    # TODO calc total scoring by the correct answer in every entry
+
+    return render(request, 'scrum/single.html', {})
+
+
+def scoring(request):
+    print request.POST
+    print request.POST.get('radio1')
+    print request.POST.get('checkbox1')
+    #TODO show the recorded score
+    return render(request, 'scrum/scoring.html', {})
+
+
+def h5_main(request):
     timestamp = int(time.time())
     noncestr = 'NONCE'
     jsapi_ticket = _get_jsapi_ticket()
@@ -26,19 +93,8 @@ def index(request):
         'signature': hashlib.sha1(s).hexdigest(), 's': s})
 
 
-def single(request):
-    print request.POST
-    print request.POST.get('radio1')
-    print request.POST.get('checkbox1')
-    return render(request, 'scrum/single.html', {})
-
-
-def multi(request):
-    return render(request, 'scrum/multi.html', {})
-
-
 @DeprecationWarning
-def h5_mine(request):
+def h5_mine_ex(request):
     # # Fetch weixin oauth_access_token
     # code = request.GET.get('code', '')
     # nickname = _oauth_user_info(code)

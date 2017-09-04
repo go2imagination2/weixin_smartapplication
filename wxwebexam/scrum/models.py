@@ -59,7 +59,8 @@ class Entry(models.Model):
     CATEGORY_MULTI = 'M'
     CATEGORY_FILL_BLANK = 'B'
     CATEGORY_DRAG_DROP = 'D'
-    CATEGORY_CHOICES = ((CATEGORY_SINGLE, '单选题'), (CATEGORY_MULTI, '多选题'), (CATEGORY_FILL_BLANK, '填空'), (CATEGORY_DRAG_DROP, '拖拽题'))
+    CATEGORY_CHOICES = (
+    (CATEGORY_SINGLE, '单选题'), (CATEGORY_MULTI, '多选题'), (CATEGORY_FILL_BLANK, '填空'), (CATEGORY_DRAG_DROP, '拖拽题'))
 
     question = models.CharField(max_length=250, blank=True, null=True)
     answer = models.CharField(max_length=250, blank=True, null=True, default='')
@@ -91,6 +92,9 @@ class Paper(models.Model):
 
     def __unicode__(self):
         return self.name
+
+    def count(self):
+        return len(self.entry.objects.all())
 
 
 class Exam(models.Model):

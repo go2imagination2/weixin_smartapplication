@@ -17,92 +17,61 @@
 
 
 <body>
+    <div class="">
+        <p>{{ s }}</p>
+
+        <p>{{ signature }}</p>
+
+        <div id='msg'>N/A<br/></div>
+    </div>
     <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
     <div class="container" id="container">    
 
-        <form class="" action="./answerit" method="POST">
-            {% csrf_token %}
+        <div class="">
             <div class="page__hd">
-                <div class="weui-progress">
-                    <div class="weui-progress__bar">
-                        <div class="weui-progress__inner-bar js_progress" style="width: 80%;" id="progress"></div>
-                    </div>
-                    <span><i class="weui-icon-info"></i>59:06</span>
-
-                </div>
-                <h1 class="page__title">单选题</h1>
-                <p class="page__desc">Scrum中三大角色包括?</p>
+                <h1 class="page__title">Button</h1>
+                <p class="page__desc">按钮</p>
             </div>
-
             <div class="page__bd page__bd_spacing">
-                <div class="weui-cells__title">单选列表项</div>
-                <div class="weui-cells weui-cells_radio">
-                    {% for option in 'ABCD' %}
-                    <label class="weui-cell weui-check__label" for="x11{{option}}">
-                        <div class="weui-cell__bd">
-                            <p>选项{{option}}</p>
-                        </div>
-                        <div class="weui-cell__ft">
-                            <input type="radio" class="weui-check" name="radio1" id="x11{{option}}" value="{{option}}">
-                            <span class="weui-icon-checked"></span>
-                        </div>
-                    </label>
-                    {% endfor %}
-                    <a href="javascript:void(0);" class="weui-cell weui-cell_link">
-                        <div class="weui-cell__bd" id="answerTips">正确答案是:A<br/>题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释</div>
-                    </a>
+                <a href="javascript:;" class="weui-btn weui-btn_primary">页面主操作 Normal</a>
+                <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading"><i class="weui-loading"></i>页面主操作 Loading</a>
+                <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_primary">页面主操作 Disabled</a>
+                <a href="javascript:;" class="weui-btn weui-btn_default">页面次要操作 Normal</a>
+                <a href="javascript:;" class="weui-btn weui-btn_default weui-btn_loading"><i class="weui-loading"></i>页面次操作 Loading</a>
+                <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_default">页面次要操作 Disabled</a>
+                <a href="javascript:;" class="weui-btn weui-btn_warn">警告类操作 Normal</a>
+                <a href="javascript:;" class="weui-btn weui-btn_warn weui-btn_loading"><i class="weui-loading"></i>警告类操作 Loading</a>
+                <a href="javascript:;" class="weui-btn weui-btn_disabled weui-btn_warn">警告类操作 Disabled</a>
+                
+                <div class="button-sp-area">
+                    <a href="javascript:;" class="weui-btn weui-btn_plain-default">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_plain-default weui-btn_plain-disabled">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_plain-primary">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_plain-primary weui-btn_plain-disabled">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_default">按钮</a>
+                    <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_warn">按钮</a>
                 </div>
-
-                <div class="weui-cells__title">复选列表项</div>
-                <div class="weui-cells weui-cells_checkbox">
-                    {% for option in 'ABCDE' %}
-                    <label class="weui-cell weui-check__label" for="s11{{option}}">
-                        <div class="weui-cell__hd">
-                            <input type="checkbox" class="weui-check" name="checkbox1" id="s11{{option}}" value="{{option}}">
-                            <i class="weui-icon-checked"></i>
-                        </div>
-                        <div class="weui-cell__bd">
-                            <p>复选{{option}}</p>
-                        </div>
-                    </label>
-                    {% endfor %}
-                    <a href="javascript:void(0);" class="weui-cell weui-cell_link">
-                        <div class="weui-cell__bd">题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释题目的解释</div>
-                    </a>
-                </div>
-
-                <a class="weui-btn-area">
-                    <a class="weui-btn weui-btn_primary" href="javascript:" id="submitAnswer" >提交答案</a>
-                    <input type="submit" class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion" value="下一题" />
-                </div>
-            </div>
-            <div class="weui-msg">
-                <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
-                <div class="weui-msg__text-area">
-                    <h2 class="weui-msg__title">考试完成</h2>
-                    <p class="weui-msg__desc">分数内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a></p>
-                </div>
-                <div class="weui-msg__opr-area">
-                    <p class="weui-btn-area">
-                        <a href="javascript:history.back();" class="weui-btn weui-btn_primary">推荐操作</a>
-                        <a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>
-                    </p>
-                </div>
-                <!--<div class="weui-msg__extra-area">-->
-                    <!--<div class="weui-footer">-->
-                        <!--<p class="weui-footer__links">-->
-                            <!--<a href="javascript:void(0);" class="weui-footer__link">底部链接文本</a>-->
-                        <!--</p>-->
-                        <!--<p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>-->
-                    <!--</div>-->
-                <!--</div>-->
             </div>
             <div class="page__ft">
-                <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
-                <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
-                <p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>
+                <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
             </div>
-        </form>
+        </div>    
+
+
+        <div class="">
+            <div class="page__hd">
+                <h1>Scrum</h1>
+            </div>
+            <div class="page__bd page__bd_spacing">
+                <a href="javascript:;" class="weui-btn weui-btn_primary">绿色按钮</a>
+                <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_loading"><i class="weui-loading"></i>页面主操作 Loading</a>
+            </div>
+            <div class="page__ft">
+                <img src="">
+            </div>
+
+        </div>
 
 
     </div>
@@ -112,46 +81,7 @@
     <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
 
-    <script>
 
-        var progress = 15;
-        function next() {
-            if(progress > 100){
-                progress = 0;
-                return;
-            }
-            $('#progress').css({width: progress + '%'});
-            progress = ++progress;
-            setTimeout(next, 20);
-        }
-        next();
-
-
-        $('#answerTips').hide();
-        $('#submitAnswer').click(function(){
-            $('#answerTips').show();
-        });
-
-        function androidInputBugFix() {
-            // .container 设置了 overflow 属性, 导致 Android 手机下输入框获取焦点时, 输入法挡住输入框的 bug
-            // 相关 issue: https://github.com/weui/weui/issues/15
-            // 解决方法:
-            // 0. .container 去掉 overflow 属性, 但此 demo 下会引发别的问题
-            // 1. 参考 http://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element
-            //    Android 手机下, input 或 textarea 元素聚焦时, 主动滚一把
-            if (/Android/gi.test(navigator.userAgent)) {
-                window.addEventListener('resize', function () {
-                    if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
-                        window.setTimeout(function () {
-                            document.activeElement.scrollIntoViewIfNeeded();
-                        }, 0);
-                    }
-                })
-            }
-        }
-
-
-    </script>
     <script>
         wx.config({
             debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
@@ -166,7 +96,6 @@
             // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
             $('#msg').append('READY<br/>');
             $('#msg').append('<br/>' + '{{ jsapi_ticket }}');
-
             wx.checkJsApi({
                 jsApiList: ['chooseImage', 'onMenuShareTimeline', 'onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
                 success: function (res) {
