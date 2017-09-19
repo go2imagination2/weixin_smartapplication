@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'enroll/', views.enroll, name='enroll'),
     url(r'scoring/', views.scoring, name='scoring'),
     url(r'h5_main/', views.h5_main, name='h5_main'),
+    url(r'h5_main_ex/', views.h5_main_ex, name='h5_main_ex'),
 ]

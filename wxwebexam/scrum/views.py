@@ -6,8 +6,8 @@ from django.core.urlresolvers import reverse
 import json
 import hashlib, re, urllib2, urllib
 from xml.etree import ElementTree as ET
-
 from django.utils.datetime_safe import time
+import time
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
@@ -93,8 +93,8 @@ def h5_main(request):
         'signature': hashlib.sha1(s).hexdigest(), 's': s})
 
 
-@DeprecationWarning
-def h5_mine_ex(request):
+# @DeprecationWarning
+def h5_main_ex(request):
     # # Fetch weixin oauth_access_token
     # code = request.GET.get('code', '')
     # nickname = _oauth_user_info(code)
@@ -113,7 +113,7 @@ def h5_mine_ex(request):
 
     jsapi_ticket = _get_jsapi_ticket()
     s = 'jsapi_ticket=%s&noncestr=%s&timestamp=%s&url=%s' % (jsapi_ticket, noncestr, timestamp, url)
-    return render_to_response('sports/h5_mine.html',
+    return render_to_response('scrum/h5_main.html',
                               {'nickname': nickname, 'headimgurl': headimgurl, 'appId': APP_ID, 'timestamp': timestamp,
                                'nonceStr': noncestr, 'jsapi_ticket': jsapi_ticket,
                                'signature': hashlib.sha1(s).hexdigest(), 's': s})
