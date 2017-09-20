@@ -33,10 +33,7 @@ def enroll_page(request):
 
 def enroll(request):
     print request.POST.get('name', 'Unnamed')
-    print request.POST.get('mobile', '-')
-    print request.POST.get('email', '-')
-    print request.POST.get('company', '-')
-    print request.POST.get('wechat_id', '-')
+    print request.POST.get('company', 'Nowhere')
 
     paper = Paper.objects.get(pk=1)
     exam = Exam.objects.get(pk=1)
@@ -44,6 +41,7 @@ def enroll(request):
     exam_record.answers = ','.join([''] * paper.count())  # use string to record answer and point to current entry
     exam_record.save()
     # TODO start the exam with session???
+    request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
 
     return redirect('/single/?entry_id=1')
@@ -51,7 +49,7 @@ def enroll(request):
 
 def single(request):
     print request.GET
-    entry_id = int(request.GET.get('entry_id', 1))
+    entry_id = int(request.GET.get('entry_id', request.session['current_entry_id']))
 
     # TODO check if it's answered then display desc and disable submit
     exam = Exam.objects.get(pk=1)
@@ -61,7 +59,7 @@ def single(request):
     # TODO
     exam_record = ExamRecord.objects.get(pk=1)
     current_entry_id = len(exam_record.answers.split(','))  # use string to calc current entry
-    current_entry_id = request.session['current_entry_id'] #FIXME
+    current_entry_id = request.session['current_entry_id']  # FIXME
     print 'current_entry_id=%s' % current_entry_id
 
     entry = Entry.objects.get(pk=current_entry_id)
@@ -74,8 +72,8 @@ def single(request):
 
 
 def answerit(request):
-    # if request.method != 'POST':
-    #     return render(request, 'scrum/single.html', {})
+    if request.method != 'POST':
+        return redirect('/single/')
 
     # TODO distinguish category: single or multi
     # TODO retrieve entry id from user session
@@ -99,6 +97,12 @@ def scoring(request):
     print request.POST.get('checkbox1')
     # TODO show the recorded score
     return render(request, 'scrum/scoring.html', {})
+
+
+def finishing(request):
+    print request.POST.get('email', '')
+    # TODO redirect to following page of wechat if UA is wx
+    return redirect('http://weixin.qq.com/q/xxx')
 
 
 #############################

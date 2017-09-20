@@ -20,14 +20,20 @@
     <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
     <div class="container" id="container">
 
-        <form class="" action="./enroll" method="POST">
+        <form class="" action="./finish" method="POST">
             {% csrf_token %}
             <div class="page__hd">
-                <h1 class="page__title">Button</h1>
-                <p class="page__desc">按钮</p>
+                <h1 class="page__title">留下您的邮箱</h1>
+                <p class="page__desc">我们将发送考试结果和一份权威学习资料到您的邮箱</p>
             </div>
             <div class="page__bd page__bd_spacing">
-                <a href="javascript:;" class="weui-btn weui-btn_primary">参加考试</a>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd"><label class="weui-label">电子邮箱</label></div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="email" placeholder="请输入邮箱" name="email">
+                    </div>
+                </div>
+                <a href="javascript:;" class="weui-btn weui-btn_primary">发给我成绩和学习资料</a>
             </div>
             <div class="page__ft">
                 <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
