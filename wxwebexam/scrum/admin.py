@@ -15,7 +15,18 @@ class UserAdmin(admin.ModelAdmin):
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 
-admin.site.register(Entry)
+
+class EntryOptionInline(admin.StackedInline):
+    model = EntryOption
+    extra = 4
+
+
+class EntryAdmin(admin.ModelAdmin):
+    inlines = [EntryOptionInline]
+
+
+admin.site.register(Entry, EntryAdmin)
+
 admin.site.register(Paper)
 
 

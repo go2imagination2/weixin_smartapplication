@@ -1,5 +1,5 @@
 #!encoding=utf8
-from django.shortcuts import render_to_response, get_object_or_404, render
+from django.shortcuts import render_to_response, get_object_or_404, render, redirect
 from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
 from django.core.urlresolvers import reverse
@@ -33,53 +33,63 @@ def enroll(request):
     entries = Entry.objects.all()
 
     exam_record = ExamRecord.objects.create(exam=exam)
-    exam_record.answer = ','.join([''] * paper.count()) # use string to record answer and point to current entry
+    exam_record.answer = ','.join([''] * paper.count())  # use string to record answer and point to current entry
 
-    #TODO start the exam
+    # TODO start the exam
 
     return render(request, 'scrum/single.html', {'entry': entries[0]})
 
 
 def single(request):
-    print request.POST
-    print request.POST.get('radio1')
-    print request.POST.get('checkbox1')
+    print request.GET
+    entry_id = int(request.GET.get('entry_id', 1))
 
     # TODO check if it's answered then display desc and disable submit
+    exam = Exam.objects.get(pk=1)
+    paper = exam.paper
+    print 'entry number=%s' % paper.count()
 
     # TODO
-    exam_record = ExamRecord.objects.get(0)
-    current_entry_idx = len(exam_record.answer.split(',')) - 1 # use string to calc current entry
-    entry = Entry.objects.get(current_entry_idx)
+    exam_record = ExamRecord.objects.get(pk=1)
+    current_entry_idx = len(exam_record.answer.split(','))  # use string to calc current entry
+    entry = Entry.objects.get(pk=current_entry_idx)
+    entry = Entry.objects.get(pk=entry_id)
 
-    return render(request, 'scrum/single.html', {})
+    enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
+
+    return render(request, 'scrum/single.html',
+                  {'entry_id': entry_id, 'entry': entry, 'enumerated_options': enumerated_options})
 
 
 def answerit(request):
-    if request.method != 'POST':
-        return render(request, 'scrum/single.html', {})
+    # if request.method != 'POST':
+    #     return render(request, 'scrum/single.html', {})
 
-    #TODO distinguish category: single or multi
+    # TODO distinguish category: single or multi
+    # TODO retrieve entry id from user session
+    print '//////////==========AnswerIt======'
     print request.POST
     print request.POST.get('radio1')
     print request.POST.get('checkbox1')
 
-    entry = Entry.objects.get(0)
+    entry = Entry.objects.get(pk=1)
     # TODO record the answer in exam record and not able to answer again
-    exam_record = ExamRecord.objects.get(0)
+    exam_record = ExamRecord.objects.get(pk=1)
     exam_record.answer = ','.join(exam_record.answer.split(',') + ['A'])
     # TODO calc total scoring by the correct answer in every entry
 
-    return render(request, 'scrum/single.html', {})
+    return redirect('/single/?entry_id=1')
 
 
 def scoring(request):
     print request.POST
     print request.POST.get('radio1')
     print request.POST.get('checkbox1')
-    #TODO show the recorded score
+    # TODO show the recorded score
     return render(request, 'scrum/scoring.html', {})
 
+
+#############################
 
 def h5_main(request):
     timestamp = int(time.time())

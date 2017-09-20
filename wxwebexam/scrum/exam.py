@@ -2,6 +2,11 @@
 import unittest
 import re
 
+# 参考题库  http://www.cnblogs.com/ups216/p/5001038.html
+# http://3y.uu456.com/bp_3t1sz5da4v7yqpp85n9v_1.html
+# http://www.jianshu.com/p/ca3b41d01ebd
+# https://wenku.baidu.com/view/de3f6e30d15abe23492f4da2.html
+# https://wenku.baidu.com/view/37fdfd264b35eefdc8d3332a.html
 
 raw_text = u"""1、安全生产“三违”{违章指挥}、{违章操作}、 {违反劳动纪律}。
 
@@ -18,33 +23,33 @@ B.三级安全教育
 C.特种作业人员安全教育
 D.经常性安全教育"""
 
-class Question(object):
-	desc = ''
-	right_answer = []
-	options = []
-	category = ''
-	index_num = 0
 
-	def __init__(self, raw):
-		self.raw = raw
-		lines = raw.split('\n')
-		m = re.match(u'(\d+).*[（|(] (\w+)[ ）|)].*', lines[0])
-		self.index_num = int(m.groups()[0])
-		if lines[0].endswith(u'[单选题]'):
-			self.category = 'Single Choice'
-			self.options = lines[1:]
-			self.right_answer = [m.groups()[1]]
-		elif lines[0].endswith(u'[多选题]'):
-			self.category = 'Multi Choice'
-			self.options = lines[1:]
-			self.right_answer = [m.groups()[1]]
+class Question(object):
+    desc = ''
+    right_answer = []
+    options = []
+    category = ''
+    index_num = 0
+
+    def __init__(self, raw):
+        self.raw = raw
+        lines = raw.split('\n')
+        m = re.match(u'(\d+).*[（|(] (\w+)[ ）|)].*', lines[0])
+        self.index_num = int(m.groups()[0])
+        if lines[0].endswith(u'[单选题]'):
+            self.category = 'Single Choice'
+            self.options = lines[1:]
+            self.right_answer = [m.groups()[1]]
+        elif lines[0].endswith(u'[多选题]'):
+            self.category = 'Multi Choice'
+            self.options = lines[1:]
+            self.right_answer = [m.groups()[1]]
 
 
 class TestExam(unittest.TestCase):
-
     def test_parse_q2(self):
-    	text = raw_text.split('\n\n')[2]
-    	print text
+        text = raw_text.split('\n\n')[2]
+        print text
 
         q2 = Question(text)
         self.assertEquals('Single Choice', q2.category)
@@ -53,14 +58,15 @@ class TestExam(unittest.TestCase):
         self.assertEquals([u'A.拒绝', u'B.抵制', u'C.抗拒'], q2.options)
 
     def test_parse_q4(self):
-    	text = raw_text.split('\n\n')[3]
-    	print text
+        text = raw_text.split('\n\n')[3]
+        print text
 
         q3 = Question(text)
         self.assertEquals('Multi Choice', q3.category)
         self.assertEquals(4, q3.index_num)
         self.assertEquals(['ABCD'], q3.right_answer)
         self.assertEquals([u'A.转岗教育', u'B.三级安全教育', u'C.特种作业人员安全教育', u'D.经常性安全教育'], q3.options)
+
 
 if __name__ == '__main__':
     unittest.main()
