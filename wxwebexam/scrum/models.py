@@ -66,7 +66,7 @@ class Entry(models.Model):
     answer = models.CharField(max_length=250, blank=True, null=True, default='')
     role = models.CharField(max_length=1, choices=DIFFICULTY_CHOICES, default=DIFFICULTY_A)
     category = models.CharField(max_length=1, choices=CATEGORY_CHOICES, default=CATEGORY_SINGLE)
-    desc = models.CharField(max_length=250, blank=True, null=True)
+    tips = models.CharField(max_length=250, blank=True, null=True)
     score = models.IntegerField(default=1)
 
     def __unicode__(self):

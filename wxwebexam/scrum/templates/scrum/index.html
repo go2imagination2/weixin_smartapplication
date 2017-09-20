@@ -1,6 +1,5 @@
-{% load staticfiles %}
-
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 
 <head>
@@ -11,37 +10,69 @@
     <title>Scrum在线考试</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.min.css" %}"> -->
-    <link rel="stylesheet" type="text/css" href="{% static "style/h5.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style/h5.css' %}">
     <link rel="stylesheet" type="text/css" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
 </head>
 
 
 <body>
-    <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
-    <div class="container" id="container">
+<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+<div class="container" id="container">
 
-        <form class="" action="./enroll" method="POST">
-            {% csrf_token %}
-            <div class="page__hd">
-                <h1 class="page__title">Button</h1>
-                <p class="page__desc">按钮</p>
+    <div>
+        <div class="page__hd">
+            <h1 class="page__title">{{question}}</h1>
+            <p class="page__desc">欢迎来到Scrum敏捷知识测验</p>
+        </div>
+        <div class="page__bd page__bd_spacing">
+            <div class="weui-cells__title">单选题</div>
+            <div class="weui-cells weui-cells_radio">
+                {% for idx, desc in options %}
+                <label class="weui-cell weui-check__label" for="x11{{idx}}">
+                    <div class="weui-cell__bd">
+                        <p>选项({{idx}}). {{desc}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                        <input type="radio" class="weui-check" name="radio1" id="x11{{idx}}" value="{{idx}}">
+                        <span class="weui-icon-checked"></span>
+                    </div>
+                </label>
+                {% endfor %}
             </div>
-            <div class="page__bd page__bd_spacing">
-                <a href="javascript:;" class="weui-btn weui-btn_primary">参加考试</a>
-            </div>
-            <div class="page__ft">
-                <a href="javascript:home()"><img src="./images/icon_footer_link.png"></a>
-            </div>
-        </form>
+            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
+                <div class="weui-cell__bd">正确答案是:{{answer}}<br/>提示:{{tips}}</div>
+            </a>
 
-
+            <div class="weui-btn-area">
+                <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
+                <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">去正式考试!</a>
+            </div>
+        </div>
+        <div class="page__ft">
+            <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
+            <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
+            <p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>
+        </div>
     </div>
 
-    <!-- <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script> -->
-    <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
-    <!--<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
-    <script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+</div>
 
+<!-- <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script> -->
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+
+<script>
+    $('#tips').hide()
+    $('#submitAnswer').click(function() {
+        $('#tips').show()
+        $('#submitAnswer').attr('disabled', 'disabled')
+        $('#submitAnswer').addClass('weui-btn_default').removeClass('weui-btn_primary')
+        $('#goEnroll').addClass('weui-btn_primary')
+        $('#goEnroll').removeClass('weui-btn_default')
+
+    })
+</script>
 
 </body>
 </html>
