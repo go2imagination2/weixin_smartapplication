@@ -40,3 +40,4 @@ class ExamAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Exam, ExamAdmin)
+admin.site.register(ExamRecord)

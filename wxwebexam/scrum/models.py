@@ -83,6 +83,7 @@ class EntryOption(models.Model):
     def __unicode__(self):
         return '[%s] for Exam %s' % (self.desc, self.entry)
 
+
 class Paper(models.Model):
     """
     试卷
@@ -118,11 +119,17 @@ class ExamRecord(models.Model):
     """
     单条考试记录
     """
-    attendee = models.OneToOneField(User, unique=True)
+    # attendee = models.OneToOneField(User, unique=True)
+    name = models.CharField(max_length=200, blank=True)
+    wechat_id = models.CharField(max_length=200, blank=True)
+    mobile = models.CharField(max_length=200, blank=True)
+    company = models.CharField(max_length=200, blank=True)
+    email = models.CharField(max_length=200, blank=True)
     exam = models.ForeignKey(Exam)
-    answer = models.CharField(max_length=2000, blank=True)
+    answers = models.CharField(max_length=2000, blank=True)
     score = models.CharField(max_length=2000, blank=True)
-    last_update = models.DateTimeField(auto_now=True)
+    start_time = models.DateTimeField(auto_now=True)
+    update_time = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return '%s scored %s on %s' % (self.attendee.username, self.score, self.exam)
+        return '%s scored %s on %s' % (self.name, self.score, self.exam)

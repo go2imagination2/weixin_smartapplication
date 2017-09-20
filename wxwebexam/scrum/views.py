@@ -20,7 +20,7 @@ APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
 def index(request):
     question = '中国最早推广Scrum认证的机构是哪家?'
-    options = [('A', 'Agile Alliance敏捷联盟'), ('B', 'UPerform敏捷学院'), ('C', 'Scrum Alliance'),]
+    options = [('A', 'Agile Alliance敏捷联盟'), ('B', 'UPerform敏捷学院'), ('C', 'Scrum Alliance'), ]
     answer = 'C'
     tips = 'UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得2017新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。'
     return render(request, 'scrum/index.html',
@@ -32,21 +32,21 @@ def enroll_page(request):
 
 
 def enroll(request):
-    print request.POST
-    print request.POST.get('email')
-    print request.POST.get('company')
-    print request.POST.get('wechat_id')
+    print request.POST.get('name', 'Unnamed')
+    print request.POST.get('mobile', '-')
+    print request.POST.get('email', '-')
+    print request.POST.get('company', '-')
+    print request.POST.get('wechat_id', '-')
 
-    paper = Paper.objects.get(pk=0)
-    exam = Exam.objects.create(paper=paper)
-    entries = Entry.objects.all()
-
+    paper = Paper.objects.get(pk=1)
+    exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
-    exam_record.answer = ','.join([''] * paper.count())  # use string to record answer and point to current entry
+    exam_record.answers = ','.join([''] * paper.count())  # use string to record answer and point to current entry
+    exam_record.save()
+    # TODO start the exam with session???
+    request.session['current_entry_id'] = 1
 
-    # TODO start the exam
-
-    return render(request, 'scrum/single.html', {'entry': entries[0]})
+    return redirect('/single/?entry_id=1')
 
 
 def single(request):
@@ -60,8 +60,11 @@ def single(request):
 
     # TODO
     exam_record = ExamRecord.objects.get(pk=1)
-    current_entry_idx = len(exam_record.answer.split(','))  # use string to calc current entry
-    entry = Entry.objects.get(pk=current_entry_idx)
+    current_entry_id = len(exam_record.answers.split(','))  # use string to calc current entry
+    current_entry_id = request.session['current_entry_id'] #FIXME
+    print 'current_entry_id=%s' % current_entry_id
+
+    entry = Entry.objects.get(pk=current_entry_id)
     entry = Entry.objects.get(pk=entry_id)
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
