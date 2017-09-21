@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-{% load staticfiles %}
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
-    <meta name="Keywords" content="Scrum exam 在线 考试 题库">
-    <meta name="Description" content="Scrum exam 在线 考试 题库">
-    <title>Scrum在线考试</title>
-
-    <!-- <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.min.css" %}"> -->
-    <link rel="stylesheet" type="text/css" href="{% static 'style/h5.css' %}">
-    <link rel="stylesheet" type="text/css" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
-</head>
+{% extends 'scrum/_base.html' %}
 
 
-<body>
+{% block main_content %}
+
 <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
 <div class="container" id="container">
 
@@ -57,22 +44,22 @@
 
 </div>
 
-<!-- <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script> -->
-<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+{% endblock %}
+
+
+{% block custom_scripts %}
 
 <script>
     $('#tips').hide()
     $('#submitAnswer').click(function() {
         $('#tips').show()
-        $('#submitAnswer').attr('disabled', 'disabled')
-        $('#submitAnswer').addClass('weui-btn_default').removeClass('weui-btn_primary')
-        $('#goEnroll').addClass('weui-btn_primary')
-        $('#goEnroll').removeClass('weui-btn_default')
+        $('#submitAnswer').attr('disabled', 'disabled').addClass('weui-btn_default').removeClass('weui-btn_primary')
+        $('#goEnroll').addClass('weui-btn_primary').removeClass('weui-btn_default')
 
     })
 </script>
+
+{% endblock %}
 
 </body>
 </html>

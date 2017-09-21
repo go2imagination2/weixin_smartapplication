@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="Keywords" content="Scrum exam 在线 考试 题库">
+    <meta name="Description" content="Scrum exam 在线 考试 题库">
+    <title>Scrum在线考试</title>
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static "styles/bootstrap.min.css" %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style/h5.css' %}">
+    <link rel="stylesheet" type="text/css" href="//res.wx.qq.com/open/libs/weui/1.1.2/weui.min.css">
+</head>
+
+
+<body>
+
+{% block main_content %}
+{% endblock %}
+
+
+<!-- <script src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script> -->
+<script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+
+{% block custom_scripts %}
+{% endblock %}
+
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1264480536'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1264480536%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>
+    $('img').last().hide() // hide the CNZZ icon
+</script>
+
+</body>
+</html>
