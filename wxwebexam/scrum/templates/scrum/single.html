@@ -50,6 +50,7 @@
             </div>
             {% endif %}
             <a href="javascript:void(0);" class="weui-cell weui-cell_link">
+                <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
                 <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>提示:{{entry.tips}}
                 </div>
             </a>
@@ -59,27 +60,7 @@
                 <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">下一题</a>
             </div>
         </div>
-        <div class="weui-msg">
-            <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
-            <div class="weui-msg__text-area">
-                <h2 class="weui-msg__title">考试完成</h2>
-                <p class="weui-msg__desc">分数内容详情，可根据实际需要安排，如果换行则不超过规定长度，居中展现<a href="javascript:void(0);">文字链接</a></p>
-            </div>
-            <div class="weui-msg__opr-area">
-                <p class="weui-btn-area">
-                    <a href="javascript:history.back();" class="weui-btn weui-btn_primary">推荐操作</a>
-                    <a href="javascript:history.back();" class="weui-btn weui-btn_default">辅助操作</a>
-                </p>
-            </div>
-            <!--<div class="weui-msg__extra-area">-->
-            <!--<div class="weui-footer">-->
-            <!--<p class="weui-footer__links">-->
-            <!--<a href="javascript:void(0);" class="weui-footer__link">底部链接文本</a>-->
-            <!--</p>-->
-            <!--<p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>-->
-            <!--</div>-->
-            <!--</div>-->
-        </div>
+
         <div class="page__ft">
             <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
             <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
