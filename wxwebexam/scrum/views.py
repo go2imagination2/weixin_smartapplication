@@ -32,77 +32,86 @@ def enroll_page(request):
 
 
 def enroll(request):
-    print request.POST.get('name', 'Unnamed')
-    print request.POST.get('company', 'Nowhere')
-
+    print request.POST
     paper = Paper.objects.get(pk=1)
     exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
-    exam_record.answers = ','.join([''] * paper.count())  # use string to record answer and point to current entry
+    exam_record.name = request.POST.get('name', 'Unnamed')
+    exam_record.name = request.POST.get('company', 'Nowhere')
+    exam_record.answers = ''
     exam_record.save()
-    # TODO start the exam with session???
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
+    request.session['entry_count'] = paper.count()
 
-    return redirect('/single/?entry_id=1')
+    return redirect('/single/')
 
 
 def single(request):
     print request.GET
     entry_id = int(request.GET.get('entry_id', request.session['current_entry_id']))
-
-    # TODO check if it's answered then display desc and disable submit
-    exam = Exam.objects.get(pk=1)
-    paper = exam.paper
-    print 'entry number=%s' % paper.count()
-
-    # TODO
-    exam_record = ExamRecord.objects.get(pk=1)
-    current_entry_id = len(exam_record.answers.split(','))  # use string to calc current entry
-    current_entry_id = request.session['current_entry_id']  # FIXME
-    print 'current_entry_id=%s' % current_entry_id
-
-    entry = Entry.objects.get(pk=current_entry_id)
+    request.session['current_entry_id'] = entry_id
+    exam_record_id = request.session['current_exam_record_id']
+    exam_record = ExamRecord.objects.get(pk=exam_record_id)
+    print 'current_exam_record_id=%s' % request.session['current_exam_record_id']
+    print 'entry_id=%s' % entry_id
+    print 'entry_count=%s' % request.session['entry_count']
     entry = Entry.objects.get(pk=entry_id)
+
+    # TODO check if it's answered then display desc and notify frontend disable submit
+
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
 
     return render(request, 'scrum/single.html',
-                  {'entry_id': entry_id, 'entry': entry, 'enumerated_options': enumerated_options})
+                  {'entry': entry, 'enumerated_options': enumerated_options,
+                   'entry_count': request.session['entry_count']})
 
 
 def answerit(request):
     if request.method != 'POST':
         return redirect('/single/')
 
-    # TODO distinguish category: single or multi
-    # TODO retrieve entry id from user session
     print '//////////==========AnswerIt======'
     print request.POST
-    print request.POST.get('radio1')
-    print request.POST.get('checkbox1')
+    entry_id = request.session['current_entry_id']
+    entry = Entry.objects.get(pk=entry_id)
 
-    entry = Entry.objects.get(pk=1)
+    if entry.category == 'S':
+        answers = request.POST.get('radio_single', '')
+    elif entry.category == 'M':
+        answers = ''.join(request.POST.getlist('checkbox_multi', ['']))
+    else:
+        print 'unknow category %s' % entry.category
+    print 'answers=%s' % answers
+
     # TODO record the answer in exam record and not able to answer again
-    exam_record = ExamRecord.objects.get(pk=1)
-    exam_record.answers = ','.join(exam_record.answers.split(',') + ['A'])
-    # TODO calc total scoring by the correct answer in every entry
+    exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
+    exam_record.answers = ','.join(exam_record.answers.split(',') + [answers])
+    exam_record.save()
 
-    return redirect('/single/?entry_id=1')
+    entry_id += 1
+    request.session['current_entry_id'] = entry_id
+    if entry_id > request.session['entry_count']:
+        return redirect('/scoring/')
+    return redirect('/single/')
 
 
 def scoring(request):
-    print request.POST
-    print request.POST.get('radio1')
-    print request.POST.get('checkbox1')
-    # TODO show the recorded score
-    return render(request, 'scrum/scoring.html', {})
+    # TODO calc total scoring by the correct answer in every entry
+    final_score = 100
+    exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
+    exam_record.score = final_score
+    exam_record.save()
+
+    return render(request, 'scrum/scoring.html', {'final_score': final_score})
 
 
 def finishing(request):
     print request.POST.get('email', '')
+    # TODO send email
     # TODO redirect to following page of wechat if UA is wx
-    return redirect('http://weixin.qq.com/q/xxx')
+    return redirect('http://weixin.qq.com/q/xxx')  # FIXME
 
 
 #############################

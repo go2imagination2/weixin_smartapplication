@@ -14,7 +14,7 @@
                 <span><i class="weui-icon-info"></i>59:06</span>
             </div>
             <h1 class="page__title">{{entry.question}}</h1>
-            <p class="page__desc">...</p>
+            <p class="page__desc">第{{entry.id}}题/共{{entry_count}}题</p>
         </div>
 
         <div class="page__bd page__bd_spacing">
@@ -27,7 +27,7 @@
                         <p>选项({{idx}}). {{desc}}</p>
                     </div>
                     <div class="weui-cell__ft">
-                        <input type="radio" class="weui-check" name="radio1" id="x11{{idx}}" value="{{idx}}">
+                        <input type="radio" class="weui-check" name="radio_single" id="x11{{idx}}" value="{{idx}}">
                         <span class="weui-icon-checked"></span>
                     </div>
                 </label>
@@ -39,7 +39,7 @@
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="s11{{idx}}">
                     <div class="weui-cell__hd">
-                        <input type="checkbox" class="weui-check" name="checkbox1" id="s11{{idx}}" value="{{idx}}">
+                        <input type="checkbox" class="weui-check" name="checkbox_multi" id="s11{{idx}}" value="{{idx}}">
                         <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
@@ -49,7 +49,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <a href="javascript:void(0);" class="weui-cell weui-cell_link">
+            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
                 <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
                 <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>提示:{{entry.tips}}
                 </div>
@@ -77,6 +77,7 @@
 {% block custom_scripts %}
 <script>
 
+
         var progress = 15;
         function next() {
             if(progress > 100){
@@ -90,30 +91,10 @@
         next();
 
 
-        $('#answerTips').hide();
+        $('#tips').hide();
         $('#submitAnswer').click(function(){
-            $('#answerTips').show();
+            $('#tips').show();
         });
-
-        function androidInputBugFix() {
-            // .container 设置了 overflow 属性, 导致 Android 手机下输入框获取焦点时, 输入法挡住输入框的 bug
-            // 相关 issue: https://github.com/weui/weui/issues/15
-            // 解决方法:
-            // 0. .container 去掉 overflow 属性, 但此 demo 下会引发别的问题
-            // 1. 参考 http://stackoverflow.com/questions/23757345/android-does-not-correctly-scroll-on-input-focus-if-not-body-element
-            //    Android 手机下, input 或 textarea 元素聚焦时, 主动滚一把
-            if (/Android/gi.test(navigator.userAgent)) {
-                window.addEventListener('resize', function () {
-                    if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
-                        window.setTimeout(function () {
-                            document.activeElement.scrollIntoViewIfNeeded();
-                        }, 0);
-                    }
-                })
-            }
-        }
-
-
 
 
 </script>

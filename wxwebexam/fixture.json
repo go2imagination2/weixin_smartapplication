@@ -1,0 +1,1041 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "scrum",
+    "model": "profile"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "scrum",
+    "model": "entry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "scrum",
+    "model": "paper"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "scrum",
+    "model": "exam"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "scrum",
+    "model": "examrecord"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "scrum",
+    "model": "entryoption"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "37uyzl5bo8ufkzvcpg1z3n77jr5hlog3",
+  "fields": {
+    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-09-13T11:28:25.218Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "410pb5s7cyp5uy9sfttyvsg213jbn2dp",
+  "fields": {
+    "session_data": "NWRhM2FlNmQ1ZDg0ZjdlYmMxOThkNzRlYWQ0YTc2ZTc5OTkwNGM1Yzp7ImN1cnJlbnRfZW50cnlfaWQiOjF9",
+    "expire_date": "2017-10-04T08:06:01.680Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oczrcokgfds5k07tef9heyxd2k8wzinm",
+  "fields": {
+    "session_data": "OTAwZjE2ZDIxYTgxZGFmMDAwOGU5ZDdiYWEzYTUyYjUwNDJkNTc5Mjp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjEzLCJjdXJyZW50X2VudHJ5X2lkIjozLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjMsIl9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIifQ==",
+    "expire_date": "2017-10-06T15:55:35.560Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wfjs0y3f571ner69vcxo9azzhpugz3b8",
+  "fields": {
+    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-10-04T01:10:59.975Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z2rk3c6w6sk8dkvz97ce0wyxxpfazx2f",
+  "fields": {
+    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-09-16T03:05:20.311Z"
+  }
+},
+{
+  "model": "scrum.entry",
+  "pk": 1,
+  "fields": {
+    "question": "Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
+    "answer": "B",
+    "role": "A",
+    "category": "S",
+    "tips": "\u5355\u9009\u9898\u89e3\u6790",
+    "score": 1
+  }
+},
+{
+  "model": "scrum.entry",
+  "pk": 2,
+  "fields": {
+    "question": "\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
+    "answer": "ABC",
+    "role": "A",
+    "category": "M",
+    "tips": "\u591a\u9009\u9898\u89e3\u6790",
+    "score": 1
+  }
+},
+{
+  "model": "scrum.entry",
+  "pk": 3,
+  "fields": {
+    "question": "\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
+    "answer": "",
+    "role": "A",
+    "category": "S",
+    "tips": "\u53c2\u80033355",
+    "score": 1
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 1,
+  "fields": {
+    "entry": 2,
+    "desc": "SM"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 2,
+  "fields": {
+    "entry": 2,
+    "desc": "PO"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 3,
+  "fields": {
+    "entry": 2,
+    "desc": "DT"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 4,
+  "fields": {
+    "entry": 2,
+    "desc": "manager"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 5,
+  "fields": {
+    "entry": 1,
+    "desc": "YES"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 6,
+  "fields": {
+    "entry": 1,
+    "desc": "NO"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 7,
+  "fields": {
+    "entry": 3,
+    "desc": "YES"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 8,
+  "fields": {
+    "entry": 3,
+    "desc": "NO"
+  }
+},
+{
+  "model": "scrum.entryoption",
+  "pk": 9,
+  "fields": {
+    "entry": 3,
+    "desc": "\u4e0d\u4e00\u5b9a"
+  }
+},
+{
+  "model": "scrum.paper",
+  "pk": 1,
+  "fields": {
+    "name": "Scrum Foundation",
+    "desc": "CSM pre-exam",
+    "image": "",
+    "last_update": "2017-09-22T15:43:03.396Z",
+    "entry": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "scrum.exam",
+  "pk": 1,
+  "fields": {
+    "title": "CSM pre-class",
+    "desc": "According to Scrum Guide",
+    "start_time": "2017-09-02T03:20:57Z",
+    "end_time": "2017-09-02T03:20:59Z",
+    "paper": 1
+  }
+},
+{
+  "model": "scrum.exam",
+  "pk": 2,
+  "fields": {
+    "title": "",
+    "desc": "",
+    "start_time": null,
+    "end_time": null,
+    "paper": 1
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 1,
+  "fields": {
+    "name": "tom",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "0",
+    "start_time": "2017-09-20T07:46:40.522Z",
+    "update_time": "2017-09-20T07:46:40.522Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 2,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 2,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-20T07:59:13.435Z",
+    "update_time": "2017-09-20T07:59:13.435Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 3,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-20T08:00:41.211Z",
+    "update_time": "2017-09-20T08:00:41.211Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 4,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-20T08:00:54.408Z",
+    "update_time": "2017-09-20T08:00:54.408Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 5,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-20T08:06:01.674Z",
+    "update_time": "2017-09-20T08:06:01.674Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 6,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-21T02:55:48.936Z",
+    "update_time": "2017-09-21T02:55:48.936Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 7,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-22T15:00:16.543Z",
+    "update_time": "2017-09-22T15:00:16.543Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 8,
+  "fields": {
+    "name": "up",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-22T15:13:47.006Z",
+    "update_time": "2017-09-22T15:13:47.006Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 9,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-22T15:23:41.083Z",
+    "update_time": "2017-09-22T15:23:41.084Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 10,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "",
+    "score": "",
+    "start_time": "2017-09-22T15:28:07.487Z",
+    "update_time": "2017-09-22T15:28:07.487Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 11,
+  "fields": {
+    "name": "up",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": ",B,D,B",
+    "score": "100",
+    "start_time": "2017-09-22T15:45:08.318Z",
+    "update_time": "2017-09-22T15:45:08.318Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 12,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": ",B,D,B",
+    "score": "100",
+    "start_time": "2017-09-22T15:48:05.104Z",
+    "update_time": "2017-09-22T15:48:05.104Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 13,
+  "fields": {
+    "name": "up",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": ",B,D,B,D,C,C,ABC",
+    "score": "100",
+    "start_time": "2017-09-22T15:55:35.481Z",
+    "update_time": "2017-09-22T15:55:35.481Z"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 4,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 4,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 4,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 5,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 5,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 5,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 6,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 6,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 6,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can add profile",
+    "content_type": 7,
+    "codename": "add_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can change profile",
+    "content_type": 7,
+    "codename": "change_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can delete profile",
+    "content_type": 7,
+    "codename": "delete_profile"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can add entry",
+    "content_type": 8,
+    "codename": "add_entry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can change entry",
+    "content_type": 8,
+    "codename": "change_entry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can delete entry",
+    "content_type": 8,
+    "codename": "delete_entry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add paper",
+    "content_type": 9,
+    "codename": "add_paper"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change paper",
+    "content_type": 9,
+    "codename": "change_paper"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete paper",
+    "content_type": 9,
+    "codename": "delete_paper"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can add exam",
+    "content_type": 10,
+    "codename": "add_exam"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can change exam",
+    "content_type": 10,
+    "codename": "change_exam"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can delete exam",
+    "content_type": 10,
+    "codename": "delete_exam"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can add exam record",
+    "content_type": 11,
+    "codename": "add_examrecord"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can change exam record",
+    "content_type": 11,
+    "codename": "change_examrecord"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can delete exam record",
+    "content_type": 11,
+    "codename": "delete_examrecord"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can add entry option",
+    "content_type": 12,
+    "codename": "add_entryoption"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can change entry option",
+    "content_type": 12,
+    "codename": "change_entryoption"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can delete entry option",
+    "content_type": 12,
+    "codename": "delete_entryoption"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$24000$BQxPNeiUxvzN$XXl4ocTXWgSXs57S2uPdWBjtOt/8vpKuLLv8GlWwrlA=",
+    "last_login": "2017-09-22T15:14:19.603Z",
+    "is_superuser": true,
+    "username": "jacky",
+    "first_name": "",
+    "last_name": "",
+    "email": "a@b.cn",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2017-08-30T11:28:09.402Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2017-09-02T03:08:43.325Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2017-09-02T03:20:16.715Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2017-09-02T03:20:32.725Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Scrum Foundation",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2017-09-02T03:21:04.515Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "CSM pre-class",
+    "action_flag": 1,
+    "change_message": "Added."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2017-09-20T01:35:34.671Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "CSM pre-class",
+    "action_flag": 2,
+    "change_message": "Added exam record \"jacky scored  on CSM pre-class\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2017-09-20T01:57:07.582Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
+    "action_flag": 2,
+    "change_message": "Added entry option \"[SM] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[PO] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[DT] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[manager] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2017-09-20T01:57:13.782Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "[S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
+    "action_flag": 2,
+    "change_message": "Added entry option \"[YES] for Exam [S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f\". Added entry option \"[NO] for Exam [S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2017-09-20T02:09:22.802Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "2",
+    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed desc."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2017-09-20T02:09:44.831Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "[S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed desc."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2017-09-20T07:46:40.523Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "1",
+    "object_repr": "tom scored 0 on CSM pre-class",
+    "action_flag": 2,
+    "change_message": "Changed name and score."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2017-09-20T07:59:09.300Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "CSM pre-class",
+    "action_flag": 2,
+    "change_message": "Changed desc."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2017-09-22T15:42:30.085Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "[S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
+    "action_flag": 1,
+    "change_message": "Added. Added entry option \"[YES] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\". Added entry option \"[NO] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2017-09-22T15:42:39.641Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Scrum Foundation",
+    "action_flag": 2,
+    "change_message": "Changed entry."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2017-09-22T15:42:49.142Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Scrum Foundation",
+    "action_flag": 2,
+    "change_message": "Changed entry."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2017-09-22T15:43:03.400Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Scrum Foundation",
+    "action_flag": 2,
+    "change_message": "Changed entry."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2017-09-22T15:52:41.399Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "[S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
+    "action_flag": 2,
+    "change_message": "Added entry option \"[\u4e0d\u4e00\u5b9a] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\"."
+  }
+}
+]
