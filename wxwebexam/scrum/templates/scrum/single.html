@@ -73,7 +73,6 @@
 {% endblock %}
 
 
-
 {% block custom_scripts %}
 <script>
 
@@ -94,6 +93,10 @@
         $('#tips').hide();
         $('#submitAnswer').click(function(){
             $('#tips').show();
+        });
+
+        $('#nextQuestion').click(function() {
+            window.href = './?entry_id=' + (parseInt({{entry.id}})+1);
         });
 
 

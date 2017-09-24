@@ -38,7 +38,7 @@ def enroll(request):
     exam_record = ExamRecord.objects.create(exam=exam)
     exam_record.name = request.POST.get('name', 'Unnamed')
     exam_record.name = request.POST.get('company', 'Nowhere')
-    exam_record.answers = ''
+    exam_record.answers = ','.join(['X'] * paper.count())
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
@@ -48,18 +48,19 @@ def enroll(request):
 
 
 def single(request):
+    # TODO redirect to index if no session enrolled yet
+
     print request.GET
     entry_id = int(request.GET.get('entry_id', request.session['current_entry_id']))
     request.session['current_entry_id'] = entry_id
     exam_record_id = request.session['current_exam_record_id']
-    exam_record = ExamRecord.objects.get(pk=exam_record_id)
     print 'current_exam_record_id=%s' % request.session['current_exam_record_id']
     print 'entry_id=%s' % entry_id
     print 'entry_count=%s' % request.session['entry_count']
     entry = Entry.objects.get(pk=entry_id)
 
     # TODO check if it's answered then display desc and notify frontend disable submit
-
+    exam_record = ExamRecord.objects.get(pk=exam_record_id)
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
 
@@ -82,12 +83,14 @@ def answerit(request):
     elif entry.category == 'M':
         answers = ''.join(request.POST.getlist('checkbox_multi', ['']))
     else:
-        print 'unknow category %s' % entry.category
+        print 'unknown category %s' % entry.category
     print 'answers=%s' % answers
 
     # TODO record the answer in exam record and not able to answer again
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
-    exam_record.answers = ','.join(exam_record.answers.split(',') + [answers])
+    updated_answers = exam_record.answers.split(',')
+    updated_answers[entry_id - 1] = answers
+    exam_record.answers = ','.join(updated_answers)
     exam_record.save()
 
     entry_id += 1
@@ -99,17 +102,28 @@ def answerit(request):
 
 def scoring(request):
     # TODO calc total scoring by the correct answer in every entry
-    final_score = 100
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
-    exam_record.score = final_score
+    actual_answers = exam_record.answers.split(',')
+    print actual_answers
+
+    final_score = 0
+    for i in xrange(int(request.session['entry_count'])):
+        expected = Entry.objects.get(pk=i+1).answer
+        actual = actual_answers[i]
+        final_score += int(100.0/request.session['entry_count']) if expected == actual else 0
+    exam_record.score = max(final_score, 100)
     exam_record.save()
+
+    del request.session['current_exam_record_id']
+    del request.session['current_entry_id']
+    del request.session['entry_count']
 
     return render(request, 'scrum/scoring.html', {'final_score': final_score})
 
 
 def finishing(request):
     print request.POST.get('email', '')
-    # TODO send email
+    # TODO send email with final score
     # TODO redirect to following page of wechat if UA is wx
     return redirect('http://weixin.qq.com/q/xxx')  # FIXME
 
