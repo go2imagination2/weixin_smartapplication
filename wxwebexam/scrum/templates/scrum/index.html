@@ -27,7 +27,9 @@
                 {% endfor %}
             </div>
             <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
-                <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+                <div class="weui-msg__icon-area">
+                    <i class="weui-icon-success weui-icon_msg"></i>
+                </div>
                 <div class="weui-cell__bd">正确答案是:{{answer}}<br/>提示:{{tips}}</div>
             </a>
 
@@ -51,6 +53,8 @@
 {% block custom_scripts %}
 
 <script>
+    console.log($('#x11').val());
+
     $('#tips').hide()
     $('#submitAnswer').click(function() {
         $('#tips').show()

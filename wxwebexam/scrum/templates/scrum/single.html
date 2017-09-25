@@ -49,15 +49,21 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
-                <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
+            <a href="javascript:void(0);"  class="weui-cell weui-cell_link" id="tips">
+                <div class="weui-msg__icon-area">
+                    {% if is_answered_correct %}
+                    <i class="weui-icon-success weui-icon_msg"></i>
+                    {% else %}
+                    <i class="weui-icon-warn weui-icon_msg"></i>
+                    {% endif %}
+                </div>
                 <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>提示:{{entry.tips}}
                 </div>
             </a>
 
             <div class="weui-btn-area">
                 <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
-                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">下一题</a>
+                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">下一步</a>
             </div>
         </div>
 
@@ -77,10 +83,11 @@
 <script>
 
 
-        var progress = 15;
+        var progress = 10;
+        var end = {{entry.id}} / {{entry_count}} * 100 + 1;
         function next() {
-            if(progress > 100){
-                progress = 0;
+            if(progress > end){
+                progress = end;
                 return;
             }
             $('#progress').css({width: progress + '%'});
@@ -89,14 +96,25 @@
         }
         next();
 
-
         $('#tips').hide();
+
+        {% if answered %}
+        $('#submitAnswer').attr('disabled', 'disabled');
+        $('#tips').show();
+        {% else %}
         $('#submitAnswer').click(function(){
             $('#tips').show();
         });
+        {% endif %}
+
 
         $('#nextQuestion').click(function() {
-            window.href = './?entry_id=' + (parseInt({{entry.id}})+1);
+            console.log('nextQuestion');
+            if ({{entry_count}} == {{entry.id}}) {
+                window.location.href = '../scoring'
+            } else {
+                window.location.href = './?entry_id=' + (parseInt({{entry.id}})+1);
+            }
         });
 
 

@@ -38,7 +38,7 @@ def enroll(request):
     exam_record = ExamRecord.objects.create(exam=exam)
     exam_record.name = request.POST.get('name', 'Unnamed')
     exam_record.name = request.POST.get('company', 'Nowhere')
-    exam_record.answers = ','.join(['X'] * paper.count())
+    exam_record.answers = ','.join(['-'] * paper.count())
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
@@ -61,57 +61,55 @@ def single(request):
 
     # TODO check if it's answered then display desc and notify frontend disable submit
     exam_record = ExamRecord.objects.get(pk=exam_record_id)
+    updated_answers = exam_record.answers.split(',')
+    answered = updated_answers[entry_id - 1] != '-'
+    is_answered_correct = entry.answer == updated_answers[request.session['current_entry_id'] - 1]
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
 
     return render(request, 'scrum/single.html',
                   {'entry': entry, 'enumerated_options': enumerated_options,
-                   'entry_count': request.session['entry_count']})
+                   'entry_count': request.session['entry_count'], 'answered': answered,
+                   'is_answered_correct': is_answered_correct})
 
 
 def answerit(request):
     if request.method != 'POST':
         return redirect('/single/')
 
-    print '//////////==========AnswerIt======'
     print request.POST
     entry_id = request.session['current_entry_id']
     entry = Entry.objects.get(pk=entry_id)
 
     if entry.category == 'S':
-        answers = request.POST.get('radio_single', '')
+        actual_answers = request.POST.get('radio_single', '')
     elif entry.category == 'M':
-        answers = ''.join(request.POST.getlist('checkbox_multi', ['']))
+        actual_answers = ''.join(request.POST.getlist('checkbox_multi', ['']))
     else:
         print 'unknown category %s' % entry.category
-    print 'answers=%s' % answers
+    print 'actual_answers=%s' % actual_answers
 
     # TODO record the answer in exam record and not able to answer again
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
     updated_answers = exam_record.answers.split(',')
-    updated_answers[entry_id - 1] = answers
+    updated_answers[entry_id - 1] = actual_answers
     exam_record.answers = ','.join(updated_answers)
     exam_record.save()
 
-    entry_id += 1
-    request.session['current_entry_id'] = entry_id
-    if entry_id > request.session['entry_count']:
-        return redirect('/scoring/')
     return redirect('/single/')
 
 
 def scoring(request):
-    # TODO calc total scoring by the correct answer in every entry
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
     actual_answers = exam_record.answers.split(',')
-    print actual_answers
 
     final_score = 0
-    for i in xrange(int(request.session['entry_count'])):
-        expected = Entry.objects.get(pk=i+1).answer
+    for i in xrange(request.session['entry_count']):
+        expected = Entry.objects.get(pk=i + 1).answer
         actual = actual_answers[i]
-        final_score += int(100.0/request.session['entry_count']) if expected == actual else 0
-    exam_record.score = max(final_score, 100)
+        final_score += 100.0 / request.session['entry_count'] if expected == actual else 0
+    final_score = int(final_score)
+    exam_record.score = min(final_score, 100)
     exam_record.save()
 
     del request.session['current_exam_record_id']
