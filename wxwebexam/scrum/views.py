@@ -123,7 +123,7 @@ def finishing(request):
     print request.POST.get('email', '')
     # TODO send email with final score
     # TODO redirect to following page of wechat if UA is wx
-    return redirect('http://weixin.qq.com/q/xxx')  # FIXME
+    return redirect('http://www.uperform.cn')  # FIXME
 
 
 #############################
