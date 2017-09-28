@@ -32,7 +32,6 @@ def enroll_page(request):
 
 
 def enroll(request):
-    print request.POST
     paper = Paper.objects.get(pk=1)
     exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
@@ -48,10 +47,13 @@ def enroll(request):
 
 
 def single(request):
-    # TODO redirect to index if no session enrolled yet
+    entry_id = request.session.get('current_entry_id', None)
+    entry_id = request.GET.get('entry_id', entry_id)
 
-    print request.GET
-    entry_id = int(request.GET.get('entry_id', request.session['current_entry_id']))
+    if entry_id is None:
+        return redirect('/')
+
+    entry_id = int(entry_id)
     request.session['current_entry_id'] = entry_id
     exam_record_id = request.session['current_exam_record_id']
     print 'current_exam_record_id=%s' % request.session['current_exam_record_id']
@@ -77,8 +79,11 @@ def answerit(request):
     if request.method != 'POST':
         return redirect('/single/')
 
-    print request.POST
     entry_id = request.session['current_entry_id']
+
+    if entry_id is None:
+        return redirect('/')
+
     entry = Entry.objects.get(pk=entry_id)
 
     if entry.category == 'S':
@@ -107,23 +112,25 @@ def scoring(request):
     for i in xrange(request.session['entry_count']):
         expected = Entry.objects.get(pk=i + 1).answer
         actual = actual_answers[i]
-        final_score += 100.0 / request.session['entry_count'] if expected == actual else 0
+        final_score += round(100.0 / request.session['entry_count']) if expected == actual else 0
     final_score = int(final_score)
     exam_record.score = min(final_score, 100)
     exam_record.save()
 
-    del request.session['current_exam_record_id']
-    del request.session['current_entry_id']
-    del request.session['entry_count']
+    if request.session.has_key('current_entry_id'):
+        del request.session['current_entry_id']
 
     return render(request, 'scrum/scoring.html', {'final_score': final_score})
 
 
 def finishing(request):
     print request.POST.get('email', '')
+    exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
+    exam_record.email = request.POST.get('email', '')
+    exam_record.save()
     # TODO send email with final score
-    # TODO redirect to following page of wechat if UA is wx
-    return redirect('http://www.uperform.cn')  # FIXME
+
+    return redirect('http://www.uperform.cn')
 
 
 #############################
