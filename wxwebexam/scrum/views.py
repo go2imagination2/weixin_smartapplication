@@ -6,8 +6,8 @@ from django.core.urlresolvers import reverse
 import json
 import hashlib, re, urllib2, urllib
 from xml.etree import ElementTree as ET
-from django.utils.datetime_safe import time
-import time
+from django.utils.datetime_safe import time, datetime
+from django.utils import timezone
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
@@ -17,6 +17,8 @@ from models import *
 APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
+# TODO a timebox 20min for 20 entry, but not strict
+# TODO bi-lingual exam
 
 def index(request):
     question = '中国最早推广Scrum认证的机构是哪家?'
@@ -38,6 +40,7 @@ def enroll(request):
     exam_record.name = request.POST.get('name', 'Unnamed')
     exam_record.name = request.POST.get('company', 'Nowhere')
     exam_record.answers = ','.join(['-'] * paper.count())
+    exam_record.start_time = timezone.now()
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
@@ -72,7 +75,8 @@ def single(request):
     return render(request, 'scrum/single.html',
                   {'entry': entry, 'enumerated_options': enumerated_options,
                    'entry_count': request.session['entry_count'], 'answered': answered,
-                   'is_answered_correct': is_answered_correct})
+                   'is_answered_correct': is_answered_correct, 'elapsed_seconds': timezone.now() - exam_record.start_time,
+                   'start_time': exam_record.start_time.strftime('%b %d, %Y %H:%M:%S')})
 
 
 def answerit(request):
@@ -129,6 +133,7 @@ def finishing(request):
     exam_record.email = request.POST.get('email', '')
     exam_record.save()
     # TODO send email with final score
+    # service@scrumchina.com
 
     return redirect('http://www.uperform.cn')
 

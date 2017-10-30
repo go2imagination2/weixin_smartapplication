@@ -11,7 +11,7 @@
                 <div class="weui-progress__bar">
                     <div class="weui-progress__inner-bar js_progress" style="width: 80%;" id="progress"></div>
                 </div>
-                <span><i class="weui-icon-info"></i>59:06</span>
+                <span id="remaining_seconds"><i class="weui-icon-info"></i>59:06</span>
             </div>
             <h1 class="page__title">{{entry.question}}</h1>
             <p class="page__desc">第{{entry.id}}题/共{{entry_count}}题</p>
@@ -49,7 +49,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <a href="javascript:void(0);"  class="weui-cell weui-cell_link" id="tips">
+            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
                 <div class="weui-msg__icon-area">
                     {% if is_answered_correct %}
                     <i class="weui-icon-success weui-icon_msg"></i>
@@ -81,18 +81,45 @@
 
 {% block custom_scripts %}
 <script>
+        if (!String.format) {
+          String.format = function(format) {
+            var args = Array.prototype.slice.call(arguments, 1);
+            return format.replace(/{(\d+)}/g, function(match, number) {
+              return typeof args[number] != 'undefined'
+                ? args[number]
+                : match
+              ;
+            });
+          };
+        }
 
+        function zero(s) {
+            return s < 10 ? '0' + s: s;
+        }
 
-        var progress = 10;
-        var end = {{entry.id}} / {{entry_count}} * 100 + 1;
+        console.log('{{start_time}}')
+        var d = Date.parse('{{start_time}}')
+        console.warn(new Date() - d)
+        //var end = {{entry.id}} / {{entry_count}} * 100 + 1;
+
+        var elapsed_sec = 0;
+        var total_sec = 20 * 60;
+        var progress = 1;
+        var end = 100 ;
         function next() {
             if(progress > end){
                 progress = end;
                 return;
             }
+            elapsed_sec = (new Date() - d) / 1000;
+            progress = (elapsed_sec / total_sec) * 100;
             $('#progress').css({width: progress + '%'});
-            progress = ++progress;
-            setTimeout(next, 20);
+
+            var m = Math.floor((total_sec-elapsed_sec)/60)
+            var s = Math.round((total_sec-elapsed_sec)%60)
+
+            $('#remaining_seconds').text(String.format('-{0}:{1}', zero(m), zero(s) ) )
+            setTimeout(next, 500);
         }
         next();
 
@@ -116,6 +143,7 @@
                 window.location.href = './?entry_id=' + (parseInt({{entry.id}})+1);
             }
         });
+
 
 
 </script>
