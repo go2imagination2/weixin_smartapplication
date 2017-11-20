@@ -39,7 +39,7 @@ def enroll(request):
     exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
     exam_record.name = request.POST.get('name', 'Unnamed')
-    exam_record.name = request.POST.get('company', 'Nowhere')
+    exam_record.company = request.POST.get('company', 'Nowhere')
     exam_record.answers = ','.join(['-'] * paper.count())
     exam_record.start_time = timezone.now()
     exam_record.save()
@@ -134,10 +134,53 @@ def finishing(request):
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
     exam_record.email = request.POST.get('email', '')
     exam_record.save()
-    # TODO send email with final score
-    # service@scrumchina.com
+
+    _send_email(exam_record.name, exam_record.email, exam_record.score)
 
     return redirect('http://www.uperform.cn')
+
+
+def _send_email(name, email_addr, score):
+    EMAIL_HOST = 'smtp.exmail.qq.com'
+    EMAIL_PORT = '465'
+    EMAIL_HOST_USER = 'service@uperform.cn'
+    EMAIL_HOST_PASSWORD = 'UPerform999'
+    EMAIL_USE_TLS = True
+    SERVER_EMAIL = DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+    import smtplib
+    from email.mime.text import MIMEText
+    from email.header import Header
+
+    msg_body = u"""
+<p>Hi, %s</p>
+
+<p>
+恭喜你完成Scrum认证培训课前测验,你获得了%s分.
+还需要继续阅读《Scrum Guide》.争取早日通过认证,加入学友会,和老师同学们在敏捷实践中共同成长.
+</p>
+
+<p>
+Best Regards,<br/>
+<b>UPerform优普丰敏捷学院</b><br/>
+近期Scrum认证公开课（CSM/CSPO/CSD/ACSM）点击 <a href="www.UPerform.CN">www.UPerform.CN</a>
+</p>
+""" % (name, score)
+
+    try:
+        # smtpObj = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+        smtpObj = smtplib.SMTP_SSL('%s:%s' % (EMAIL_HOST, EMAIL_PORT))
+        smtpObj.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD)
+        message = MIMEText(msg_body, 'html', 'utf-8')
+        message['From'] = Header("UPerform Agile Academy <%s>" % EMAIL_HOST_USER, 'utf-8')
+        message['To'] = Header(email_addr, 'utf-8')
+        message['Subject'] = Header('Scrum认证培训课前测验结果', 'utf-8')
+
+        smtpObj.sendmail(EMAIL_HOST_USER, [email_addr], message.as_string())
+        print "Successfully sent emails to: " % email_addr
+        smtpObj.quit()
+    except Exception, e:
+        print "Error: unable to send email: ", e
 
 
 #############################
