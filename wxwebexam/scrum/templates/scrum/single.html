@@ -49,7 +49,7 @@
                 {% endfor %}
             </div>
             {% endif %}
-            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
+            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="explanation">
                 <div class="weui-msg__icon-area">
                     {% if is_answered_correct %}
                     <i class="weui-icon-success weui-icon_msg"></i>
@@ -57,7 +57,7 @@
                     <i class="weui-icon-warn weui-icon_msg"></i>
                     {% endif %}
                 </div>
-                <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>提示:{{entry.tips}}
+                <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>解释:{{entry.explanation}}
                 </div>
             </a>
 
@@ -65,12 +65,6 @@
                 <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
                 <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">下一步</a>
             </div>
-        </div>
-
-        <div class="page__ft">
-            <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
-            <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
-            <p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>
         </div>
     </form>
 
@@ -123,14 +117,15 @@
         }
         next();
 
-        $('#tips').hide();
+        $('#explanation').hide();
 
         {% if answered %}
-        $('#submitAnswer').attr('disabled', 'disabled');
-        $('#tips').show();
+        $('#submitAnswer').attr('disabled', 'disabled').addClass('weui-btn_default').removeClass('weui-btn_primary')
+        $('#explanation').show();
+        $('#nextQuestion').addClass('weui-btn_primary').removeClass('weui-btn_default')
         {% else %}
         $('#submitAnswer').click(function(){
-            $('#tips').show();
+            $('#explanation').show();
         });
         {% endif %}
 

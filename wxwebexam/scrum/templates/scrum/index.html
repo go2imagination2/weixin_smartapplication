@@ -26,22 +26,17 @@
                 </label>
                 {% endfor %}
             </div>
-            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="tips">
+            <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="explanation">
                 <div class="weui-msg__icon-area">
                     <i class="weui-icon-success weui-icon_msg"></i>
                 </div>
-                <div class="weui-cell__bd">正确答案是:{{answer}}<br/>提示:{{tips}}</div>
+                <div class="weui-cell__bd">正确答案是:{{answer}}<br/>解释:{{explanation}}</div>
             </a>
 
             <div class="weui-btn-area">
                 <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
                 <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">去正式考试!</a>
             </div>
-        </div>
-        <div class="page__ft">
-            <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
-            <p class="weui-footer__text">Scrum认证培训敏捷教练咨询</p>
-            <p class="weui-footer__text">Copyright © 2007-2017 www.uperform.cn</p>
         </div>
     </div>
 
@@ -55,9 +50,9 @@
 <script>
     console.log($('#x11').val());
 
-    $('#tips').hide()
+    $('#explanation').hide()
     $('#submitAnswer').click(function() {
-        $('#tips').show()
+        $('#explanation').show()
         $('#submitAnswer').attr('disabled', 'disabled').addClass('weui-btn_default').removeClass('weui-btn_primary')
         $('#goEnroll').addClass('weui-btn_primary').removeClass('weui-btn_default')
 

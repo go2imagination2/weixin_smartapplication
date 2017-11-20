@@ -17,6 +17,7 @@ from models import *
 APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
+
 # TODO a timebox 20min for 20 entry, but not strict
 # TODO bi-lingual exam
 
@@ -24,9 +25,9 @@ def index(request):
     question = '中国最早推广Scrum认证的机构是哪家?'
     options = [('A', 'Agile Alliance敏捷联盟'), ('B', 'UPerform敏捷学院'), ('C', 'Scrum Alliance'), ]
     answer = 'B'
-    tips = 'UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得2017新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。'
+    explanation = 'UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得2017新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。'
     return render(request, 'scrum/index.html',
-                  {'question': question, 'options': options, 'answer': answer, 'tips': tips})
+                  {'question': question, 'options': options, 'answer': answer, 'explanation': explanation})
 
 
 def enroll_page(request):
@@ -75,7 +76,8 @@ def single(request):
     return render(request, 'scrum/single.html',
                   {'entry': entry, 'enumerated_options': enumerated_options,
                    'entry_count': request.session['entry_count'], 'answered': answered,
-                   'is_answered_correct': is_answered_correct, 'elapsed_seconds': timezone.now() - exam_record.start_time,
+                   'is_answered_correct': is_answered_correct,
+                   'elapsed_seconds': timezone.now() - exam_record.start_time,
                    'start_time': exam_record.start_time.strftime('%b %d, %Y %H:%M:%S')})
 
 
