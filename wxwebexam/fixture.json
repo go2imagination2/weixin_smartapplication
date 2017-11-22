@@ -123,8 +123,8 @@
   "model": "sessions.session",
   "pk": "hutzkdexj5u9bb07sik8e8kadiwvi0kx",
   "fields": {
-    "session_data": "NzdhMjkyM2QwZTk1OGE5ODkxMzBlOTlkOGFiNWM4MTRiMjAzMWY2ZTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjQ0LCJjdXJyZW50X2VudHJ5X2lkIjoxLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjIwLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
-    "expire_date": "2017-12-06T03:19:17.130Z"
+    "session_data": "YmQxY2M2ZGM1N2IzODM1MGVmYTk4ZjUwYmQxMjhhMTc4Mzk5YTJmOTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjUxLCJjdXJyZW50X2VudHJ5X2lkIjo0LCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjIwLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
+    "expire_date": "2017-12-06T15:40:57.515Z"
   }
 },
 {
@@ -1519,6 +1519,118 @@
     "score": "",
     "start_time": "2017-11-22T03:19:17.107Z",
     "update_time": "2017-11-22T03:19:17.107Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 45,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T14:07:35.257Z",
+    "update_time": "2017-11-22T14:07:35.257Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 46,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T14:10:13.108Z",
+    "update_time": "2017-11-22T14:10:13.108Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 47,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T14:10:42.568Z",
+    "update_time": "2017-11-22T14:10:42.568Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 48,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T14:21:41.296Z",
+    "update_time": "2017-11-22T14:21:41.296Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 49,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T14:24:33.161Z",
+    "update_time": "2017-11-22T14:24:33.161Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 50,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "a@b.cn",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "0",
+    "start_time": "2017-11-22T14:39:53.222Z",
+    "update_time": "2017-11-22T14:39:53.222Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 51,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": ",C,-,B,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-22T15:40:45.048Z",
+    "update_time": "2017-11-22T15:40:57.488Z"
   }
 },
 {

@@ -129,7 +129,7 @@ class ExamRecord(models.Model):
     exam = models.ForeignKey(Exam)
     answers = models.CharField(max_length=2000, blank=True)
     score = models.CharField(max_length=2000, blank=True)
-    start_time = models.DateTimeField(auto_now=True)
+    start_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
