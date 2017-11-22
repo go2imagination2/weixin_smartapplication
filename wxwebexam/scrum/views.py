@@ -42,6 +42,7 @@ def enroll(request):
     exam_record.company = request.POST.get('company', 'Nowhere')
     exam_record.answers = ','.join(['-'] * paper.count())
     exam_record.start_time = timezone.now()
+    print 'now=', timezone.now()
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1
@@ -78,7 +79,7 @@ def single(request):
                    'entry_count': request.session['entry_count'], 'answered': answered,
                    'is_answered_correct': is_answered_correct,
                    'elapsed_seconds': timezone.now() - exam_record.start_time,
-                   'start_time': exam_record.start_time.strftime('%b %d, %Y %H:%M:%S')})
+                   'start_time': timezone.make_naive(exam_record.start_time).strftime('%b %d, %Y %H:%M:%S')})
 
 
 def answerit(request):
@@ -157,13 +158,17 @@ def _send_email(name, email_addr, score):
 
 <p>
 恭喜你完成Scrum认证培训课前测验,你获得了%s分.
-还需要继续阅读《Scrum Guide》.争取早日通过认证,加入学友会,和老师同学们在敏捷实践中共同成长.
+还需要继续阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>.争取早日通过认证,加入学友会,和老师同学们在敏捷实践中共同成长.
 </p>
 
 <p>
 Best Regards,<br/>
 <b>UPerform优普丰敏捷学院</b><br/>
 近期Scrum认证公开课（CSM/CSPO/CSD/ACSM）点击 <a href="www.UPerform.CN">www.UPerform.CN</a>
+</p>
+<p>
+长按扫码关注微信公众号<br/>
+<img src="https://www.uperform.cn/wp-content/uploads/2017/06/upeform_wechat-300x300.png">
 </p>
 """ % (name, score)
 
