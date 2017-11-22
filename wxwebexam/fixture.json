@@ -1,1041 +1,1715 @@
-[
-{
-  "model": "contenttypes.contenttype",
-  "pk": 1,
-  "fields": {
-    "app_label": "admin",
-    "model": "logentry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 2,
-  "fields": {
-    "app_label": "auth",
-    "model": "permission"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 3,
-  "fields": {
-    "app_label": "auth",
-    "model": "group"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 4,
-  "fields": {
-    "app_label": "auth",
-    "model": "user"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 5,
-  "fields": {
-    "app_label": "contenttypes",
-    "model": "contenttype"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 6,
-  "fields": {
-    "app_label": "sessions",
-    "model": "session"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 7,
-  "fields": {
-    "app_label": "scrum",
-    "model": "profile"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 8,
-  "fields": {
-    "app_label": "scrum",
-    "model": "entry"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 9,
-  "fields": {
-    "app_label": "scrum",
-    "model": "paper"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 10,
-  "fields": {
-    "app_label": "scrum",
-    "model": "exam"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 11,
-  "fields": {
-    "app_label": "scrum",
-    "model": "examrecord"
-  }
-},
-{
-  "model": "contenttypes.contenttype",
-  "pk": 12,
-  "fields": {
-    "app_label": "scrum",
-    "model": "entryoption"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "37uyzl5bo8ufkzvcpg1z3n77jr5hlog3",
-  "fields": {
-    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-    "expire_date": "2017-09-13T11:28:25.218Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "410pb5s7cyp5uy9sfttyvsg213jbn2dp",
-  "fields": {
-    "session_data": "NWRhM2FlNmQ1ZDg0ZjdlYmMxOThkNzRlYWQ0YTc2ZTc5OTkwNGM1Yzp7ImN1cnJlbnRfZW50cnlfaWQiOjF9",
-    "expire_date": "2017-10-04T08:06:01.680Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "oczrcokgfds5k07tef9heyxd2k8wzinm",
-  "fields": {
-    "session_data": "OTAwZjE2ZDIxYTgxZGFmMDAwOGU5ZDdiYWEzYTUyYjUwNDJkNTc5Mjp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjEzLCJjdXJyZW50X2VudHJ5X2lkIjozLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjMsIl9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIifQ==",
-    "expire_date": "2017-10-06T15:55:35.560Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "wfjs0y3f571ner69vcxo9azzhpugz3b8",
-  "fields": {
-    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-    "expire_date": "2017-10-04T01:10:59.975Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "z2rk3c6w6sk8dkvz97ce0wyxxpfazx2f",
-  "fields": {
-    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-    "expire_date": "2017-09-16T03:05:20.311Z"
-  }
-},
-{
-  "model": "scrum.entry",
-  "pk": 1,
-  "fields": {
-    "question": "Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
-    "answer": "B",
-    "role": "A",
-    "category": "S",
-    "tips": "\u5355\u9009\u9898\u89e3\u6790",
-    "score": 1
-  }
-},
-{
-  "model": "scrum.entry",
-  "pk": 2,
-  "fields": {
-    "question": "\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
-    "answer": "ABC",
-    "role": "A",
-    "category": "M",
-    "tips": "\u591a\u9009\u9898\u89e3\u6790",
-    "score": 1
-  }
-},
-{
-  "model": "scrum.entry",
-  "pk": 3,
-  "fields": {
-    "question": "\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
-    "answer": "",
-    "role": "A",
-    "category": "S",
-    "tips": "\u53c2\u80033355",
-    "score": 1
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 1,
-  "fields": {
-    "entry": 2,
-    "desc": "SM"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 2,
-  "fields": {
-    "entry": 2,
-    "desc": "PO"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 3,
-  "fields": {
-    "entry": 2,
-    "desc": "DT"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 4,
-  "fields": {
-    "entry": 2,
-    "desc": "manager"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 5,
-  "fields": {
-    "entry": 1,
-    "desc": "YES"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 6,
-  "fields": {
-    "entry": 1,
-    "desc": "NO"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 7,
-  "fields": {
-    "entry": 3,
-    "desc": "YES"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 8,
-  "fields": {
-    "entry": 3,
-    "desc": "NO"
-  }
-},
-{
-  "model": "scrum.entryoption",
-  "pk": 9,
-  "fields": {
-    "entry": 3,
-    "desc": "\u4e0d\u4e00\u5b9a"
-  }
-},
-{
-  "model": "scrum.paper",
-  "pk": 1,
-  "fields": {
-    "name": "Scrum Foundation",
-    "desc": "CSM pre-exam",
-    "image": "",
-    "last_update": "2017-09-22T15:43:03.396Z",
-    "entry": [
-      1,
-      2,
-      3
-    ]
-  }
-},
-{
-  "model": "scrum.exam",
-  "pk": 1,
-  "fields": {
-    "title": "CSM pre-class",
-    "desc": "According to Scrum Guide",
-    "start_time": "2017-09-02T03:20:57Z",
-    "end_time": "2017-09-02T03:20:59Z",
-    "paper": 1
-  }
-},
-{
-  "model": "scrum.exam",
-  "pk": 2,
-  "fields": {
-    "title": "",
-    "desc": "",
-    "start_time": null,
-    "end_time": null,
-    "paper": 1
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 1,
-  "fields": {
-    "name": "tom",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "0",
-    "start_time": "2017-09-20T07:46:40.522Z",
-    "update_time": "2017-09-20T07:46:40.522Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 2,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 2,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-20T07:59:13.435Z",
-    "update_time": "2017-09-20T07:59:13.435Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 3,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-20T08:00:41.211Z",
-    "update_time": "2017-09-20T08:00:41.211Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 4,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-20T08:00:54.408Z",
-    "update_time": "2017-09-20T08:00:54.408Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 5,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-20T08:06:01.674Z",
-    "update_time": "2017-09-20T08:06:01.674Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 6,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-21T02:55:48.936Z",
-    "update_time": "2017-09-21T02:55:48.936Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 7,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-22T15:00:16.543Z",
-    "update_time": "2017-09-22T15:00:16.543Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 8,
-  "fields": {
-    "name": "up",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-22T15:13:47.006Z",
-    "update_time": "2017-09-22T15:13:47.006Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 9,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-22T15:23:41.083Z",
-    "update_time": "2017-09-22T15:23:41.084Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 10,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": "",
-    "score": "",
-    "start_time": "2017-09-22T15:28:07.487Z",
-    "update_time": "2017-09-22T15:28:07.487Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 11,
-  "fields": {
-    "name": "up",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": ",B,D,B",
-    "score": "100",
-    "start_time": "2017-09-22T15:45:08.318Z",
-    "update_time": "2017-09-22T15:45:08.318Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 12,
-  "fields": {
-    "name": "",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": ",B,D,B",
-    "score": "100",
-    "start_time": "2017-09-22T15:48:05.104Z",
-    "update_time": "2017-09-22T15:48:05.104Z"
-  }
-},
-{
-  "model": "scrum.examrecord",
-  "pk": 13,
-  "fields": {
-    "name": "up",
-    "wechat_id": "",
-    "mobile": "",
-    "company": "",
-    "email": "",
-    "exam": 1,
-    "answers": ",B,D,B,D,C,C,ABC",
-    "score": "100",
-    "start_time": "2017-09-22T15:55:35.481Z",
-    "update_time": "2017-09-22T15:55:35.481Z"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 1,
-  "fields": {
-    "name": "Can add log entry",
-    "content_type": 1,
-    "codename": "add_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 2,
-  "fields": {
-    "name": "Can change log entry",
-    "content_type": 1,
-    "codename": "change_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 3,
-  "fields": {
-    "name": "Can delete log entry",
-    "content_type": 1,
-    "codename": "delete_logentry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 4,
-  "fields": {
-    "name": "Can add permission",
-    "content_type": 2,
-    "codename": "add_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 5,
-  "fields": {
-    "name": "Can change permission",
-    "content_type": 2,
-    "codename": "change_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 6,
-  "fields": {
-    "name": "Can delete permission",
-    "content_type": 2,
-    "codename": "delete_permission"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 7,
-  "fields": {
-    "name": "Can add group",
-    "content_type": 3,
-    "codename": "add_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 8,
-  "fields": {
-    "name": "Can change group",
-    "content_type": 3,
-    "codename": "change_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 9,
-  "fields": {
-    "name": "Can delete group",
-    "content_type": 3,
-    "codename": "delete_group"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 10,
-  "fields": {
-    "name": "Can add user",
-    "content_type": 4,
-    "codename": "add_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 11,
-  "fields": {
-    "name": "Can change user",
-    "content_type": 4,
-    "codename": "change_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 12,
-  "fields": {
-    "name": "Can delete user",
-    "content_type": 4,
-    "codename": "delete_user"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 13,
-  "fields": {
-    "name": "Can add content type",
-    "content_type": 5,
-    "codename": "add_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 14,
-  "fields": {
-    "name": "Can change content type",
-    "content_type": 5,
-    "codename": "change_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 15,
-  "fields": {
-    "name": "Can delete content type",
-    "content_type": 5,
-    "codename": "delete_contenttype"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 16,
-  "fields": {
-    "name": "Can add session",
-    "content_type": 6,
-    "codename": "add_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 17,
-  "fields": {
-    "name": "Can change session",
-    "content_type": 6,
-    "codename": "change_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 18,
-  "fields": {
-    "name": "Can delete session",
-    "content_type": 6,
-    "codename": "delete_session"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 19,
-  "fields": {
-    "name": "Can add profile",
-    "content_type": 7,
-    "codename": "add_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 20,
-  "fields": {
-    "name": "Can change profile",
-    "content_type": 7,
-    "codename": "change_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 21,
-  "fields": {
-    "name": "Can delete profile",
-    "content_type": 7,
-    "codename": "delete_profile"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 22,
-  "fields": {
-    "name": "Can add entry",
-    "content_type": 8,
-    "codename": "add_entry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 23,
-  "fields": {
-    "name": "Can change entry",
-    "content_type": 8,
-    "codename": "change_entry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 24,
-  "fields": {
-    "name": "Can delete entry",
-    "content_type": 8,
-    "codename": "delete_entry"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 25,
-  "fields": {
-    "name": "Can add paper",
-    "content_type": 9,
-    "codename": "add_paper"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 26,
-  "fields": {
-    "name": "Can change paper",
-    "content_type": 9,
-    "codename": "change_paper"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 27,
-  "fields": {
-    "name": "Can delete paper",
-    "content_type": 9,
-    "codename": "delete_paper"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 28,
-  "fields": {
-    "name": "Can add exam",
-    "content_type": 10,
-    "codename": "add_exam"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 29,
-  "fields": {
-    "name": "Can change exam",
-    "content_type": 10,
-    "codename": "change_exam"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 30,
-  "fields": {
-    "name": "Can delete exam",
-    "content_type": 10,
-    "codename": "delete_exam"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 31,
-  "fields": {
-    "name": "Can add exam record",
-    "content_type": 11,
-    "codename": "add_examrecord"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 32,
-  "fields": {
-    "name": "Can change exam record",
-    "content_type": 11,
-    "codename": "change_examrecord"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 33,
-  "fields": {
-    "name": "Can delete exam record",
-    "content_type": 11,
-    "codename": "delete_examrecord"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 34,
-  "fields": {
-    "name": "Can add entry option",
-    "content_type": 12,
-    "codename": "add_entryoption"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 35,
-  "fields": {
-    "name": "Can change entry option",
-    "content_type": 12,
-    "codename": "change_entryoption"
-  }
-},
-{
-  "model": "auth.permission",
-  "pk": 36,
-  "fields": {
-    "name": "Can delete entry option",
-    "content_type": 12,
-    "codename": "delete_entryoption"
-  }
-},
-{
-  "model": "auth.user",
-  "pk": 1,
-  "fields": {
-    "password": "pbkdf2_sha256$24000$BQxPNeiUxvzN$XXl4ocTXWgSXs57S2uPdWBjtOt/8vpKuLLv8GlWwrlA=",
-    "last_login": "2017-09-22T15:14:19.603Z",
-    "is_superuser": true,
-    "username": "jacky",
-    "first_name": "",
-    "last_name": "",
-    "email": "a@b.cn",
-    "is_staff": true,
-    "is_active": true,
-    "date_joined": "2017-08-30T11:28:09.402Z",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 1,
-  "fields": {
-    "action_time": "2017-09-02T03:08:43.325Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
-    "action_flag": 1,
-    "change_message": "Added."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 2,
-  "fields": {
-    "action_time": "2017-09-02T03:20:16.715Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "2",
-    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
-    "action_flag": 1,
-    "change_message": "Added."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 3,
-  "fields": {
-    "action_time": "2017-09-02T03:20:32.725Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Scrum Foundation",
-    "action_flag": 1,
-    "change_message": "Added."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 4,
-  "fields": {
-    "action_time": "2017-09-02T03:21:04.515Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "CSM pre-class",
-    "action_flag": 1,
-    "change_message": "Added."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 5,
-  "fields": {
-    "action_time": "2017-09-20T01:35:34.671Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "CSM pre-class",
-    "action_flag": 2,
-    "change_message": "Added exam record \"jacky scored  on CSM pre-class\"."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 6,
-  "fields": {
-    "action_time": "2017-09-20T01:57:07.582Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "2",
-    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
-    "action_flag": 2,
-    "change_message": "Added entry option \"[SM] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[PO] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[DT] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\". Added entry option \"[manager] for Exam [M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f\"."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 7,
-  "fields": {
-    "action_time": "2017-09-20T01:57:13.782Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "[S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
-    "action_flag": 2,
-    "change_message": "Added entry option \"[YES] for Exam [S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f\". Added entry option \"[NO] for Exam [S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f\"."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 8,
-  "fields": {
-    "action_time": "2017-09-20T02:09:22.802Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "2",
-    "object_repr": "[M]\u4e09\u5927\u89d2\u8272\u5305\u62ec\uff1f",
-    "action_flag": 2,
-    "change_message": "Changed desc."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 9,
-  "fields": {
-    "action_time": "2017-09-20T02:09:44.831Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "1",
-    "object_repr": "[S]Scrum\u7b49\u4e8e\u654f\u6377\uff1f",
-    "action_flag": 2,
-    "change_message": "Changed desc."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 10,
-  "fields": {
-    "action_time": "2017-09-20T07:46:40.523Z",
-    "user": 1,
-    "content_type": 11,
-    "object_id": "1",
-    "object_repr": "tom scored 0 on CSM pre-class",
-    "action_flag": 2,
-    "change_message": "Changed name and score."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 11,
-  "fields": {
-    "action_time": "2017-09-20T07:59:09.300Z",
-    "user": 1,
-    "content_type": 10,
-    "object_id": "1",
-    "object_repr": "CSM pre-class",
-    "action_flag": 2,
-    "change_message": "Changed desc."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 12,
-  "fields": {
-    "action_time": "2017-09-22T15:42:30.085Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "3",
-    "object_repr": "[S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
-    "action_flag": 1,
-    "change_message": "Added. Added entry option \"[YES] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\". Added entry option \"[NO] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\"."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 13,
-  "fields": {
-    "action_time": "2017-09-22T15:42:39.641Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Scrum Foundation",
-    "action_flag": 2,
-    "change_message": "Changed entry."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 14,
-  "fields": {
-    "action_time": "2017-09-22T15:42:49.142Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Scrum Foundation",
-    "action_flag": 2,
-    "change_message": "Changed entry."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 15,
-  "fields": {
-    "action_time": "2017-09-22T15:43:03.400Z",
-    "user": 1,
-    "content_type": 9,
-    "object_id": "1",
-    "object_repr": "Scrum Foundation",
-    "action_flag": 2,
-    "change_message": "Changed entry."
-  }
-},
-{
-  "model": "admin.logentry",
-  "pk": 16,
-  "fields": {
-    "action_time": "2017-09-22T15:52:41.399Z",
-    "user": 1,
-    "content_type": 8,
-    "object_id": "3",
-    "object_repr": "[S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f",
-    "action_flag": 2,
-    "change_message": "Added entry option \"[\u4e0d\u4e00\u5b9a] for Exam [S]\u8d44\u4ea7\u5305\u62ec\u71c3\u5c3d\u56fe\uff1f\"."
-  }
-}
-]
+<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+  <object model="contenttypes.contenttype" pk="1">
+    <field name="app_label" type="CharField">admin</field>
+    <field name="model" type="CharField">logentry</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="2">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">permission</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="3">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">group</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="4">
+    <field name="app_label" type="CharField">auth</field>
+    <field name="model" type="CharField">user</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="5">
+    <field name="app_label" type="CharField">contenttypes</field>
+    <field name="model" type="CharField">contenttype</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="6">
+    <field name="app_label" type="CharField">sessions</field>
+    <field name="model" type="CharField">session</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="7">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">profile</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="8">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">entry</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="9">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">paper</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="10">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">exam</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="11">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">examrecord</field>
+  </object>
+  <object model="contenttypes.contenttype" pk="12">
+    <field name="app_label" type="CharField">scrum</field>
+    <field name="model" type="CharField">entryoption</field>
+  </object>
+  <object model="sessions.session" pk="29qd0sbockq7mxk5cg41joofesc0fujk">
+    <field name="session_data" type="TextField">ZjNjNWMwNjkzOTc3NGM1MzM2NGI2NjEyZTVkODI4NzViYTUyNzUyYTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM3LCJjdXJyZW50X2VudHJ5X2lkIjoxLCJlbnRyeV9jb3VudCI6M30=</field>
+    <field name="expire_date" type="DateTimeField">2017-11-13T08:03:14.149577+00:00</field>
+  </object>
+  <object model="sessions.session" pk="37uyzl5bo8ufkzvcpg1z3n77jr5hlog3">
+    <field name="session_data" type="TextField">NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-09-13T11:28:25.218568+00:00</field>
+  </object>
+  <object model="sessions.session" pk="410pb5s7cyp5uy9sfttyvsg213jbn2dp">
+    <field name="session_data" type="TextField">NWRhM2FlNmQ1ZDg0ZjdlYmMxOThkNzRlYWQ0YTc2ZTc5OTkwNGM1Yzp7ImN1cnJlbnRfZW50cnlfaWQiOjF9</field>
+    <field name="expire_date" type="DateTimeField">2017-10-04T08:06:01.680921+00:00</field>
+  </object>
+  <object model="sessions.session" pk="hutzkdexj5u9bb07sik8e8kadiwvi0kx">
+    <field name="session_data" type="TextField">ZDVkN2MzZGVkNjkzMmVhYWE4NzllYmQ4NzI4NGMzYTEzM2IxOWI3OTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjQzLCJjdXJyZW50X2VudHJ5X2lkIjoxLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjIwLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-12-06T03:13:59.108807+00:00</field>
+  </object>
+  <object model="sessions.session" pk="i7vxzjw81fdej9auubbotqspgqmrscpd">
+    <field name="session_data" type="TextField">NzQ1NzFhYzAxOTc5NjU3OTQ4MjNlZTQ3MTVjYThlYzIyZTE3YjQzMzp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM4LCJlbnRyeV9jb3VudCI6M30=</field>
+    <field name="expire_date" type="DateTimeField">2017-12-04T01:13:30.758761+00:00</field>
+  </object>
+  <object model="sessions.session" pk="oczrcokgfds5k07tef9heyxd2k8wzinm">
+    <field name="session_data" type="TextField">OTk1ZDY1ODIyMDI1NDMxMWFjZmNlYTIxZTYxNzQxMmUxZWY3YjgyODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-10-09T16:43:32.595351+00:00</field>
+  </object>
+  <object model="sessions.session" pk="uz6a80keiklxdwa3erjfkmetgivtvvsl">
+    <field name="session_data" type="TextField">ZWYxYTVkMWNkODg1YjI0ZmZmNGQ3YTljYzgwM2ZhMjM3MjQzMDg3ZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM5LCJlbnRyeV9jb3VudCI6M30=</field>
+    <field name="expire_date" type="DateTimeField">2017-12-04T13:34:19.038929+00:00</field>
+  </object>
+  <object model="sessions.session" pk="wfjs0y3f571ner69vcxo9azzhpugz3b8">
+    <field name="session_data" type="TextField">Y2RlMmNhNDI1NjAzYzkwNGI1YTAzYzMxNDRiYjQ1NGU1ZGNhYWZlZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjMwLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjMsIl9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIifQ==</field>
+    <field name="expire_date" type="DateTimeField">2017-10-12T10:28:23.934390+00:00</field>
+  </object>
+  <object model="sessions.session" pk="z2rk3c6w6sk8dkvz97ce0wyxxpfazx2f">
+    <field name="session_data" type="TextField">NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=</field>
+    <field name="expire_date" type="DateTimeField">2017-09-16T03:05:20.311906+00:00</field>
+  </object>
+  <object model="scrum.entry" pk="1">
+    <field name="question" type="CharField">Scrum等于敏捷吗？</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField">Scrum是一种遵循敏捷宣言的框架</field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="2">
+    <field name="question" type="CharField">Scrum定义了三大角色是？</field>
+    <field name="answer" type="CharField">ABC</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField">龙舟队</field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="3">
+    <field name="question" type="CharField">Scrum工件中包括哪些？</field>
+    <field name="answer" type="CharField">ABD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField">参考3355</field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="4">
+    <field name="question" type="CharField">哪个符合Sprint的描述?</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="5">
+    <field name="question" type="CharField">哪些不是每日Scrum站会上要回答的问题？</field>
+    <field name="answer" type="CharField">AB</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="6">
+    <field name="question" type="CharField">下列哪个最符合Product Backlog的定义？</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="7">
+    <field name="question" type="CharField">经验过程(Empirical Process)的三大支柱包括？</field>
+    <field name="answer" type="CharField">ACD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="8">
+    <field name="question" type="CharField">Scrum Team是指？</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="9">
+    <field name="question" type="CharField">Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？</field>
+    <field name="answer" type="CharField"></field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="10">
+    <field name="question" type="CharField">临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？</field>
+    <field name="answer" type="CharField">C</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="11">
+    <field name="question" type="CharField">下列哪个描述更符合Daily Scrum?</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="12">
+    <field name="question" type="CharField">Scrum是基于下列哪种过程论？</field>
+    <field name="answer" type="CharField">C</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="13">
+    <field name="question" type="CharField">工作于同一产品的多个Scrum团队应该如何定义“完成"?</field>
+    <field name="answer" type="CharField">A</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="14">
+    <field name="question" type="CharField">Scrum的价值观是？</field>
+    <field name="answer" type="CharField">B</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="15">
+    <field name="question" type="CharField">哪些人可以参加Sprint Review？</field>
+    <field name="answer" type="CharField">ABCD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="16">
+    <field name="question" type="CharField">在Scrum框架中，谁负责跟踪进度和保证质量？</field>
+    <field name="answer" type="CharField">A</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="17">
+    <field name="question" type="CharField">Sprint时间长度定义是多久？</field>
+    <field name="answer" type="CharField">A</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="18">
+    <field name="question" type="CharField">下列哪个符合Scrum的定义？</field>
+    <field name="answer" type="CharField">BD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">S</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="19">
+    <field name="question" type="CharField">下列哪些不是Scrum定义的事件？</field>
+    <field name="answer" type="CharField">CD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entry" pk="20">
+    <field name="question" type="CharField">关于时间盒，哪些说法是正确的？</field>
+    <field name="answer" type="CharField">ABCD</field>
+    <field name="role" type="CharField">A</field>
+    <field name="category" type="CharField">M</field>
+    <field name="tips" type="CharField"></field>
+    <field name="explanation" type="CharField"></field>
+    <field name="score" type="IntegerField">1</field>
+  </object>
+  <object model="scrum.entryoption" pk="1">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">2</field>
+    <field name="desc" type="CharField">ScrumMaster</field>
+  </object>
+  <object model="scrum.entryoption" pk="2">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">2</field>
+    <field name="desc" type="CharField">Product Owner</field>
+  </object>
+  <object model="scrum.entryoption" pk="3">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">2</field>
+    <field name="desc" type="CharField">Development Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="4">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">2</field>
+    <field name="desc" type="CharField">Project Manager</field>
+  </object>
+  <object model="scrum.entryoption" pk="5">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">1</field>
+    <field name="desc" type="CharField">YES</field>
+  </object>
+  <object model="scrum.entryoption" pk="6">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">1</field>
+    <field name="desc" type="CharField">NO</field>
+  </object>
+  <object model="scrum.entryoption" pk="7">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">3</field>
+    <field name="desc" type="CharField">Sprint Backlog</field>
+  </object>
+  <object model="scrum.entryoption" pk="8">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">3</field>
+    <field name="desc" type="CharField">Increment</field>
+  </object>
+  <object model="scrum.entryoption" pk="9">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">3</field>
+    <field name="desc" type="CharField">Burndown Chart</field>
+  </object>
+  <object model="scrum.entryoption" pk="10">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">4</field>
+    <field name="desc" type="CharField">极限编程方法论中的一个迭代</field>
+  </object>
+  <object model="scrum.entryoption" pk="11">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">4</field>
+    <field name="desc" type="CharField">固定长度的时间盒，包含所有需要的工作</field>
+  </object>
+  <object model="scrum.entryoption" pk="12">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">4</field>
+    <field name="desc" type="CharField">Scrum项目中用尽一切手段完成里程碑</field>
+  </object>
+  <object model="scrum.entryoption" pk="13">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">4</field>
+    <field name="desc" type="CharField">两个开发者之间的速度竞争</field>
+  </object>
+  <object model="scrum.entryoption" pk="14">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">5</field>
+    <field name="desc" type="CharField">解决某个障碍的解决方案是什么？</field>
+  </object>
+  <object model="scrum.entryoption" pk="15">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">5</field>
+    <field name="desc" type="CharField">下一个任务ScrumMaster要分配给谁？</field>
+  </object>
+  <object model="scrum.entryoption" pk="16">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">5</field>
+    <field name="desc" type="CharField">昨天我完成了什么？</field>
+  </object>
+  <object model="scrum.entryoption" pk="17">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">5</field>
+    <field name="desc" type="CharField">我遇到什么障碍会影响达成Sprint目标？</field>
+  </object>
+  <object model="scrum.entryoption" pk="18">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">6</field>
+    <field name="desc" type="CharField">项目需求文档</field>
+  </object>
+  <object model="scrum.entryoption" pk="19">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">6</field>
+    <field name="desc" type="CharField">一份动态的列表</field>
+  </object>
+  <object model="scrum.entryoption" pk="20">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">6</field>
+    <field name="desc" type="CharField">某个迭代的工作集合</field>
+  </object>
+  <object model="scrum.entryoption" pk="21">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">7</field>
+    <field name="desc" type="CharField">检视</field>
+  </object>
+  <object model="scrum.entryoption" pk="22">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">7</field>
+    <field name="desc" type="CharField">设计</field>
+  </object>
+  <object model="scrum.entryoption" pk="23">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">7</field>
+    <field name="desc" type="CharField">透明</field>
+  </object>
+  <object model="scrum.entryoption" pk="24">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">7</field>
+    <field name="desc" type="CharField">调整</field>
+  </object>
+  <object model="scrum.entryoption" pk="25">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">8</field>
+    <field name="desc" type="CharField">开发团队</field>
+  </object>
+  <object model="scrum.entryoption" pk="26">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">8</field>
+    <field name="desc" type="CharField">PO、SM和Development Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="27">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">8</field>
+    <field name="desc" type="CharField">Development Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="28">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">8</field>
+    <field name="desc" type="CharField">敏捷教练团队</field>
+  </object>
+  <object model="scrum.entryoption" pk="29">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">9</field>
+    <field name="desc" type="CharField">燃尽图</field>
+  </object>
+  <object model="scrum.entryoption" pk="30">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">9</field>
+    <field name="desc" type="CharField">"完成"的定义</field>
+  </object>
+  <object model="scrum.entryoption" pk="31">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">9</field>
+    <field name="desc" type="CharField">Sprint Backlog</field>
+  </object>
+  <object model="scrum.entryoption" pk="32">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">9</field>
+    <field name="desc" type="CharField">用户故事</field>
+  </object>
+  <object model="scrum.entryoption" pk="33">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">10</field>
+    <field name="desc" type="CharField">加人手同时加班</field>
+  </object>
+  <object model="scrum.entryoption" pk="34">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">10</field>
+    <field name="desc" type="CharField">延长Sprint时间直到完成任务</field>
+  </object>
+  <object model="scrum.entryoption" pk="35">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">10</field>
+    <field name="desc" type="CharField">Sprint按时结束，下一个Sprint继续计划剩余任务</field>
+  </object>
+  <object model="scrum.entryoption" pk="36">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">10</field>
+    <field name="desc" type="CharField">下一个Sprint按时开始，当前Sprint也要继续完成</field>
+  </object>
+  <object model="scrum.entryoption" pk="37">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">11</field>
+    <field name="desc" type="CharField">ScrumMaster在Daily Scrum上更新燃尽图和看板</field>
+  </object>
+  <object model="scrum.entryoption" pk="38">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">11</field>
+    <field name="desc" type="CharField">Development Team跟踪完成Sprint目标的工作进展</field>
+  </object>
+  <object model="scrum.entryoption" pk="39">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">11</field>
+    <field name="desc" type="CharField">Product Owner检查团队的进度</field>
+  </object>
+  <object model="scrum.entryoption" pk="40">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">11</field>
+    <field name="desc" type="CharField">Development Team向Manager汇报状态</field>
+  </object>
+  <object model="scrum.entryoption" pk="41">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">12</field>
+    <field name="desc" type="CharField">受控过程(Controlled Process)</field>
+  </object>
+  <object model="scrum.entryoption" pk="42">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">12</field>
+    <field name="desc" type="CharField">预定义过程(Defined Process)</field>
+  </object>
+  <object model="scrum.entryoption" pk="43">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">12</field>
+    <field name="desc" type="CharField">经验过程(Empirical Process)</field>
+  </object>
+  <object model="scrum.entryoption" pk="44">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">12</field>
+    <field name="desc" type="CharField">博弈过程(Game Process)</field>
+  </object>
+  <object model="scrum.entryoption" pk="45">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">13</field>
+    <field name="desc" type="CharField">所有Scrum Team共享统一的Definition of Done</field>
+  </object>
+  <object model="scrum.entryoption" pk="46">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">13</field>
+    <field name="desc" type="CharField">每个Scrum Team可以自行定义独特的Definition of Done</field>
+  </object>
+  <object model="scrum.entryoption" pk="47">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">13</field>
+    <field name="desc" type="CharField">ScrumMaster们负责保证每个工作项做到完成</field>
+  </object>
+  <object model="scrum.entryoption" pk="48">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">14</field>
+    <field name="desc" type="CharField">交流、朴素、反馈和勇气</field>
+  </object>
+  <object model="scrum.entryoption" pk="49">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">14</field>
+    <field name="desc" type="CharField">勇气、开放、专注、承诺、尊重</field>
+  </object>
+  <object model="scrum.entryoption" pk="50">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">14</field>
+    <field name="desc" type="CharField">“个体与互动高于流程和工具”等四句话</field>
+  </object>
+  <object model="scrum.entryoption" pk="51">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">14</field>
+    <field name="desc" type="CharField">专注、平等、协作、主动、承诺</field>
+  </object>
+  <object model="scrum.entryoption" pk="52">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">15</field>
+    <field name="desc" type="CharField">Product Owner</field>
+  </object>
+  <object model="scrum.entryoption" pk="53">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">15</field>
+    <field name="desc" type="CharField">Scrum Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="54">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">15</field>
+    <field name="desc" type="CharField">Stakeholder</field>
+  </object>
+  <object model="scrum.entryoption" pk="55">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">15</field>
+    <field name="desc" type="CharField">Development Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="56">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">16</field>
+    <field name="desc" type="CharField">Development Team</field>
+  </object>
+  <object model="scrum.entryoption" pk="57">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">16</field>
+    <field name="desc" type="CharField">Product Owner</field>
+  </object>
+  <object model="scrum.entryoption" pk="58">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">16</field>
+    <field name="desc" type="CharField">Project Manager</field>
+  </object>
+  <object model="scrum.entryoption" pk="59">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">16</field>
+    <field name="desc" type="CharField">ScrumMaster</field>
+  </object>
+  <object model="scrum.entryoption" pk="60">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">17</field>
+    <field name="desc" type="CharField">少于4周</field>
+  </object>
+  <object model="scrum.entryoption" pk="61">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">17</field>
+    <field name="desc" type="CharField">2周</field>
+  </object>
+  <object model="scrum.entryoption" pk="62">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">17</field>
+    <field name="desc" type="CharField">1周</field>
+  </object>
+  <object model="scrum.entryoption" pk="63">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">17</field>
+    <field name="desc" type="CharField">越短越好，做完就结束</field>
+  </object>
+  <object model="scrum.entryoption" pk="64">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">18</field>
+    <field name="desc" type="CharField">一种敏捷方法论</field>
+  </object>
+  <object model="scrum.entryoption" pk="65">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">18</field>
+    <field name="desc" type="CharField">一个破解复杂问题的框架</field>
+  </object>
+  <object model="scrum.entryoption" pk="66">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">18</field>
+    <field name="desc" type="CharField">一种项目管理手段</field>
+  </object>
+  <object model="scrum.entryoption" pk="67">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">19</field>
+    <field name="desc" type="CharField">Sprint Retrospective</field>
+  </object>
+  <object model="scrum.entryoption" pk="68">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">19</field>
+    <field name="desc" type="CharField">Daily Scrum</field>
+  </object>
+  <object model="scrum.entryoption" pk="69">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">19</field>
+    <field name="desc" type="CharField">Product Backlog Refinement</field>
+  </object>
+  <object model="scrum.entryoption" pk="70">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">19</field>
+    <field name="desc" type="CharField">Design Workshop</field>
+  </object>
+  <object model="scrum.entryoption" pk="71">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">3</field>
+    <field name="desc" type="CharField">Product Backlog</field>
+  </object>
+  <object model="scrum.entryoption" pk="72">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">1</field>
+    <field name="desc" type="CharField">不一定</field>
+  </object>
+  <object model="scrum.entryoption" pk="73">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">20</field>
+    <field name="desc" type="CharField">Scrum中定义的事件都是基于时间盒的</field>
+  </object>
+  <object model="scrum.entryoption" pk="74">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">20</field>
+    <field name="desc" type="CharField">时间盒可以提前结束</field>
+  </object>
+  <object model="scrum.entryoption" pk="75">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">20</field>
+    <field name="desc" type="CharField">时间一到，时间盒就立即结束</field>
+  </object>
+  <object model="scrum.entryoption" pk="76">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">20</field>
+    <field name="desc" type="CharField">时间盒有助于协调节奏和提高效率</field>
+  </object>
+  <object model="scrum.entryoption" pk="77">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">6</field>
+    <field name="desc" type="CharField">产品研发合同</field>
+  </object>
+  <object model="scrum.entryoption" pk="78">
+    <field name="entry" rel="ManyToOneRel" to="scrum.entry">18</field>
+    <field name="desc" type="CharField">最短时间内交付最大价值</field>
+  </object>
+  <object model="scrum.paper" pk="1">
+    <field name="name" type="CharField">Scrum Foundation</field>
+    <field name="desc" type="CharField">CSM pre-exam</field>
+    <field name="image" type="CharField"></field>
+    <field name="last_update" type="DateTimeField">2017-11-22T03:13:48.993409+00:00</field>
+    <field name="entry" rel="ManyToManyRel" to="scrum.entry"><object pk="1"></object><object pk="2"></object><object pk="3"></object><object pk="4"></object><object pk="5"></object><object pk="6"></object><object pk="7"></object><object pk="8"></object><object pk="9"></object><object pk="10"></object><object pk="11"></object><object pk="12"></object><object pk="13"></object><object pk="14"></object><object pk="15"></object><object pk="16"></object><object pk="17"></object><object pk="18"></object><object pk="19"></object><object pk="20"></object></field>
+  </object>
+  <object model="scrum.exam" pk="1">
+    <field name="title" type="CharField">CSM pre-class</field>
+    <field name="desc" type="CharField">According to Scrum Guide</field>
+    <field name="start_time" type="DateTimeField">2017-09-02T03:20:57+00:00</field>
+    <field name="end_time" type="DateTimeField">2017-09-02T03:20:59+00:00</field>
+    <field name="paper" rel="ManyToOneRel" to="scrum.paper">1</field>
+  </object>
+  <object model="scrum.exam" pk="2">
+    <field name="title" type="CharField"></field>
+    <field name="desc" type="CharField"></field>
+    <field name="start_time" type="DateTimeField"><None></None></field>
+    <field name="end_time" type="DateTimeField"><None></None></field>
+    <field name="paper" rel="ManyToOneRel" to="scrum.paper">1</field>
+  </object>
+  <object model="scrum.examrecord" pk="19">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">A,ABC,A</field>
+    <field name="score" type="CharField">100</field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:26:44.948437+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:26:44.948449+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="20">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">A,ABC,B</field>
+    <field name="score" type="CharField">100</field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:27:12.208182+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:27:12.208192+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="21">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,ABC,B</field>
+    <field name="score" type="CharField">99</field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:28:52.403948+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:28:52.403964+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="22">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,-,A</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:35:58.412419+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:35:58.412433+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="23">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">A,D,B</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:39:14.498531+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:39:14.498541+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="24">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,A,A</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-25T16:43:32.589301+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-25T16:43:32.589311+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="25">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">A,ABC,C</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:02:28.433983+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:02:28.433995+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="26">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:15:46.725155+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:15:46.725172+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="27">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">A,AC,B</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:16:19.954680+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:16:19.954698+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="28">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField">a@b</field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,,</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:20:32.361772+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:20:32.361785+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="29">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField">a@b</field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">,,</field>
+    <field name="score" type="CharField">0</field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:28:06.938732+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:28:06.938748+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="30">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField">a@b</field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,A,B</field>
+    <field name="score" type="CharField">33</field>
+    <field name="start_time" type="DateTimeField">2017-09-28T10:28:26.825767+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-09-28T10:28:26.825777+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="31">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T06:38:15.652957+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T06:38:15.652975+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="32">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T15:08:59.703685+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T15:08:59.703691+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="33">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T07:25:42.551594+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T07:25:42.551601+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="34">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T07:41:26.992763+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T07:41:26.992775+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="35">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T07:48:20.314995+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T07:48:20.315001+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="36">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T07:50:14.657509+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T07:50:14.657517+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="37">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-10-30T07:59:33.988220+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-10-30T07:59:33.988260+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="38">
+    <field name="name" type="CharField">up</field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField">jackyshen@uperform.cn</field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">,C,-</field>
+    <field name="score" type="CharField">0</field>
+    <field name="start_time" type="DateTimeField">2017-11-20T01:28:59.694896+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-20T01:28:59.694906+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="39">
+    <field name="name" type="CharField">jacky</field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField">up</field>
+    <field name="email" type="CharField">vernon.stinebaker@icloud.com</field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,C,B</field>
+    <field name="score" type="CharField">66</field>
+    <field name="start_time" type="DateTimeField">2017-11-20T14:14:42.015735+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-20T14:14:42.015762+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="40">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-</field>
+    <field name="score" type="CharField">0</field>
+    <field name="start_time" type="DateTimeField">2017-11-21T14:53:05.012842+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-21T14:53:05.012852+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="41">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-,-,-,-,-,-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-11-21T14:53:53.309042+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-21T14:53:53.309056+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="42">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">B,,-,-,AB,-,-,-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-11-22T03:10:18.155782+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-22T03:10:18.155796+00:00</field>
+  </object>
+  <object model="scrum.examrecord" pk="43">
+    <field name="name" type="CharField"></field>
+    <field name="wechat_id" type="CharField"></field>
+    <field name="mobile" type="CharField"></field>
+    <field name="company" type="CharField"></field>
+    <field name="email" type="CharField"></field>
+    <field name="exam" rel="ManyToOneRel" to="scrum.exam">1</field>
+    <field name="answers" type="CharField">-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-</field>
+    <field name="score" type="CharField"></field>
+    <field name="start_time" type="DateTimeField">2017-11-22T03:13:59.088514+00:00</field>
+    <field name="update_time" type="DateTimeField">2017-11-22T03:13:59.088530+00:00</field>
+  </object>
+  <object model="auth.permission" pk="1">
+    <field name="name" type="CharField">Can add log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">add_logentry</field>
+  </object>
+  <object model="auth.permission" pk="2">
+    <field name="name" type="CharField">Can change log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">change_logentry</field>
+  </object>
+  <object model="auth.permission" pk="3">
+    <field name="name" type="CharField">Can delete log entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">1</field>
+    <field name="codename" type="CharField">delete_logentry</field>
+  </object>
+  <object model="auth.permission" pk="4">
+    <field name="name" type="CharField">Can add permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">add_permission</field>
+  </object>
+  <object model="auth.permission" pk="5">
+    <field name="name" type="CharField">Can change permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">change_permission</field>
+  </object>
+  <object model="auth.permission" pk="6">
+    <field name="name" type="CharField">Can delete permission</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">2</field>
+    <field name="codename" type="CharField">delete_permission</field>
+  </object>
+  <object model="auth.permission" pk="7">
+    <field name="name" type="CharField">Can add group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">add_group</field>
+  </object>
+  <object model="auth.permission" pk="8">
+    <field name="name" type="CharField">Can change group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">change_group</field>
+  </object>
+  <object model="auth.permission" pk="9">
+    <field name="name" type="CharField">Can delete group</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">3</field>
+    <field name="codename" type="CharField">delete_group</field>
+  </object>
+  <object model="auth.permission" pk="10">
+    <field name="name" type="CharField">Can add user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">add_user</field>
+  </object>
+  <object model="auth.permission" pk="11">
+    <field name="name" type="CharField">Can change user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">change_user</field>
+  </object>
+  <object model="auth.permission" pk="12">
+    <field name="name" type="CharField">Can delete user</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">4</field>
+    <field name="codename" type="CharField">delete_user</field>
+  </object>
+  <object model="auth.permission" pk="13">
+    <field name="name" type="CharField">Can add content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">add_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="14">
+    <field name="name" type="CharField">Can change content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">change_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="15">
+    <field name="name" type="CharField">Can delete content type</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">5</field>
+    <field name="codename" type="CharField">delete_contenttype</field>
+  </object>
+  <object model="auth.permission" pk="16">
+    <field name="name" type="CharField">Can add session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">add_session</field>
+  </object>
+  <object model="auth.permission" pk="17">
+    <field name="name" type="CharField">Can change session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">change_session</field>
+  </object>
+  <object model="auth.permission" pk="18">
+    <field name="name" type="CharField">Can delete session</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">6</field>
+    <field name="codename" type="CharField">delete_session</field>
+  </object>
+  <object model="auth.permission" pk="19">
+    <field name="name" type="CharField">Can add profile</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">add_profile</field>
+  </object>
+  <object model="auth.permission" pk="20">
+    <field name="name" type="CharField">Can change profile</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">change_profile</field>
+  </object>
+  <object model="auth.permission" pk="21">
+    <field name="name" type="CharField">Can delete profile</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">7</field>
+    <field name="codename" type="CharField">delete_profile</field>
+  </object>
+  <object model="auth.permission" pk="22">
+    <field name="name" type="CharField">Can add entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">add_entry</field>
+  </object>
+  <object model="auth.permission" pk="23">
+    <field name="name" type="CharField">Can change entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">change_entry</field>
+  </object>
+  <object model="auth.permission" pk="24">
+    <field name="name" type="CharField">Can delete entry</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="codename" type="CharField">delete_entry</field>
+  </object>
+  <object model="auth.permission" pk="25">
+    <field name="name" type="CharField">Can add paper</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">add_paper</field>
+  </object>
+  <object model="auth.permission" pk="26">
+    <field name="name" type="CharField">Can change paper</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">change_paper</field>
+  </object>
+  <object model="auth.permission" pk="27">
+    <field name="name" type="CharField">Can delete paper</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="codename" type="CharField">delete_paper</field>
+  </object>
+  <object model="auth.permission" pk="28">
+    <field name="name" type="CharField">Can add exam</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">add_exam</field>
+  </object>
+  <object model="auth.permission" pk="29">
+    <field name="name" type="CharField">Can change exam</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">change_exam</field>
+  </object>
+  <object model="auth.permission" pk="30">
+    <field name="name" type="CharField">Can delete exam</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="codename" type="CharField">delete_exam</field>
+  </object>
+  <object model="auth.permission" pk="31">
+    <field name="name" type="CharField">Can add exam record</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">add_examrecord</field>
+  </object>
+  <object model="auth.permission" pk="32">
+    <field name="name" type="CharField">Can change exam record</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">change_examrecord</field>
+  </object>
+  <object model="auth.permission" pk="33">
+    <field name="name" type="CharField">Can delete exam record</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="codename" type="CharField">delete_examrecord</field>
+  </object>
+  <object model="auth.permission" pk="34">
+    <field name="name" type="CharField">Can add entry option</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">add_entryoption</field>
+  </object>
+  <object model="auth.permission" pk="35">
+    <field name="name" type="CharField">Can change entry option</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">change_entryoption</field>
+  </object>
+  <object model="auth.permission" pk="36">
+    <field name="name" type="CharField">Can delete entry option</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">12</field>
+    <field name="codename" type="CharField">delete_entryoption</field>
+  </object>
+  <object model="auth.user" pk="1">
+    <field name="password" type="CharField">pbkdf2_sha256$24000$BQxPNeiUxvzN$XXl4ocTXWgSXs57S2uPdWBjtOt/8vpKuLLv8GlWwrlA=</field>
+    <field name="last_login" type="DateTimeField">2017-11-21T14:36:40.296578+00:00</field>
+    <field name="is_superuser" type="BooleanField">True</field>
+    <field name="username" type="CharField">jacky</field>
+    <field name="first_name" type="CharField"></field>
+    <field name="last_name" type="CharField"></field>
+    <field name="email" type="CharField">a@b.cn</field>
+    <field name="is_staff" type="BooleanField">True</field>
+    <field name="is_active" type="BooleanField">True</field>
+    <field name="date_joined" type="DateTimeField">2017-08-30T11:28:09.402142+00:00</field>
+    <field name="groups" rel="ManyToManyRel" to="auth.group"></field>
+    <field name="user_permissions" rel="ManyToManyRel" to="auth.permission"></field>
+  </object>
+  <object model="admin.logentry" pk="1">
+    <field name="action_time" type="DateTimeField">2017-09-02T03:08:43.325758+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum等于敏捷？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added.</field>
+  </object>
+  <object model="admin.logentry" pk="2">
+    <field name="action_time" type="DateTimeField">2017-09-02T03:20:16.715980+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField">[M]三大角色包括？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added.</field>
+  </object>
+  <object model="admin.logentry" pk="3">
+    <field name="action_time" type="DateTimeField">2017-09-02T03:20:32.725121+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added.</field>
+  </object>
+  <object model="admin.logentry" pk="4">
+    <field name="action_time" type="DateTimeField">2017-09-02T03:21:04.515783+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added.</field>
+  </object>
+  <object model="admin.logentry" pk="5">
+    <field name="action_time" type="DateTimeField">2017-09-20T01:35:34.671343+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Added exam record "jacky scored  on CSM pre-class".</field>
+  </object>
+  <object model="admin.logentry" pk="6">
+    <field name="action_time" type="DateTimeField">2017-09-20T01:57:07.582113+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField">[M]三大角色包括？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Added entry option "[SM] for Exam [M]三大角色包括？". Added entry option "[PO] for Exam [M]三大角色包括？". Added entry option "[DT] for Exam [M]三大角色包括？". Added entry option "[manager] for Exam [M]三大角色包括？".</field>
+  </object>
+  <object model="admin.logentry" pk="7">
+    <field name="action_time" type="DateTimeField">2017-09-20T01:57:13.782344+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">[S]Scrum等于敏捷？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Added entry option "[YES] for Exam [S]Scrum等于敏捷？". Added entry option "[NO] for Exam [S]Scrum等于敏捷？".</field>
+  </object>
+  <object model="admin.logentry" pk="8">
+    <field name="action_time" type="DateTimeField">2017-09-20T02:09:22.802454+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField">[M]三大角色包括？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc.</field>
+  </object>
+  <object model="admin.logentry" pk="9">
+    <field name="action_time" type="DateTimeField">2017-09-20T02:09:44.831872+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">[S]Scrum等于敏捷？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc.</field>
+  </object>
+  <object model="admin.logentry" pk="10">
+    <field name="action_time" type="DateTimeField">2017-09-20T07:46:40.523881+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">tom scored 0 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed name and score.</field>
+  </object>
+  <object model="admin.logentry" pk="11">
+    <field name="action_time" type="DateTimeField">2017-09-20T07:59:09.300744+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">10</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc.</field>
+  </object>
+  <object model="admin.logentry" pk="12">
+    <field name="action_time" type="DateTimeField">2017-09-22T15:42:30.085351+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField">[S]资产包括燃尽图？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[YES] for Exam [S]资产包括燃尽图？". Added entry option "[NO] for Exam [S]资产包括燃尽图？".</field>
+  </object>
+  <object model="admin.logentry" pk="13">
+    <field name="action_time" type="DateTimeField">2017-09-22T15:42:39.641782+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed entry.</field>
+  </object>
+  <object model="admin.logentry" pk="14">
+    <field name="action_time" type="DateTimeField">2017-09-22T15:42:49.142069+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed entry.</field>
+  </object>
+  <object model="admin.logentry" pk="15">
+    <field name="action_time" type="DateTimeField">2017-09-22T15:43:03.400434+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed entry.</field>
+  </object>
+  <object model="admin.logentry" pk="16">
+    <field name="action_time" type="DateTimeField">2017-09-22T15:52:41.399558+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField">[S]资产包括燃尽图？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Added entry option "[不一定] for Exam [S]资产包括燃尽图？".</field>
+  </object>
+  <object model="admin.logentry" pk="17">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:44:50.942796+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField">[S]资产包括燃尽图？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed answer.</field>
+  </object>
+  <object model="admin.logentry" pk="18">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.138727+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">18</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="19">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.142918+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">17</field>
+    <field name="object_repr" type="CharField"> scored 100 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="20">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.144649+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">16</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="21">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.146436+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">15</field>
+    <field name="object_repr" type="CharField"> scored 66 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="22">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.147868+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">14</field>
+    <field name="object_repr" type="CharField"> scored 0 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="23">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.149405+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">13</field>
+    <field name="object_repr" type="CharField">up scored 3 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="24">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.150854+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">12</field>
+    <field name="object_repr" type="CharField"> scored 100 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="25">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.152656+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">11</field>
+    <field name="object_repr" type="CharField">up scored 100 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="26">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.154200+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">10</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="27">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.155805+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">9</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="28">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.157177+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">8</field>
+    <field name="object_repr" type="CharField">up scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="29">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.158601+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">7</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="30">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.160326+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">6</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="31">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.162237+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">5</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="32">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.163695+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">4</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="33">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.165308+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField"> scored  on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="34">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.166638+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField"> scored  on </field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="35">
+    <field name="action_time" type="DateTimeField">2017-09-25T14:45:04.168569+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">11</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">tom scored 0 on CSM pre-class</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">3</field>
+    <field name="change_message" type="TextField"></field>
+  </object>
+  <object model="admin.logentry" pk="36">
+    <field name="action_time" type="DateTimeField">2017-09-25T16:21:20.589007+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">[S]Scrum等于敏捷？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed tips.</field>
+  </object>
+  <object model="admin.logentry" pk="37">
+    <field name="action_time" type="DateTimeField">2017-09-25T16:21:29.042597+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField">[M]三大角色包括？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed tips.</field>
+  </object>
+  <object model="admin.logentry" pk="38">
+    <field name="action_time" type="DateTimeField">2017-09-25T16:21:33.327066+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField">[S]资产包括燃尽图？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">No fields changed.</field>
+  </object>
+  <object model="admin.logentry" pk="39">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:39:44.815099+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">4</field>
+    <field name="object_repr" type="CharField">[S]什么是Sprint?</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[极限编程方法论中的一个迭代] for Exam [S]什么是Sprint?". Added entry option "[固定长度的时间盒，包含所有需要的工作] for Exam [S]什么是Sprint?". Added entry option "[Scrum项目中用尽一切手段完成里程碑] for Exam [S]什么是Sprint?". Added entry option "[两个开发者之间的速度竞争] for Exam [S]什么是Sprint?".</field>
+  </object>
+  <object model="admin.logentry" pk="40">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:42:31.729916+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">5</field>
+    <field name="object_repr" type="CharField">[M]哪些不是每日Scrum站会上要回答的问题？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[解决障碍的解决方案是什么？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？". Added entry option "[下一个任务ScrumMaster要分配给谁？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？". Added entry option "[昨天完成了什么？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？". Added entry option "[我遇到什么障碍会影响达成Sprint目标？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？".</field>
+  </object>
+  <object model="admin.logentry" pk="41">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:44:36.904408+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">6</field>
+    <field name="object_repr" type="CharField">[S]下列哪个最符合Product Backlog的定义？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[项目需求计划] for Exam [S]下列哪个最符合Product Backlog的定义？". Added entry option "[一份动态的列表] for Exam [S]下列哪个最符合Product Backlog的定义？". Added entry option "[迭代的工作集合] for Exam [S]下列哪个最符合Product Backlog的定义？".</field>
+  </object>
+  <object model="admin.logentry" pk="42">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:46:03.151628+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">7</field>
+    <field name="object_repr" type="CharField">[M]经验过程(Empirical Process)的三大支柱包括？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[检视] for Exam [M]经验过程(Empirical Process)的三大支柱包括？". Added entry option "[设计] for Exam [M]经验过程(Empirical Process)的三大支柱包括？". Added entry option "[透明] for Exam [M]经验过程(Empirical Process)的三大支柱包括？". Added entry option "[调整] for Exam [M]经验过程(Empirical Process)的三大支柱包括？".</field>
+  </object>
+  <object model="admin.logentry" pk="43">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:47:43.024586+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">8</field>
+    <field name="object_repr" type="CharField">[S]Scrum Team是指？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[开发团队] for Exam [S]Scrum Team是指？". Added entry option "[PO、SM和Development Team] for Exam [S]Scrum Team是指？". Added entry option "[Development Team] for Exam [S]Scrum Team是指？". Added entry option "[敏捷教练团队] for Exam [S]Scrum Team是指？".</field>
+  </object>
+  <object model="admin.logentry" pk="44">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:50:35.585876+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">9</field>
+    <field name="object_repr" type="CharField">[S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[燃尽图] for Exam [S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？". Added entry option "[完成的定义] for Exam [S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？". Added entry option "[Sprint Backlog] for Exam [S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？". Added entry option "[用户故事] for Exam [S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？".</field>
+  </object>
+  <object model="admin.logentry" pk="45">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:52:45.433962+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">10</field>
+    <field name="object_repr" type="CharField">[S]临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[加人手同时加班] for Exam [S]临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？". Added entry option "[延长Sprint时间直到完成任务] for Exam [S]临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？". Added entry option "[Sprint按时结束，下一个Sprint继续计划剩余任务] for Exam [S]临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？". Added entry option "[下一个Sprint按时开始，当前Sprint也要继续完成] for Exam [S]临近Sprint结束时，大家发现工作不能全部完成，那么应该怎么做？".</field>
+  </object>
+  <object model="admin.logentry" pk="46">
+    <field name="action_time" type="DateTimeField">2017-11-21T14:53:39.142744+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed entry.</field>
+  </object>
+  <object model="admin.logentry" pk="47">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:04:45.845609+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">11</field>
+    <field name="object_repr" type="CharField">[S]下列哪个描述更符合Daily Scrum?</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[ScrumMaster在Daily Scrum上更新燃尽图和看板] for Exam [S]下列哪个描述更符合Daily Scrum?". Added entry option "[Development Team跟踪完成Sprint目标的工作进展] for Exam [S]下列哪个描述更符合Daily Scrum?". Added entry option "[Product Owner检查团队的进度] for Exam [S]下列哪个描述更符合Daily Scrum?". Added entry option "[Development Team向Manager汇报状态] for Exam [S]下列哪个描述更符合Daily Scrum?".</field>
+  </object>
+  <object model="admin.logentry" pk="48">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:07:14.978392+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">12</field>
+    <field name="object_repr" type="CharField">[S]Scrum是基于下列哪种过程？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[阶段性过程(Phased Process)] for Exam [S]Scrum是基于下列哪种过程？". Added entry option "[预定义过程(Defined Process)] for Exam [S]Scrum是基于下列哪种过程？". Added entry option "[经验过程(Empirical Process)] for Exam [S]Scrum是基于下列哪种过程？". Added entry option "[受控过程(Monitored Process)] for Exam [S]Scrum是基于下列哪种过程？".</field>
+  </object>
+  <object model="admin.logentry" pk="49">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:10:42.439831+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">13</field>
+    <field name="object_repr" type="CharField">[S]工作于同一产品的多个Scrum团队应该如何定义“完成"?</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[所有Scrum Team共享统一的Definition of Done] for Exam [S]工作于同一产品的多个Scrum团队应该如何定义“完成"?". Added entry option "[每个Scrum Team可以自行定义独特的Definition of Done] for Exam [S]工作于同一产品的多个Scrum团队应该如何定义“完成"?". Added entry option "[ScrumMaster负责保证每个工作项做到完成] for Exam [S]工作于同一产品的多个Scrum团队应该如何定义“完成"?".</field>
+  </object>
+  <object model="admin.logentry" pk="50">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:14:37.176380+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">14</field>
+    <field name="object_repr" type="CharField">[S]Scrum的价值观是？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[交流、朴素、反馈和勇气] for Exam [S]Scrum的价值观是？". Added entry option "[勇气、开放、专注、承诺、尊重] for Exam [S]Scrum的价值观是？". Added entry option "[“个体与互动高于流程和工具”等四句话] for Exam [S]Scrum的价值观是？". Added entry option "[专注、平等、协作、主动、承诺] for Exam [S]Scrum的价值观是？".</field>
+  </object>
+  <object model="admin.logentry" pk="51">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:17:01.604664+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">15</field>
+    <field name="object_repr" type="CharField">[M]哪些人可以参加Sprint Review？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[Product Owner] for Exam [M]哪些人可以参加Sprint Review？". Added entry option "[Scrum Team] for Exam [M]哪些人可以参加Sprint Review？". Added entry option "[Stakeholder] for Exam [M]哪些人可以参加Sprint Review？". Added entry option "[Development Team] for Exam [M]哪些人可以参加Sprint Review？".</field>
+  </object>
+  <object model="admin.logentry" pk="52">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:18:30.745892+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">16</field>
+    <field name="object_repr" type="CharField">[S]在Scrum框架中，谁负责跟踪进度和保证质量？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[Development Team] for Exam [S]在Scrum框架中，谁负责跟踪进度和保证质量？". Added entry option "[Product Owner] for Exam [S]在Scrum框架中，谁负责跟踪进度和保证质量？". Added entry option "[Project Manager] for Exam [S]在Scrum框架中，谁负责跟踪进度和保证质量？". Added entry option "[ScrumMaster] for Exam [S]在Scrum框架中，谁负责跟踪进度和保证质量？".</field>
+  </object>
+  <object model="admin.logentry" pk="53">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:20:14.077428+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">12</field>
+    <field name="object_repr" type="CharField">[S]Scrum是基于下列哪种过程论？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question. Changed desc for entry option "[受控过程(Controlled Process)] for Exam [S]Scrum是基于下列哪种过程论？". Changed desc for entry option "[博弈过程(Game Process)] for Exam [S]Scrum是基于下列哪种过程论？".</field>
+  </object>
+  <object model="admin.logentry" pk="54">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:26:25.544592+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">17</field>
+    <field name="object_repr" type="CharField">[S]Sprint时间长度是多久？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[少于4周] for Exam [S]Sprint时间长度是多久？". Added entry option "[2周] for Exam [S]Sprint时间长度是多久？". Added entry option "[1周] for Exam [S]Sprint时间长度是多久？". Added entry option "[越短越好，做完就结束] for Exam [S]Sprint时间长度是多久？".</field>
+  </object>
+  <object model="admin.logentry" pk="55">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:27:56.248614+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">18</field>
+    <field name="object_repr" type="CharField">[S]Scrum的定义是？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[一种敏捷方法论] for Exam [S]Scrum的定义是？". Added entry option "[一个破解复杂问题的框架] for Exam [S]Scrum的定义是？". Added entry option "[一种项目管理手段] for Exam [S]Scrum的定义是？".</field>
+  </object>
+  <object model="admin.logentry" pk="56">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:41:07.687905+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">19</field>
+    <field name="object_repr" type="CharField">[M]下列哪些不是Scrum定义的事件？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[Sprint Retrospective] for Exam [M]下列哪些不是Scrum定义的事件？". Added entry option "[Daily Scrum] for Exam [M]下列哪些不是Scrum定义的事件？". Added entry option "[Product Backlog Refinement] for Exam [M]下列哪些不是Scrum定义的事件？". Added entry option "[Design Workshop] for Exam [M]下列哪些不是Scrum定义的事件？".</field>
+  </object>
+  <object model="admin.logentry" pk="57">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:56:26.484743+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">2</field>
+    <field name="object_repr" type="CharField">[M]Scrum定义了三大角色是？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question. Changed desc for entry option "[ScrumMaster] for Exam [M]Scrum定义了三大角色是？". Changed desc for entry option "[Product Owner] for Exam [M]Scrum定义了三大角色是？". Changed desc for entry option "[Development Team] for Exam [M]Scrum定义了三大角色是？". Changed desc for entry option "[Project Manager] for Exam [M]Scrum定义了三大角色是？".</field>
+  </object>
+  <object model="admin.logentry" pk="58">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:57:50.646628+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">3</field>
+    <field name="object_repr" type="CharField">[M]Scrum工件中包括哪些？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question, answer and category. Added entry option "[Product Backlog] for Exam [M]Scrum工件中包括哪些？". Changed desc for entry option "[Sprint Backlog] for Exam [M]Scrum工件中包括哪些？". Changed desc for entry option "[Increment] for Exam [M]Scrum工件中包括哪些？". Changed desc for entry option "[Burndown Chart] for Exam [M]Scrum工件中包括哪些？".</field>
+  </object>
+  <object model="admin.logentry" pk="59">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:58:09.507898+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">[S]Scrum等于敏捷吗？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question. Added entry option "[不一定] for Exam [S]Scrum等于敏捷吗？".</field>
+  </object>
+  <object model="admin.logentry" pk="60">
+    <field name="action_time" type="DateTimeField">2017-11-22T02:58:29.372172+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">5</field>
+    <field name="object_repr" type="CharField">[M]哪些不是每日Scrum站会上要回答的问题？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc for entry option "[解决某个障碍的解决方案是什么？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？". Changed desc for entry option "[昨天我完成了什么？] for Exam [M]哪些不是每日Scrum站会上要回答的问题？".</field>
+  </object>
+  <object model="admin.logentry" pk="61">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:02:12.647093+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">20</field>
+    <field name="object_repr" type="CharField">[M]关于时间盒，哪些说法是正确的？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">1</field>
+    <field name="change_message" type="TextField">Added. Added entry option "[Scrum中定义的事件都是基于时间盒的] for Exam [M]关于时间盒，哪些说法是正确的？". Added entry option "[时间盒可以提前结束] for Exam [M]关于时间盒，哪些说法是正确的？". Added entry option "[时间一到，时间盒就立即结束] for Exam [M]关于时间盒，哪些说法是正确的？". Added entry option "[时间盒有助于协调节奏和提高效率] for Exam [M]关于时间盒，哪些说法是正确的？".</field>
+  </object>
+  <object model="admin.logentry" pk="62">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:03:30.259082+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">9</field>
+    <field name="object_repr" type="CharField">[S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc for entry option "["完成"的定义] for Exam [S]Scrum团队对某项工作能否交付的一致理解是通过什么来体现的？".</field>
+  </object>
+  <object model="admin.logentry" pk="63">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:04:29.024638+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">6</field>
+    <field name="object_repr" type="CharField">[S]下列哪个最符合Product Backlog的定义？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Added entry option "[产品研发合同] for Exam [S]下列哪个最符合Product Backlog的定义？". Changed desc for entry option "[项目需求文档] for Exam [S]下列哪个最符合Product Backlog的定义？". Changed desc for entry option "[某个迭代的工作集合] for Exam [S]下列哪个最符合Product Backlog的定义？".</field>
+  </object>
+  <object model="admin.logentry" pk="64">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:04:46.152906+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">4</field>
+    <field name="object_repr" type="CharField">[S]哪个符合Sprint的描述?</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question.</field>
+  </object>
+  <object model="admin.logentry" pk="65">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:05:16.732784+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">17</field>
+    <field name="object_repr" type="CharField">[S]Sprint时间长度定义是多久？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question.</field>
+  </object>
+  <object model="admin.logentry" pk="66">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:06:03.650574+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">[S]Scrum等于敏捷吗？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed tips and explanation.</field>
+  </object>
+  <object model="admin.logentry" pk="67">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:08:00.188531+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">13</field>
+    <field name="object_repr" type="CharField">[S]工作于同一产品的多个Scrum团队应该如何定义“完成"?</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed desc for entry option "[ScrumMaster们负责保证每个工作项做到完成] for Exam [S]工作于同一产品的多个Scrum团队应该如何定义“完成"?".</field>
+  </object>
+  <object model="admin.logentry" pk="68">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:09:17.838031+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">8</field>
+    <field name="object_id" type="TextField">18</field>
+    <field name="object_repr" type="CharField">[S]下列哪个符合Scrum的定义？</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed question and answer. Added entry option "[最短时间内交付最大价值] for Exam [S]下列哪个符合Scrum的定义？".</field>
+  </object>
+  <object model="admin.logentry" pk="69">
+    <field name="action_time" type="DateTimeField">2017-11-22T03:13:48.998668+00:00</field>
+    <field name="user" rel="ManyToOneRel" to="auth.user">1</field>
+    <field name="content_type" rel="ManyToOneRel" to="contenttypes.contenttype">9</field>
+    <field name="object_id" type="TextField">1</field>
+    <field name="object_repr" type="CharField">Scrum Foundation</field>
+    <field name="action_flag" type="PositiveSmallIntegerField">2</field>
+    <field name="change_message" type="TextField">Changed entry.</field>
+  </object>
+</django-objects>
