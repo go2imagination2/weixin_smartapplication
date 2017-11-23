@@ -51,10 +51,12 @@
             {% endif %}
             <a href="javascript:void(0);" class="weui-cell weui-cell_link" id="explanation">
                 <div class="weui-msg__icon-area">
-                    {% if is_answered_correct %}
-                    <i class="weui-icon-success weui-icon_msg"></i>
-                    {% else %}
-                    <i class="weui-icon-warn weui-icon_msg"></i>
+                    {% if answered %}
+                        {% if is_answered_correct %}
+                        <i class="weui-icon-success weui-icon_msg"></i>
+                        {% else %}
+                        <i class="weui-icon-warn weui-icon_msg"></i>
+                        {% endif %}
                     {% endif %}
                 </div>
                 <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>解释:{{entry.explanation}}
