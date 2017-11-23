@@ -158,17 +158,15 @@ def _send_email(name, email_addr, score):
 
 <p>
 恭喜你完成Scrum认证培训课前测验,你获得了%s分.
-还需要继续阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>.争取早日通过认证,加入学友会,和老师同学们在敏捷实践中共同成长.
+你还需要继续阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>.争取早日通过认证,加入学友会群,和老师同学们在敏捷实践中共同成长,继续向更高级的职业路径发展.
+
 </p>
 
 <p>
 Best Regards,<br/>
-<b>UPerform优普丰敏捷学院</b><br/>
-近期Scrum认证公开课（CSM/CSPO/CSD/ACSM）点击 <a href="www.UPerform.CN">www.UPerform.CN</a>
-</p>
-<p>
-长按扫码关注微信公众号<br/>
-<img src="https://www.uperform.cn/wp-content/uploads/2017/06/upeform_wechat-300x300.png">
+<b><span style="color:blue;">UP</span>er<span style="color:blue;">f</span>orm 优普丰<span style="color:blue;">敏捷</span>学院</b>
+<br/>创立于2007年<br/>
+近期Scrum认证公开课(CSM/CSPO/CSD/ACSM)及资深敏捷教练服务,请点击 <a href="www.UPerform.CN">www.UPerform.CN</a>
 </p>
 """ % (name, score)
 
