@@ -96,6 +96,78 @@
   }
 },
 {
+  "model": "sessions.session",
+  "pk": "29qd0sbockq7mxk5cg41joofesc0fujk",
+  "fields": {
+    "session_data": "ZjNjNWMwNjkzOTc3NGM1MzM2NGI2NjEyZTVkODI4NzViYTUyNzUyYTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM3LCJjdXJyZW50X2VudHJ5X2lkIjoxLCJlbnRyeV9jb3VudCI6M30=",
+    "expire_date": "2017-11-13T08:03:14.149Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "37uyzl5bo8ufkzvcpg1z3n77jr5hlog3",
+  "fields": {
+    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-09-13T11:28:25.218Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "410pb5s7cyp5uy9sfttyvsg213jbn2dp",
+  "fields": {
+    "session_data": "NWRhM2FlNmQ1ZDg0ZjdlYmMxOThkNzRlYWQ0YTc2ZTc5OTkwNGM1Yzp7ImN1cnJlbnRfZW50cnlfaWQiOjF9",
+    "expire_date": "2017-10-04T08:06:01.680Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hutzkdexj5u9bb07sik8e8kadiwvi0kx",
+  "fields": {
+    "session_data": "OWUyM2EwNmI4MWI2N2YwYzg0Yjk1NzIzNDkwOTQ5OTZjZWYyYTM1ZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjU3LCJjdXJyZW50X2VudHJ5X2lkIjoyLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjIwLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
+    "expire_date": "2017-12-07T11:25:52.225Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i7vxzjw81fdej9auubbotqspgqmrscpd",
+  "fields": {
+    "session_data": "NzQ1NzFhYzAxOTc5NjU3OTQ4MjNlZTQ3MTVjYThlYzIyZTE3YjQzMzp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM4LCJlbnRyeV9jb3VudCI6M30=",
+    "expire_date": "2017-12-04T01:13:30.758Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oczrcokgfds5k07tef9heyxd2k8wzinm",
+  "fields": {
+    "session_data": "OTk1ZDY1ODIyMDI1NDMxMWFjZmNlYTIxZTYxNzQxMmUxZWY3YjgyODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
+    "expire_date": "2017-10-09T16:43:32.595Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uz6a80keiklxdwa3erjfkmetgivtvvsl",
+  "fields": {
+    "session_data": "ZWYxYTVkMWNkODg1YjI0ZmZmNGQ3YTljYzgwM2ZhMjM3MjQzMDg3ZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM5LCJlbnRyeV9jb3VudCI6M30=",
+    "expire_date": "2017-12-04T13:34:19.038Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wfjs0y3f571ner69vcxo9azzhpugz3b8",
+  "fields": {
+    "session_data": "Y2RlMmNhNDI1NjAzYzkwNGI1YTAzYzMxNDRiYjQ1NGU1ZGNhYWZlZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjMwLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjMsIl9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIifQ==",
+    "expire_date": "2017-10-12T10:28:23.934Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z2rk3c6w6sk8dkvz97ce0wyxxpfazx2f",
+  "fields": {
+    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
+    "expire_date": "2017-09-16T03:05:20.311Z"
+  }
+},
+{
   "model": "scrum.entry",
   "pk": 1,
   "fields": {
@@ -268,7 +340,7 @@
   "model": "scrum.entry",
   "pk": 14,
   "fields": {
-    "question": "Scrum\u7684\u4ef7\u503c\u89c2\u662f\uff1f",
+    "question": "Scrum\u6846\u67b6\u6240\u5b9a\u4e49\u7684\u4ef7\u503c\u89c2\u662f\uff1f",
     "answer": "B",
     "role": "A",
     "category": "S",
@@ -294,7 +366,7 @@
   "model": "scrum.entry",
   "pk": 16,
   "fields": {
-    "question": "\u5728Scrum\u6846\u67b6\u4e2d\uff0c\u8c01\u8d1f\u8d23\u8ddf\u8e2a\u8fdb\u5ea6\u548c\u4fdd\u8bc1\u8d28\u91cf\uff1f",
+    "question": "\u5728Sprint\u8fc7\u7a0b\u4e2d\uff0c\u8c01\u8d1f\u8d23\u8ddf\u8e2a\u8fdb\u5ea6\u548c\u4fdd\u8bc1\u8d28\u91cf\uff1f",
     "answer": "A",
     "role": "A",
     "category": "S",
@@ -432,7 +504,7 @@
   "pk": 10,
   "fields": {
     "entry": 4,
-    "desc": "\u6781\u9650\u7f16\u7a0b\u65b9\u6cd5\u8bba\u4e2d\u7684\u4e00\u4e2a\u8fed\u4ee3"
+    "desc": "\u6781\u9650\u7f16\u7a0b\u65b9\u6cd5\u8bba\u4e2d\u5b9a\u4e49\u7684\u4e00\u4e2a\u8fed\u4ee3"
   }
 },
 {
@@ -440,7 +512,7 @@
   "pk": 11,
   "fields": {
     "entry": 4,
-    "desc": "\u56fa\u5b9a\u957f\u5ea6\u7684\u65f6\u95f4\u76d2\uff0c\u5305\u542b\u6240\u6709\u9700\u8981\u7684\u5de5\u4f5c"
+    "desc": "\u4e00\u4e2a\u56fa\u5b9a\u957f\u5ea6\u7684\u65f6\u95f4\u76d2\uff0c\u5305\u542b\u6240\u6709\u9700\u8981\u5b8c\u6210\u7684\u5de5\u4f5c"
   }
 },
 {
@@ -448,7 +520,7 @@
   "pk": 12,
   "fields": {
     "entry": 4,
-    "desc": "Scrum\u9879\u76ee\u4e2d\u7528\u5c3d\u4e00\u5207\u624b\u6bb5\u5b8c\u6210\u91cc\u7a0b\u7891"
+    "desc": "Scrum\u9879\u76ee\u4e2d\u7528\u5c3d\u4e00\u5207\u624b\u6bb5\u8fbe\u81f4\u91cc\u7a0b\u7891"
   }
 },
 {
@@ -864,7 +936,7 @@
   "pk": 64,
   "fields": {
     "entry": 18,
-    "desc": "\u4e00\u79cd\u654f\u6377\u65b9\u6cd5\u8bba"
+    "desc": "\u4e00\u79cd\u4e8b\u65e0\u5de8\u7ec6\u7684\u654f\u6377\u65b9\u6cd5\u8bba"
   }
 },
 {
@@ -880,7 +952,7 @@
   "pk": 66,
   "fields": {
     "entry": 18,
-    "desc": "\u4e00\u79cd\u9879\u76ee\u7ba1\u7406\u624b\u6bb5"
+    "desc": "\u4e00\u79cd\u9884\u5b9a\u4e49\u7684\u9879\u76ee\u7ba1\u7406\u624b\u6bb5"
   }
 },
 {
@@ -1559,6 +1631,102 @@
     "score": "",
     "start_time": "2017-11-22T15:40:45.048Z",
     "update_time": "2017-11-22T15:40:57.488Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 52,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "B,B,ABD,B,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-23T01:51:42.612Z",
+    "update_time": "2017-11-23T02:00:47.110Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 53,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "jackyshen@uperform.cn",
+    "exam": 1,
+    "answers": "-,C,ABD,B,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "10",
+    "start_time": "2017-11-23T02:24:41.167Z",
+    "update_time": "2017-11-23T03:04:35.389Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 54,
+  "fields": {
+    "name": "",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-23T03:11:15.544Z",
+    "update_time": "2017-11-23T03:11:15.544Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 55,
+  "fields": {
+    "name": "j",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "u",
+    "email": "jackyshen@uperform.cn",
+    "exam": 1,
+    "answers": ",-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "0",
+    "start_time": "2017-11-23T03:12:04.612Z",
+    "update_time": "2017-11-23T03:12:16.212Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 56,
+  "fields": {
+    "name": "jacky",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "up",
+    "email": "",
+    "exam": 1,
+    "answers": "C,BC,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-23T11:21:07.491Z",
+    "update_time": "2017-11-23T11:21:19.510Z"
+  }
+},
+{
+  "model": "scrum.examrecord",
+  "pk": 57,
+  "fields": {
+    "name": "jacky",
+    "wechat_id": "",
+    "mobile": "",
+    "company": "scrumchina",
+    "email": "",
+    "exam": 1,
+    "answers": "-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-",
+    "score": "",
+    "start_time": "2017-11-23T11:25:37.523Z",
+    "update_time": "2017-11-23T11:25:37.523Z"
   }
 },
 {
@@ -2876,6 +3044,58 @@
     "object_repr": "[M]Scrum\u7684\u5de5\u4ef6\u5305\u62ec\u54ea\u4e9b\uff1f",
     "action_flag": 2,
     "change_message": "Changed question."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2017-11-23T11:18:37.564Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "[S]\u54ea\u4e2a\u7b26\u5408Sprint\u7684\u63cf\u8ff0?",
+    "action_flag": 2,
+    "change_message": "Changed desc for entry option \"[\u6781\u9650\u7f16\u7a0b\u65b9\u6cd5\u8bba\u4e2d\u5b9a\u4e49\u7684\u4e00\u4e2a\u8fed\u4ee3] for Exam [S]\u54ea\u4e2a\u7b26\u5408Sprint\u7684\u63cf\u8ff0?\". Changed desc for entry option \"[\u4e00\u4e2a\u56fa\u5b9a\u957f\u5ea6\u7684\u65f6\u95f4\u76d2\uff0c\u5305\u542b\u6240\u6709\u9700\u8981\u5b8c\u6210\u7684\u5de5\u4f5c] for Exam [S]\u54ea\u4e2a\u7b26\u5408Sprint\u7684\u63cf\u8ff0?\". Changed desc for entry option \"[Scrum\u9879\u76ee\u4e2d\u7528\u5c3d\u4e00\u5207\u624b\u6bb5\u8fbe\u81f4\u91cc\u7a0b\u7891] for Exam [S]\u54ea\u4e2a\u7b26\u5408Sprint\u7684\u63cf\u8ff0?\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2017-11-23T11:22:29.553Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "14",
+    "object_repr": "[S]Scrum\u6846\u67b6\u6240\u5b9a\u4e49\u7684\u4ef7\u503c\u89c2\u662f\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed question."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2017-11-23T11:24:44.586Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "16",
+    "object_repr": "[S]\u5728Sprint\u8fc7\u7a0b\u4e2d\uff0c\u8c01\u8d1f\u8d23\u8ddf\u8e2a\u8fdb\u5ea6\u548c\u4fdd\u8bc1\u8d28\u91cf\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed question."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2017-11-23T11:28:11.653Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "18",
+    "object_repr": "[M]\u4e0b\u5217\u54ea\u4e2a\u7b26\u5408Scrum\u7684\u5b9a\u4e49\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed desc for entry option \"[\u4e00\u79cd\u4e8b\u65e0\u5de8\u7ec6\u7684\u654f\u6377\u65b9\u6cd5\u8bba] for Exam [M]\u4e0b\u5217\u54ea\u4e2a\u7b26\u5408Scrum\u7684\u5b9a\u4e49\uff1f\". Changed desc for entry option \"[\u4e00\u79cd\u9884\u5b9a\u4e49\u7684\u9879\u76ee\u7ba1\u7406\u624b\u6bb5] for Exam [M]\u4e0b\u5217\u54ea\u4e2a\u7b26\u5408Scrum\u7684\u5b9a\u4e49\uff1f\"."
   }
 }
 ]

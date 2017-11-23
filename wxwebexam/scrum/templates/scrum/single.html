@@ -19,12 +19,12 @@
 
         <div class="page__bd page__bd_spacing">
             {% if entry.category == 'S' %}
-            <div class="weui-cells__title">单选题</div>
+            <div class="weui-cells__title" style="color:#1aad19;">单选题</div>
             <div class="weui-cells weui-cells_radio">
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="x11{{idx}}">
                     <div class="weui-cell__ft">
-                        <input type="radio" class="weui-check" name="radio_single" id="x11{{idx}}" value="{{idx}}">
+                        <input type="radio" class="weui-check" name="radio_single" id="x11{{idx}}" value="{{idx}}" {% if answered %}disabled{% endif %}>
                         <span class="weui-icon-checked"></span>
                     </div>
                     <div class="weui-cell__bd">
@@ -34,12 +34,12 @@
                 {% endfor %}
             </div>
             {% elif entry.category == 'M' %}
-            <div class="weui-cells__title">多选题</div>
+            <div class="weui-cells__title" style="color:#1aad19;">多选题</div>
             <div class="weui-cells weui-cells_checkbox">
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="s11{{idx}}">
                     <div class="weui-cell__hd">
-                        <input type="checkbox" class="weui-check" name="checkbox_multi" id="s11{{idx}}" value="{{idx}}">
+                        <input type="checkbox" class="weui-check" name="checkbox_multi" id="s11{{idx}}" value="{{idx}}" {% if answered %}disabled{% endif %}>
                         <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
