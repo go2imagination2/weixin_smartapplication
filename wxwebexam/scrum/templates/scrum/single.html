@@ -11,7 +11,7 @@
                 <div class="weui-progress__bar">
                     <div class="weui-progress__inner-bar js_progress" style="width: 80%;" id="progress"></div>
                 </div>
-                <span id="remaining_seconds"><i class="weui-icon-info"></i>59:06</span>
+                <span id="remaining_seconds"><i class="weui-icon-info"></i>00:00</span>
             </div>
             <h1 class="page__title">{{entry.question}}</h1>
             <p class="page__desc">第{{entry.id}}题/共{{entry_count}}题</p>
@@ -23,12 +23,12 @@
             <div class="weui-cells weui-cells_radio">
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="x11{{idx}}">
-                    <div class="weui-cell__bd">
-                        <p>选项({{idx}}). {{desc}}</p>
-                    </div>
                     <div class="weui-cell__ft">
                         <input type="radio" class="weui-check" name="radio_single" id="x11{{idx}}" value="{{idx}}">
                         <span class="weui-icon-checked"></span>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <p>选项({{idx}}). {{desc}}</p>
                     </div>
                 </label>
                 {% endfor %}
