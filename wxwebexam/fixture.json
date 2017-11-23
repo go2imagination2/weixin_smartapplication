@@ -96,78 +96,6 @@
   }
 },
 {
-  "model": "sessions.session",
-  "pk": "29qd0sbockq7mxk5cg41joofesc0fujk",
-  "fields": {
-    "session_data": "ZjNjNWMwNjkzOTc3NGM1MzM2NGI2NjEyZTVkODI4NzViYTUyNzUyYTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM3LCJjdXJyZW50X2VudHJ5X2lkIjoxLCJlbnRyeV9jb3VudCI6M30=",
-    "expire_date": "2017-11-13T08:03:14.149Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "37uyzl5bo8ufkzvcpg1z3n77jr5hlog3",
-  "fields": {
-    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-    "expire_date": "2017-09-13T11:28:25.218Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "410pb5s7cyp5uy9sfttyvsg213jbn2dp",
-  "fields": {
-    "session_data": "NWRhM2FlNmQ1ZDg0ZjdlYmMxOThkNzRlYWQ0YTc2ZTc5OTkwNGM1Yzp7ImN1cnJlbnRfZW50cnlfaWQiOjF9",
-    "expire_date": "2017-10-04T08:06:01.680Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "hutzkdexj5u9bb07sik8e8kadiwvi0kx",
-  "fields": {
-    "session_data": "YmQxY2M2ZGM1N2IzODM1MGVmYTk4ZjUwYmQxMjhhMTc4Mzk5YTJmOTp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjUxLCJjdXJyZW50X2VudHJ5X2lkIjo0LCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjIwLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
-    "expire_date": "2017-12-06T15:40:57.515Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "i7vxzjw81fdej9auubbotqspgqmrscpd",
-  "fields": {
-    "session_data": "NzQ1NzFhYzAxOTc5NjU3OTQ4MjNlZTQ3MTVjYThlYzIyZTE3YjQzMzp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM4LCJlbnRyeV9jb3VudCI6M30=",
-    "expire_date": "2017-12-04T01:13:30.758Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "oczrcokgfds5k07tef9heyxd2k8wzinm",
-  "fields": {
-    "session_data": "OTk1ZDY1ODIyMDI1NDMxMWFjZmNlYTIxZTYxNzQxMmUxZWY3YjgyODp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiIyMjM2NDYxMjhiNDgyZjhlZWI0OGQ1NWJiNDg3YjgzNzQ4NTllOWYyIn0=",
-    "expire_date": "2017-10-09T16:43:32.595Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "uz6a80keiklxdwa3erjfkmetgivtvvsl",
-  "fields": {
-    "session_data": "ZWYxYTVkMWNkODg1YjI0ZmZmNGQ3YTljYzgwM2ZhMjM3MjQzMDg3ZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjM5LCJlbnRyeV9jb3VudCI6M30=",
-    "expire_date": "2017-12-04T13:34:19.038Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "wfjs0y3f571ner69vcxo9azzhpugz3b8",
-  "fields": {
-    "session_data": "Y2RlMmNhNDI1NjAzYzkwNGI1YTAzYzMxNDRiYjQ1NGU1ZGNhYWZlZDp7ImN1cnJlbnRfZXhhbV9yZWNvcmRfaWQiOjMwLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiZW50cnlfY291bnQiOjMsIl9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIifQ==",
-    "expire_date": "2017-10-12T10:28:23.934Z"
-  }
-},
-{
-  "model": "sessions.session",
-  "pk": "z2rk3c6w6sk8dkvz97ce0wyxxpfazx2f",
-  "fields": {
-    "session_data": "NGI0OGM4ZDE5OTA3M2RiODIxNmExOTEyY2I5OTY5NjI0MmYyMjEwZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjIyMzY0NjEyOGI0ODJmOGVlYjQ4ZDU1YmI0ODdiODM3NDg1OWU5ZjIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
-    "expire_date": "2017-09-16T03:05:20.311Z"
-  }
-},
-{
   "model": "scrum.entry",
   "pk": 1,
   "fields": {
@@ -197,7 +125,7 @@
   "model": "scrum.entry",
   "pk": 3,
   "fields": {
-    "question": "Scrum\u5de5\u4ef6\u4e2d\u5305\u62ec\u54ea\u4e9b\uff1f",
+    "question": "Scrum\u7684\u5de5\u4ef6\u5305\u62ec\u54ea\u4e9b\uff1f",
     "answer": "ABD",
     "role": "A",
     "category": "M",
@@ -249,10 +177,10 @@
   "model": "scrum.entry",
   "pk": 7,
   "fields": {
-    "question": "\u7ecf\u9a8c\u8fc7\u7a0b(Empirical Process)\u7684\u4e09\u5927\u652f\u67f1\u5305\u62ec\uff1f",
-    "answer": "ACD",
+    "question": "Scrum\u662f\u57fa\u4e8e\u4e0b\u5217\u54ea\u79cd\u8fc7\u7a0b\u8bba\uff1f",
+    "answer": "C",
     "role": "A",
-    "category": "M",
+    "category": "S",
     "tips": "",
     "explanation": "",
     "score": 1
@@ -314,10 +242,10 @@
   "model": "scrum.entry",
   "pk": 12,
   "fields": {
-    "question": "Scrum\u662f\u57fa\u4e8e\u4e0b\u5217\u54ea\u79cd\u8fc7\u7a0b\u8bba\uff1f",
-    "answer": "C",
+    "question": "\u5b9e\u9a8c\u6027\u8fc7\u7a0b(Empirical Process)\u7684\u4e09\u5927\u652f\u67f1\u5305\u62ec\uff1f",
+    "answer": "ACD",
     "role": "A",
-    "category": "S",
+    "category": "M",
     "tips": "",
     "explanation": "",
     "score": 1
@@ -591,7 +519,7 @@
   "model": "scrum.entryoption",
   "pk": 21,
   "fields": {
-    "entry": 7,
+    "entry": 12,
     "desc": "\u68c0\u89c6"
   }
 },
@@ -599,7 +527,7 @@
   "model": "scrum.entryoption",
   "pk": 22,
   "fields": {
-    "entry": 7,
+    "entry": 12,
     "desc": "\u8bbe\u8ba1"
   }
 },
@@ -607,7 +535,7 @@
   "model": "scrum.entryoption",
   "pk": 23,
   "fields": {
-    "entry": 7,
+    "entry": 12,
     "desc": "\u900f\u660e"
   }
 },
@@ -615,7 +543,7 @@
   "model": "scrum.entryoption",
   "pk": 24,
   "fields": {
-    "entry": 7,
+    "entry": 12,
     "desc": "\u8c03\u6574"
   }
 },
@@ -751,7 +679,7 @@
   "model": "scrum.entryoption",
   "pk": 41,
   "fields": {
-    "entry": 12,
+    "entry": 7,
     "desc": "\u53d7\u63a7\u8fc7\u7a0b(Controlled Process)"
   }
 },
@@ -759,7 +687,7 @@
   "model": "scrum.entryoption",
   "pk": 42,
   "fields": {
-    "entry": 12,
+    "entry": 7,
     "desc": "\u9884\u5b9a\u4e49\u8fc7\u7a0b(Defined Process)"
   }
 },
@@ -767,15 +695,15 @@
   "model": "scrum.entryoption",
   "pk": 43,
   "fields": {
-    "entry": 12,
-    "desc": "\u7ecf\u9a8c\u8fc7\u7a0b(Empirical Process)"
+    "entry": 7,
+    "desc": "\u5b9e\u9a8c\u6027\u8fc7\u7a0b(Empirical Process)"
   }
 },
 {
   "model": "scrum.entryoption",
   "pk": 44,
   "fields": {
-    "entry": 12,
+    "entry": 7,
     "desc": "\u535a\u5f08\u8fc7\u7a0b(Game Process)"
   }
 },
@@ -2909,6 +2837,45 @@
     "object_repr": "[M]\u4e0b\u5217\u54ea\u4e2a\u7b26\u5408Scrum\u7684\u5b9a\u4e49\uff1f",
     "action_flag": 2,
     "change_message": "Changed category."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2017-11-23T01:23:28.578Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "7",
+    "object_repr": "[M]\u5b9e\u9a8c\u6027\u8fc7\u7a0b(Empirical Process)\u7684\u4e09\u5927\u652f\u67f1\u5305\u62ec\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed question."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2017-11-23T01:23:38.251Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "12",
+    "object_repr": "[S]Scrum\u662f\u57fa\u4e8e\u4e0b\u5217\u54ea\u79cd\u8fc7\u7a0b\u8bba\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed desc for entry option \"[\u5b9e\u9a8c\u6027\u8fc7\u7a0b(Empirical Process)] for Exam [S]Scrum\u662f\u57fa\u4e8e\u4e0b\u5217\u54ea\u79cd\u8fc7\u7a0b\u8bba\uff1f\"."
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2017-11-23T01:29:25.156Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "[M]Scrum\u7684\u5de5\u4ef6\u5305\u62ec\u54ea\u4e9b\uff1f",
+    "action_flag": 2,
+    "change_message": "Changed question."
   }
 }
 ]
