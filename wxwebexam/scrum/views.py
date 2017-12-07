@@ -34,6 +34,14 @@ def enroll_page(request):
     return render(request, 'scrum/enroll_page.html', {})
 
 
+def _get_client_ip(request):
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+    if x_forwarded_for:
+        ip = x_forwarded_for.split(',')[0]
+    else:
+        ip = request.META.get('REMOTE_ADDR')
+    return ip
+
 def enroll(request):
     paper = Paper.objects.get(pk=1)
     exam = Exam.objects.get(pk=1)
@@ -42,7 +50,7 @@ def enroll(request):
     exam_record.company = request.POST.get('company', 'Nowhere')
     exam_record.answers = ','.join(['-'] * paper.count())
     exam_record.start_time = timezone.now()
-    print 'now=', timezone.now()
+    exam_record.client_ip = _get_client_ip(request)
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
     request.session['current_entry_id'] = 1

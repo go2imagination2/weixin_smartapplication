@@ -38,7 +38,7 @@ class ExamAdmin(admin.ModelAdmin):
 
 @admin.register(ExamRecord)
 class EntryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'company', 'email', 'update_time', 'score')
+    list_display = ('name', 'company', 'email', 'update_time', 'score', 'client_ip')
     date_hierarchy = 'update_time'
 
 
