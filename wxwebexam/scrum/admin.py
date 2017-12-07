@@ -21,13 +21,9 @@ class EntryOptionInline(admin.StackedInline):
     extra = 4
 
 
+@admin.register(Entry)
 class EntryAdmin(admin.ModelAdmin):
     inlines = [EntryOptionInline]
-
-
-admin.site.register(Entry, EntryAdmin)
-
-admin.site.register(Paper)
 
 
 class ExamRecordInline(admin.StackedInline):
@@ -35,9 +31,15 @@ class ExamRecordInline(admin.StackedInline):
     extra = 3
 
 
+@admin.register(Exam)
 class ExamAdmin(admin.ModelAdmin):
     inlines = [ExamRecordInline]
 
 
-admin.site.register(Exam, ExamAdmin)
-admin.site.register(ExamRecord)
+@admin.register(ExamRecord)
+class EntryAdmin(admin.ModelAdmin):
+    list_display = ('name', 'company', 'email', 'update_time', 'score')
+    date_hierarchy = 'update_time'
+
+
+admin.site.register(Paper)
