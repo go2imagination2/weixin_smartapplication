@@ -35,14 +35,15 @@ def enroll_page(request):
 
 
 def _get_client_ip(request):
-    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-    if x_forwarded_for:
-        ip = x_forwarded_for.split(',')[0]
-        if ip == '127.0.0.1':
-            ip = request.META.get('REMOTE_ADDR')
-    else:
-        ip = request.META.get('REMOTE_ADDR')
-    return ip
+    x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR', '')
+    ip = request.META.get('REMOTE_ADDR', '')
+    # if x_forwarded_for:
+    #     ip = x_forwarded_for.split(',')[0]
+    #     if ip == '127.0.0.1':
+    #         ip = request.META.get('REMOTE_ADDR')
+    # else:
+    #     ip = request.META.get('REMOTE_ADDR')
+    return ','.join([ip, x_forwarded_for])
 
 
 def enroll(request):
