@@ -65,7 +65,7 @@
 
             <div class="weui-btn-area">
                 <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
-                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">下一步</a>
+                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">放弃此题</a>
             </div>
         </div>
     </form>
@@ -125,6 +125,7 @@
         $('#submitAnswer').attr('disabled', 'disabled').addClass('weui-btn_default').removeClass('weui-btn_primary')
         $('#explanation').show();
         $('#nextQuestion').addClass('weui-btn_primary').removeClass('weui-btn_default')
+        $('#nextQuestion').text('下一步')
         {% else %}
         $('#submitAnswer').click(function(){
             $('#explanation').show();
