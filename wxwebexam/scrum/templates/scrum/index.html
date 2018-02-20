@@ -1,6 +1,5 @@
 {% extends 'scrum/_base.html' %}
-
-
+{% load i18n %}
 {% block main_content %}
 
 <div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
@@ -35,7 +34,7 @@
 
             <div class="weui-btn-area">
                 <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
-                <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">去正式考试!</a>
+                <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">{% trans 'go ahead' %} 去正式考试!</a>
             </div>
         </div>
     </div>

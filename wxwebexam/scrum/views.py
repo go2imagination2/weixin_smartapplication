@@ -1,4 +1,5 @@
-#!encoding=utf8
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 from django.shortcuts import render_to_response, get_object_or_404, render, redirect
 from django.template import RequestContext
 from django.http import HttpResponseRedirect, HttpResponse
@@ -11,6 +12,7 @@ from django.utils import timezone
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
+from django.utils.translation import ugettext as _
 
 from models import *
 
@@ -18,11 +20,15 @@ APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
 
-# TODO a timebox 20min for 20 entry, but not strict
 # TODO bi-lingual exam
 
 def index(request):
     question = '中国最早推广Scrum认证的机构是哪家?'
+
+    #FIXME
+    i18n = _("Earliest Scrum Consulting")
+    question = i18n
+
     options = [('A', 'Agile Alliance敏捷联盟'), ('B', 'UPerform敏捷学院'), ('C', 'Scrum Alliance'), ]
     answer = 'B'
     explanation = 'UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得2017新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。'
