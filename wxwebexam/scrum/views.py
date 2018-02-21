@@ -45,18 +45,14 @@ def _get_client_ip(request):
     return ','.join([ip, x_forwarded_for])
 
 
-# TODO entry count should be decoupled with entry ids in an Exam object, instead of constant ENTRY_START_ID
-ENTRY_START_ID = 1
-
-
 def enroll(request):
-    global ENTRY_START_ID
+    # TODO entry count should be decoupled with entry ids in an Exam object, from paper.count() or min(paper.start_IDXXX)
     if 'en' == get_language():
         paper = Paper.objects.get(pk=2)  # en
-        ENTRY_START_ID = 21
+        request.session['entry_start_id'] = 21
     else:
         paper = Paper.objects.get(pk=1)  # zh-hans
-        ENTRY_START_ID = 1
+        request.session['entry_start_id'] = 1
 
     exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
@@ -67,7 +63,7 @@ def enroll(request):
     exam_record.client_ip = _get_client_ip(request)
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
-    request.session['current_entry_id'] = ENTRY_START_ID
+    request.session['current_entry_id'] = request.session['entry_start_id']
     request.session['entry_count'] = paper.count()
 
     return redirect('../single/')
@@ -80,7 +76,7 @@ def single(request):
     if entry_id is None:
         return redirect('../')
     entry_id = int(entry_id)
-    if entry_id - ENTRY_START_ID >= request.session['entry_count']:
+    if entry_id - request.session['entry_start_id'] >= request.session['entry_count']:
         return redirect('../scoring')
 
     request.session['current_entry_id'] = entry_id
@@ -93,14 +89,14 @@ def single(request):
     # TODO check if it's answered then display desc and notify frontend disable submit
     exam_record = ExamRecord.objects.get(pk=exam_record_id)
     updated_answers = exam_record.answers.split(',')
-    answered = updated_answers[entry_id - ENTRY_START_ID] != '-'
-    is_answered_correct = entry.answer == updated_answers[request.session['current_entry_id'] - ENTRY_START_ID]
+    answered = updated_answers[entry_id - request.session['entry_start_id']] != '-'
+    is_answered_correct = entry.answer == updated_answers[request.session['current_entry_id'] - request.session['entry_start_id']]
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
 
     return render(request, 'scrum/single.html',
                   {'entry': entry, 'enumerated_options': enumerated_options,
-                   'entry_id': entry.id - ENTRY_START_ID + 1,
+                   'entry_id': entry.id - request.session['entry_start_id'] + 1,
                    'entry_count': request.session['entry_count'], 'answered': answered,
                    'is_answered_correct': is_answered_correct,
                    'elapsed_seconds': timezone.now() - exam_record.start_time,
@@ -129,7 +125,7 @@ def answerit(request):
     # TODO record the answer in exam record and not able to answer again
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
     updated_answers = exam_record.answers.split(',')
-    updated_answers[entry_id - ENTRY_START_ID] = actual_answers
+    updated_answers[entry_id - request.session['entry_start_id']] = actual_answers
     exam_record.answers = ','.join(updated_answers)
     exam_record.save()
 
