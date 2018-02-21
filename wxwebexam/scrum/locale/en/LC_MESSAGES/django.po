@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 17:49+0800\n"
+"POT-Creation-Date: 2018-02-21 17:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: scrum/templates/scrum/_base.html:12
+msgid "page title"
+msgstr "Pre-test of Certified ScrumMaster Agile training course"
+
+#: scrum/templates/scrum/_base.html:29
+msgid "UPerform agile academy"
+msgstr "<span style='color:blue;'>Agile</span> Academy"
+
+#: scrum/templates/scrum/_base.html:30
+msgid "services"
+msgstr "Scrum Certification Training Consulting Agile Coaching"
+
+#: scrum/templates/scrum/index.html:5
+msgid "tooltips"
+msgstr "Tooltips"
+
+#: scrum/templates/scrum/index.html:11
+msgid "pre-reading"
+msgstr "Welcome to Scrum knowledge pre-test, Reading <a target='_blank' href='https://www.uperform.cn/scrum-guide-english'>《Scrum Guide》</a> may increase your score."
+
+
+#: scrum/templates/scrum/index.html:14
+msgid "Single Answer"
+msgstr "Single Answer"
+
+#: scrum/templates/scrum/index.html:19
+msgid "option"
+msgstr "-"
+
+#: scrum/templates/scrum/index.html:32
+msgid "correct answer"
+msgstr "Correct Answer"
+
+#: scrum/templates/scrum/index.html:32
+msgid "explanation"
+msgstr "Explanation"
+
+#: scrum/templates/scrum/index.html:36
+msgid "submit answer"
+msgstr "Submit Answer"
+
 #: scrum/templates/scrum/index.html:37
 msgid "go ahead"
-msgstr "Go Ahead"
+msgstr "Go to the Exam!"
 
 #: scrum/views.py:29
 msgid "Earliest Scrum Consulting"
-msgstr "EARLIEST"
+msgstr "Which one is the earliest organization to promote Scrum in Greater China?"

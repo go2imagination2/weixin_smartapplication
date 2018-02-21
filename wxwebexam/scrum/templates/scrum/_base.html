@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% load staticfiles %}
+{% load i18n %}
 
 <html>
 
@@ -9,7 +10,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <meta name="Keywords" content="Scrum exam 在线 考试 题库">
     <meta name="Description" content="Scrum exam 在线 考试 题库">
-    <title>ScrumMaster认证敏捷培训课前测验</title>
+    <title>{% trans 'page title' %}</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'style/h5.css' %}">
     <!--<link rel="stylesheet" type="text/css" href="{% static 'style/weui.min.css' %}">-->
@@ -26,8 +27,8 @@
 {% block footer %}
 <div class="page__ft">
     <a href="/"><img src="http://www.uperform.cn/wp-content/uploads/2017/06/up.png"></a>
-    <p class="weui-footer__text">优普丰<span style="color:blue;">敏捷</span>学院</p>
-    <p class="weui-footer__text">国际Scrum认证培训咨询敏捷教练</p>
+    <p class="weui-footer__text">{% trans 'UPerform agile academy' %}</p>
+    <p class="weui-footer__text">{% trans 'services' %}</p>
     <p class="weui-footer__text">Copyright © 2007-2018 <a href="http://www.uperform.cn">www.UPerform.CN</a></p>
 </div>
 {% endblock %}

@@ -2,21 +2,21 @@
 {% load i18n %}
 {% block main_content %}
 
-<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+<div class="weui-toptips weui-toptips_warn js_tooltips">{% trans 'tooltips' %}</div>
 <div class="container" id="container">
 
     <div>
         <div class="page__hd">
             <h1 class="page__title">{{question}}</h1>
-            <p class="page__desc">欢迎来到Scrum敏捷知识测验。事先阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>有助于提高考试成绩。</p>
+            <p class="page__desc">{% trans 'pre-reading' %}</p>
         </div>
         <div class="page__bd page__bd_spacing">
-            <div class="weui-cells__title">单选题</div>
+            <div class="weui-cells__title">{% trans 'Single Answer' %}</div>
             <div class="weui-cells weui-cells_radio">
                 {% for idx, desc in options %}
                 <label class="weui-cell weui-check__label" for="x11{{idx}}">
                     <div class="weui-cell__bd">
-                        <p>选项({{idx}}). {{desc}}</p>
+                        <p>{% trans 'option' %} ({{idx}}). {{desc}}</p>
                     </div>
                     <div class="weui-cell__ft">
                         <input type="radio" class="weui-check" name="radio1" id="x11{{idx}}" value="{{idx}}">
@@ -29,12 +29,12 @@
                 <div class="weui-msg__icon-area">
                     <i class="weui-icon-success weui-icon_msg"></i>
                 </div>
-                <div class="weui-cell__bd">正确答案是:{{answer}}<br/>解释:{{explanation}}</div>
+                <div class="weui-cell__bd">{% trans 'correct answer' %}: {{answer}}<br/>{% trans 'explanation' %}: {{explanation}}</div>
             </a>
 
             <div class="weui-btn-area">
-                <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
-                <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">{% trans 'go ahead' %} 去正式考试!</a>
+                <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="{% trans 'submit answer' %}"/>
+                <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">{% trans 'go ahead' %}</a>
             </div>
         </div>
     </div>

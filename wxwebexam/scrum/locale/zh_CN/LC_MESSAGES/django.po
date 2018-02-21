@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-20 17:49+0800\n"
+"POT-Creation-Date: 2018-02-21 17:17+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: scrum/templates/scrum/_base.html:12
+msgid "page title"
+msgstr "ScrumMaster认证敏捷培训课前测验"
+
+#: scrum/templates/scrum/_base.html:29
+msgid "UPerform agile academy"
+msgstr "优普丰<span style='color:blue;'>敏捷</span>学院"
+
+#: scrum/templates/scrum/_base.html:30
+msgid "services"
+msgstr "国际Scrum认证培训咨询敏捷教练"
+
+#: scrum/templates/scrum/index.html:5
+msgid "tooltips"
+msgstr "错误提示"
+
+#: scrum/templates/scrum/index.html:11
+msgid "pre-reading"
+msgstr "欢迎来到Scrum敏捷知识测验。事先阅读<a target='_blank' href='http://www.uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
+
+
+#: scrum/templates/scrum/index.html:14
+msgid "Single Answer"
+msgstr "单选题"
+
+#: scrum/templates/scrum/index.html:19
+msgid "option"
+msgstr "选项"
+
+#: scrum/templates/scrum/index.html:32
+msgid "correct answer"
+msgstr "正确答案"
+
+#: scrum/templates/scrum/index.html:32
+msgid "explanation"
+msgstr "解释"
+
+#: scrum/templates/scrum/index.html:36
+msgid "submit answer"
+msgstr "提交答案"
+
 #: scrum/templates/scrum/index.html:37
 msgid "go ahead"
-msgstr "去正式考试"
+msgstr "去正式考试!"
 
 #: scrum/views.py:29
 msgid "Earliest Scrum Consulting"
-msgstr "最早的Scrum机构"
+msgstr "大中华区最早推广Scrum的专业机构是哪个?"
