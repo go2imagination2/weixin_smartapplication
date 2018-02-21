@@ -100,6 +100,7 @@ def single(request):
 
     return render(request, 'scrum/single.html',
                   {'entry': entry, 'enumerated_options': enumerated_options,
+                   'entry_id': entry.id - ENTRY_START_ID + 1,
                    'entry_count': request.session['entry_count'], 'answered': answered,
                    'is_answered_correct': is_answered_correct,
                    'elapsed_seconds': timezone.now() - exam_record.start_time,
