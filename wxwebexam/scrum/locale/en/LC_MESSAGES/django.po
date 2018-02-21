@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 20:37+0800\n"
+"POT-Creation-Date: 2018-02-21 21:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "Company"
 
 #: scrum/templates/scrum/enroll_page.html:50
 msgid "plz input company name"
-msgstr "Please input company name"
+msgstr "Input company name"
 
 #: scrum/templates/scrum/enroll_page.html:55
 msgid "agreement"
@@ -152,20 +152,32 @@ msgstr "Pass To Next Question"
 msgid "next step"
 msgstr "Next Step"
 
-#: scrum/views.py:29
+#: scrum/views.py:28
 msgid "Earliest Scrum Consulting"
 msgstr ""
 "Which one is the earliest organization to promote Scrum in Greater China?"
 
-#: scrum/views.py:174
+#: scrum/views.py:31
+msgid "UPerform introduction"
+msgstr "UPerform Agile Academy is the first REP (Registered Education Partner) of Scrum Alliance and member of Agile Alliance in Greater China. The core team of Agile promotion and community in China since 2007, by introduced Ken Schwaber (one of the founder of Scrum)'s book, and called upon the first time Agile Tour in Shanghai in 2008. It supports by experts like Ken Schwaber, Mike Cohn, Lyssa Adkins, Michael Spayd, Ken Rubin, Jurgen Appelo, Pete Deemer, Peter Borsella, Vernon Stinebaker, Chris Sims. With the most of Chinese-speaking CST and CTC, as well as the only educator of new CSP path in Asia. It develops lots of original theories, practices and tools."
+
+
+#: scrum/views.py:172
 msgid "msg subject"
 msgstr "Scrum Certification Training Pre-test Score And Learning Resource"
 
-#: scrum/views.py:176
+#: scrum/views.py:174
 #, python-format
 msgid "msg body %(name)s %(score)s"
-msgstr "<p>Hi, %(name)s   </p>"
-"<p>Congratulation to you complete pre-test of Scrum certification training courses. You got %(score)s score. Keep reading <a href='http://www.uperform.cn/scrum-guide-english/'>The Scrum Guide</a>, to get your certification soon. Join alumni, learn and share with teacher and classmates, grow together with practicing towards senior career path.</p>"
-"<p>Best Regards,<br/><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</span>orm <span style='color:blue;'>Agile</span> Academy</b><br/>Promote Agile Since 2007 in Greater China<br/>"
-"Recent Scrum certification public courses (CSM/CSPO/CSD/A-CSM/CSP) and senior Agile Coaching service, see <a href='https://www.uperform.cn/recent-public-course/'>www.UPerform.CN/recent-public-course</a>"
-"</p>"
+msgstr ""
+"<p>Hi, %(name)s   </p><p>Congratulation to you complete pre-test of Scrum "
+"certification training courses. You got %(score)s score. Keep reading <a "
+"href='http://www.uperform.cn/scrum-guide-english/'>The Scrum Guide</a>, to "
+"get your certification soon. Join alumni, learn and share with teacher and "
+"classmates, grow together with practicing towards senior career path.</"
+"p><p>Best Regards,<br/><b><span style='color:blue;'>UP</span>er<span "
+"style='color:blue;'>f</span>orm <span style='color:blue;'>Agile</span> "
+"Academy</b><br/>Promote Agile Since 2007 in Greater China<br/>Recent Scrum "
+"certification public courses (CSM/CSPO/CSD/A-CSM/CSP) and senior Agile "
+"Coaching service, see <a href='https://www.uperform.cn/recent-public-"
+"course/'>www.UPerform.CN/recent-public-course</a></p>"

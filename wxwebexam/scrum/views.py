@@ -12,7 +12,7 @@ from django.utils import timezone
 from django.utils.encoding import smart_str
 from django.views.decorators.csrf import csrf_exempt
 from django.core.cache import cache
-from django.utils.translation import ugettext as _
+from django.utils.translation import ugettext as _, get_language
 
 from models import *
 
@@ -20,18 +20,11 @@ APP_ID = 'wx4a61d7aaa96ced25'
 APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 
 
-# TODO bi-lingual exam
-
 def index(request):
-    question = '中国最早推广Scrum认证的机构是哪家?'
-
-    # FIXME
-    i18n = _("Earliest Scrum Consulting")
-    question = i18n
-
-    options = [('A', 'Agile Alliance敏捷联盟'), ('B', 'UPerform敏捷学院'), ('C', 'Scrum Alliance'), ]
+    question = _("Earliest Scrum Consulting")
+    options = [('A', 'Agile Alliance'), ('B', 'UPerform Agile Acedamy'), ('C', 'Scrum Alliance'), ]
     answer = 'B'
-    explanation = 'UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得2017新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。'
+    explanation = _("UPerform introduction")
     return render(request, 'scrum/index.html',
                   {'question': question, 'options': options, 'answer': answer, 'explanation': explanation})
 
@@ -52,8 +45,19 @@ def _get_client_ip(request):
     return ','.join([ip, x_forwarded_for])
 
 
+# TODO entry count should be decoupled with entry ids in an Exam object, instead of constant ENTRY_START_ID
+ENTRY_START_ID = 1
+
+
 def enroll(request):
-    paper = Paper.objects.get(pk=1)
+    global ENTRY_START_ID
+    if 'en' == get_language():
+        paper = Paper.objects.get(pk=2)  # en
+        ENTRY_START_ID = 21
+    else:
+        paper = Paper.objects.get(pk=1)  # zh-hans
+        ENTRY_START_ID = 1
+
     exam = Exam.objects.get(pk=1)
     exam_record = ExamRecord.objects.create(exam=exam)
     exam_record.name = request.POST.get('name', 'Unnamed')
@@ -63,7 +67,7 @@ def enroll(request):
     exam_record.client_ip = _get_client_ip(request)
     exam_record.save()
     request.session['current_exam_record_id'] = exam_record.id
-    request.session['current_entry_id'] = 1
+    request.session['current_entry_id'] = ENTRY_START_ID
     request.session['entry_count'] = paper.count()
 
     return redirect('../single/')
@@ -75,8 +79,10 @@ def single(request):
 
     if entry_id is None:
         return redirect('../')
-
     entry_id = int(entry_id)
+    if entry_id - ENTRY_START_ID >= request.session['entry_count']:
+        return redirect('../scoring')
+
     request.session['current_entry_id'] = entry_id
     exam_record_id = request.session['current_exam_record_id']
     print 'current_exam_record_id=%s' % request.session['current_exam_record_id']
@@ -87,8 +93,8 @@ def single(request):
     # TODO check if it's answered then display desc and notify frontend disable submit
     exam_record = ExamRecord.objects.get(pk=exam_record_id)
     updated_answers = exam_record.answers.split(',')
-    answered = updated_answers[entry_id - 1] != '-'
-    is_answered_correct = entry.answer == updated_answers[request.session['current_entry_id'] - 1]
+    answered = updated_answers[entry_id - ENTRY_START_ID] != '-'
+    is_answered_correct = entry.answer == updated_answers[request.session['current_entry_id'] - ENTRY_START_ID]
 
     enumerated_options = map(lambda (idx, option): (chr(idx + 65), option.desc), enumerate(entry.entryoption_set.all()))
 
@@ -111,9 +117,9 @@ def answerit(request):
 
     entry = Entry.objects.get(pk=entry_id)
 
-    if entry.category == 'S':
+    if entry.category == Entry.CATEGORY_SINGLE:
         actual_answers = request.POST.get('radio_single', '')
-    elif entry.category == 'M':
+    elif entry.category == Entry.CATEGORY_MULTI:
         actual_answers = ''.join(request.POST.getlist('checkbox_multi', ['']))
     else:
         print 'unknown category %s' % entry.category
@@ -122,7 +128,7 @@ def answerit(request):
     # TODO record the answer in exam record and not able to answer again
     exam_record = ExamRecord.objects.get(pk=(request.session['current_exam_record_id']))
     updated_answers = exam_record.answers.split(',')
-    updated_answers[entry_id - 1] = actual_answers
+    updated_answers[entry_id - ENTRY_START_ID] = actual_answers
     exam_record.answers = ','.join(updated_answers)
     exam_record.save()
 

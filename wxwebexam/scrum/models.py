@@ -91,7 +91,7 @@ class Paper(models.Model):
     试卷
     """
     name = models.CharField(max_length=50, blank=False, unique=True)
-    desc = models.CharField(max_length=2000, blank=False, unique=True)
+    desc = models.CharField(max_length=2000, blank=False)
     image = models.CharField(max_length=100, blank=True)
     last_update = models.DateTimeField(auto_now=True)
     entry = models.ManyToManyField(Entry)

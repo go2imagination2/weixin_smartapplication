@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 20:37+0800\n"
+"POT-Creation-Date: 2018-02-21 21:46+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -151,17 +151,28 @@ msgstr "放弃此题"
 msgid "next step"
 msgstr "下一步"
 
-#: scrum/views.py:29
+#: scrum/views.py:28
 msgid "Earliest Scrum Consulting"
 msgstr "大中华区最早推广Scrum的专业机构是哪个?"
 
-#: scrum/views.py:174
+#: scrum/views.py:31
+msgid "UPerform introduction"
+msgstr "UPerform－优普丰敏捷学院是中国地区首家国际Scrum Alliance联盟REP(注册教育提供商)及Agile Alliance联盟企业会员，中国敏捷运动的核心推动团队。创立于2007年，通过将Scrum创始人Ken Schwaber的扛鼎之作《Scrum敏捷项目管理》一书翻译引进中国，并于2008年在上海参与召集了首次敏捷社区聚会，带头吹响了中国敏捷推广的集结号。十年来，得到国际多位敏捷大师的支持和眷顾，包括Ken Schwaber、Mike Cohn、Lyssa Adkins、Michael Spayd、Ken Rubin、Jurgen Appelo、Pete Deemer、Peter Borsella 、Vernon Stinebaker,、Chris Sims等，目前是华语地区拥有导师级Scrum认证者最多的机构，也是目前亚洲地区唯一获得新版CSP认证成长路径教练资格的机构。发展出大量原创敏捷内容，包括理论哲学、现场实践、工具方法等。"
+
+#: scrum/views.py:172
 msgid "msg subject"
 msgstr "Scrum认证培训课前测验结果和学习资源"
 
-#: scrum/views.py:176
+#: scrum/views.py:174
 #, python-format
 msgid "msg body %(name)s %(score)s"
-msgstr "<p>Hi, %(name)s   </p>"
-"<p>恭喜你完成Scrum认证培训课前测验,你获得了%(score)s分.你还需要继续阅读<a href='http://www.uperform.cn/scrum-guide-chinese/'>《Scrum Guide》</a>，争取早日通过认证，申请加入学友会微信群，和老师同学们在敏捷实践中共同成长,继续向更高级的职业路径发展。</p>"
-"<p>祝一切顺利,<br/><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</span>orm 优普丰<span style='color:blue;'>敏捷</span>学院</b><br/>自2007年开始在大中华区推广敏捷<br/>近期Scrum认证公开课(CSM/CSPO/CSD/A-CSM/CSP)及资深敏捷教练服务,请点击 <a href='https://www.uperform.cn/recent-public-course/'>www.UPerform.CN/recent-public-course</a></p>"
+msgstr ""
+"<p>Hi, %(name)s   </p><p>恭喜你完成Scrum认证培训课前测验,你获得了%(score)s分."
+"你还需要继续阅读<a href='http://www.uperform.cn/scrum-guide-"
+"chinese/'>《Scrum Guide》</a>，争取早日通过认证，申请加入学友会微信群，和老师"
+"同学们在敏捷实践中共同成长,继续向更高级的职业路径发展。</p><p>祝一切顺利,<br/"
+"><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</"
+"span>orm 优普丰<span style='color:blue;'>敏捷</span>学院</b><br/>自2007年开始"
+"在大中华区推广敏捷<br/>近期Scrum认证公开课(CSM/CSPO/CSD/A-CSM/CSP)及资深敏捷"
+"教练服务,请点击 <a href='https://www.uperform.cn/recent-public-course/'>www."
+"UPerform.CN/recent-public-course</a></p>"

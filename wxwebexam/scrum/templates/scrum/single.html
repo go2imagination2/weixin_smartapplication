@@ -136,11 +136,7 @@
 
         $('#nextQuestion').click(function() {
             console.log('nextQuestion');
-            if ({{entry_count}} == {{entry.id}}) {
-                window.location.href = '../scoring'
-            } else {
-                window.location.href = './?entry_id=' + (parseInt({{entry.id}})+1);
-            }
+            window.location.href = './?entry_id=' + (parseInt({{entry.id}})+1);
         });
 
 
