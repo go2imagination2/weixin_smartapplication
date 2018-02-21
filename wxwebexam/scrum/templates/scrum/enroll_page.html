@@ -1,23 +1,24 @@
 {% extends 'scrum/_base.html' %}
+{% load i18n %}
 
 {% block main_content %}
 
-<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+<div class="weui-toptips weui-toptips_warn js_tooltips">{% trans 'tooltips' %}</div>
 <div class="container" id="container">
 
     <form class="" action="../enroll/" method="POST">
         {% csrf_token %}
         <div class="page__hd">
-            <h1 class="page__title">报名参加考试</h1>
-            <p class="page__desc">结束后我们将通过您的联系方式将考试成绩发给您。事先阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>有助于提高考试成绩。</p>
+            <h1 class="page__title">{% trans 'enroll the exam' %}</h1>
+            <p class="page__desc">{% trans 'will send you score' %}</p>
         </div>
 
         <div class="page__bd page__bd_spacing">
             <div class="weui-cells weui-cells_form">
                 <div class="weui-cell">
-                    <div class="weui-cell__hd"><label class="weui-label">真实姓名</label></div>
+                    <div class="weui-cell__hd"><label class="weui-label">{% trans 'real name' %}</label></div>
                     <div class="weui-cell__bd">
-                        <input class="weui-input" type="text" placeholder="请输入姓名" name="name" required>
+                        <input class="weui-input" type="text" placeholder="{% trans 'plz input name' %}" name="name" required>
                     </div>
                 </div>
                 <!--<div class="weui-cell">-->
@@ -44,20 +45,19 @@
                     <!--</div>-->
                 <!--</div>-->
                 <div class="weui-cell">
-                    <div class="weui-cell__hd"><label class="weui-label">公司名称</label></div>
+                    <div class="weui-cell__hd"><label class="weui-label">{% trans 'company name' %}</label></div>
                     <div class="weui-cell__bd">
-                        <input class="weui-input" type="text" placeholder="请输入公司名" name="company" required>
+                        <input class="weui-input" type="text" placeholder="{% trans 'plz input company name' %}" name="company" required>
                     </div>
                 </div>
                 <label class="weui-agree">
                     <input type="checkbox" class="weui-agree__checkbox" name="terms_read" value="read" checked="checked">
-                        <span class="weui-agree__text">
-                            阅读并同意<a href="http://www.uperform.cn">《相关条款》</a>
+                        <span class="weui-agree__text">{% trans 'agreement' %}
                         </span>
                 </label>
             </div>
             <div class="weui-btn-area">
-                <input type="submit" class="weui-btn weui-btn_primary" id="enroll" value="立即开始考试"/>
+                <input type="submit" class="weui-btn weui-btn_primary" id="enroll" value="{% trans 'start the exam' %}"/>
             </div>
         </div>
 

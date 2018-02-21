@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 17:17+0800\n"
+"POT-Creation-Date: 2018-02-21 18:35+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,26 +17,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: scrum/templates/scrum/_base.html:12
+#: scrum/templates/scrum/_base.html:13
 msgid "page title"
 msgstr "ScrumMaster认证敏捷培训课前测验"
 
-#: scrum/templates/scrum/_base.html:29
+#: scrum/templates/scrum/_base.html:30
 msgid "UPerform agile academy"
 msgstr "优普丰<span style='color:blue;'>敏捷</span>学院"
 
-#: scrum/templates/scrum/_base.html:30
+#: scrum/templates/scrum/_base.html:31
 msgid "services"
 msgstr "国际Scrum认证培训咨询敏捷教练"
 
-#: scrum/templates/scrum/index.html:5
+#: scrum/templates/scrum/enroll_page.html:6 scrum/templates/scrum/index.html:5
 msgid "tooltips"
 msgstr "错误提示"
 
+#: scrum/templates/scrum/enroll_page.html:12
+msgid "enroll the exam"
+msgstr "报名参加考试"
+
+#: scrum/templates/scrum/enroll_page.html:13
+msgid "will send you score"
+msgstr "结束后我们将通过您的联系方式将考试成绩发给您。事先阅读<a target='_blank' href='http://www."
+"uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
+
+#: scrum/templates/scrum/enroll_page.html:19
+msgid "real name"
+msgstr "真实姓名"
+
+#: scrum/templates/scrum/enroll_page.html:21
+msgid "plz input name"
+msgstr "请输入姓名"
+
+#: scrum/templates/scrum/enroll_page.html:48
+msgid "company name"
+msgstr "公司名称"
+
+#: scrum/templates/scrum/enroll_page.html:50
+msgid "plz input company name"
+msgstr "请输入公司名"
+
+#: scrum/templates/scrum/enroll_page.html:55
+msgid "agreement"
+msgstr "我已阅读并同意<a href='http://www.uperform.cn'>《相关条款》</a>"
+
+#: scrum/templates/scrum/enroll_page.html:61
+msgid "start the exam"
+msgstr "立即开始考试"
+
 #: scrum/templates/scrum/index.html:11
 msgid "pre-reading"
-msgstr "欢迎来到Scrum敏捷知识测验。事先阅读<a target='_blank' href='http://www.uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
-
+msgstr ""
+"欢迎来到Scrum敏捷知识测验。事先阅读<a target='_blank' href='http://www."
+"uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
 
 #: scrum/templates/scrum/index.html:14
 msgid "Single Answer"
