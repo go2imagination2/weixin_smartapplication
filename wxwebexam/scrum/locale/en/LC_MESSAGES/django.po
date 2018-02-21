@@ -142,7 +142,7 @@ msgstr "Question %(entry_id)s of %(entry_count)s"
 
 #: scrum/templates/scrum/single.html:38
 msgid "Multiple Answer"
-msgstr "多选题"
+msgstr "Multiple Answer"
 
 #: scrum/templates/scrum/single.html:68
 msgid "pass to next question"
