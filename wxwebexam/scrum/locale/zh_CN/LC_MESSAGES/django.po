@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 18:35+0800\n"
+"POT-Creation-Date: 2018-02-21 20:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,7 @@ msgid "services"
 msgstr "国际Scrum认证培训咨询敏捷教练"
 
 #: scrum/templates/scrum/enroll_page.html:6 scrum/templates/scrum/index.html:5
+#: scrum/templates/scrum/scoring.html:6 scrum/templates/scrum/single.html:5
 msgid "tooltips"
 msgstr "错误提示"
 
@@ -39,8 +40,10 @@ msgstr "报名参加考试"
 
 #: scrum/templates/scrum/enroll_page.html:13
 msgid "will send you score"
-msgstr "结束后我们将通过您的联系方式将考试成绩发给您。事先阅读<a target='_blank' href='http://www."
-"uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
+msgstr ""
+"结束后我们将通过您的联系方式将考试成绩发给您。事先阅读<a target='_blank' "
+"href='http://www.uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提"
+"高考试成绩。"
 
 #: scrum/templates/scrum/enroll_page.html:19
 msgid "real name"
@@ -60,9 +63,11 @@ msgstr "请输入公司名"
 
 #: scrum/templates/scrum/enroll_page.html:55
 msgid "agreement"
-msgstr "我已阅读并同意<a href='http://www.uperform.cn'>《相关条款》</a>"
+msgstr ""
+"我已阅读并同意<a target='_blank' href='http://www.uperform.cn'>《相关条款》</"
+"a>"
 
-#: scrum/templates/scrum/enroll_page.html:61
+#: scrum/templates/scrum/enroll_page.html:60
 msgid "start the exam"
 msgstr "立即开始考试"
 
@@ -72,23 +77,24 @@ msgstr ""
 "欢迎来到Scrum敏捷知识测验。事先阅读<a target='_blank' href='http://www."
 "uperform.cn/scrum-guide-chinese/'>《Scrum指南》</a>有助于提高考试成绩。"
 
-#: scrum/templates/scrum/index.html:14
+#: scrum/templates/scrum/index.html:14 scrum/templates/scrum/single.html:23
 msgid "Single Answer"
 msgstr "单选题"
 
-#: scrum/templates/scrum/index.html:19
+#: scrum/templates/scrum/index.html:19 scrum/templates/scrum/single.html:32
+#: scrum/templates/scrum/single.html:47
 msgid "option"
 msgstr "选项"
 
-#: scrum/templates/scrum/index.html:32
+#: scrum/templates/scrum/index.html:32 scrum/templates/scrum/single.html:63
 msgid "correct answer"
 msgstr "正确答案"
 
-#: scrum/templates/scrum/index.html:32
+#: scrum/templates/scrum/index.html:32 scrum/templates/scrum/single.html:63
 msgid "explanation"
 msgstr "解释"
 
-#: scrum/templates/scrum/index.html:36
+#: scrum/templates/scrum/index.html:36 scrum/templates/scrum/single.html:67
 msgid "submit answer"
 msgstr "提交答案"
 
@@ -96,6 +102,66 @@ msgstr "提交答案"
 msgid "go ahead"
 msgstr "去正式考试!"
 
+#: scrum/templates/scrum/scoring.html:15
+msgid "Completion and score"
+msgstr "考试完成获得了,嗯,到底是多少分呢? ~(≧▽≦)/~"
+
+#: scrum/templates/scrum/scoring.html:16
+msgid "leave your email"
+msgstr ""
+"留下您的邮箱,我们将发送考试结果和一份权威学习资料到您的邮箱, 查看<a "
+"target='_blank' href='http://www.uperform.cn/recent-public-course/'>近期敏捷"
+"Scrum认证公开班</a>"
+
+#: scrum/templates/scrum/scoring.html:22
+msgid "email"
+msgstr "电子邮箱"
+
+#: scrum/templates/scrum/scoring.html:24
+msgid "plz input email"
+msgstr "请输入邮箱"
+
+#: scrum/templates/scrum/scoring.html:27
+msgid "send me result"
+msgstr "发给我成绩和学习资料吧"
+
+#: scrum/templates/scrum/scoring.html:28
+msgid "will redirect"
+msgstr "发送后会自动跳转网页"
+
+#: scrum/templates/scrum/scoring.html:41
+#, python-format
+msgid "score is %(final_score)s"
+msgstr "其实是%(final_score)s分哦~"
+
+#: scrum/templates/scrum/single.html:18
+#, python-format
+msgid "Question %(entry_id)s of %(entry_count)s"
+msgstr "第%(entry_id)s题/共%(entry_count)s题"
+
+#: scrum/templates/scrum/single.html:38
+msgid "Multiple Answer"
+msgstr "单选题"
+
+#: scrum/templates/scrum/single.html:68
+msgid "pass to next question"
+msgstr "放弃此题"
+
+#: scrum/templates/scrum/single.html:128
+msgid "next step"
+msgstr "下一步"
+
 #: scrum/views.py:29
 msgid "Earliest Scrum Consulting"
 msgstr "大中华区最早推广Scrum的专业机构是哪个?"
+
+#: scrum/views.py:174
+msgid "msg subject"
+msgstr "Scrum认证培训课前测验结果和学习资源"
+
+#: scrum/views.py:176
+#, python-format
+msgid "msg body %(name)s %(score)s"
+msgstr "<p>Hi, %(name)s   </p>"
+"<p>恭喜你完成Scrum认证培训课前测验,你获得了%(score)s分.你还需要继续阅读<a href='http://www.uperform.cn/scrum-guide-chinese/'>《Scrum Guide》</a>，争取早日通过认证，申请加入学友会微信群，和老师同学们在敏捷实践中共同成长,继续向更高级的职业路径发展。</p>"
+"<p>祝一切顺利,<br/><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</span>orm 优普丰<span style='color:blue;'>敏捷</span>学院</b><br/>自2007年开始在大中华区推广敏捷<br/>近期Scrum认证公开课(CSM/CSPO/CSD/A-CSM/CSP)及资深敏捷教练服务,请点击 <a href='https://www.uperform.cn/recent-public-course/'>www.UPerform.CN/recent-public-course</a></p>"

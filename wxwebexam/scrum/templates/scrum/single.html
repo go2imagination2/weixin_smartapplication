@@ -1,7 +1,8 @@
 {% extends 'scrum/_base.html' %}
+{% load i18n %}
 
 {% block main_content %}
-<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+<div class="weui-toptips weui-toptips_warn js_tooltips">{% trans 'tooltips' %}</div>
 <div class="container" id="container">
 
     <form class="" action="../answerit/" method="POST">
@@ -14,12 +15,12 @@
                 <span id="remaining_seconds"><i class="weui-icon-info"></i>00:00</span>
             </div>
             <h1 class="page__title">{{entry.question}}</h1>
-            <p class="page__desc">第{{entry.id}}题/共{{entry_count}}题</p>
+            <p class="page__desc">{% blocktrans with entry_id=entry.id %}Question {{entry_id}} of {{entry_count}}{% endblocktrans %}</p>
         </div>
 
         <div class="page__bd page__bd_spacing">
             {% if entry.category == 'S' %}
-            <div class="weui-cells__title" style="color:#1aad19;">单选题</div>
+            <div class="weui-cells__title" style="color:#1aad19;">{% trans 'Single Answer' %}</div>
             <div class="weui-cells weui-cells_radio">
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="x11{{idx}}">
@@ -28,13 +29,13 @@
                         <span class="weui-icon-checked"></span>
                     </div>
                     <div class="weui-cell__bd">
-                        <p>选项({{idx}}). {{desc}}</p>
+                        <p>{% trans 'option' %}({{idx}}). {{desc}}</p>
                     </div>
                 </label>
                 {% endfor %}
             </div>
             {% elif entry.category == 'M' %}
-            <div class="weui-cells__title" style="color:#1aad19;">多选题</div>
+            <div class="weui-cells__title" style="color:#1aad19;">{% trans 'Multiple Answer' %}</div>
             <div class="weui-cells weui-cells_checkbox">
                 {% for idx, desc in enumerated_options %}
                 <label class="weui-cell weui-check__label" for="s11{{idx}}">
@@ -43,7 +44,7 @@
                         <i class="weui-icon-checked"></i>
                     </div>
                     <div class="weui-cell__bd">
-                        <p>选项({{idx}}). {{desc}}</p>
+                        <p>{% trans 'option' %}({{idx}}). {{desc}}</p>
                     </div>
                 </label>
                 {% endfor %}
@@ -59,13 +60,12 @@
                         {% endif %}
                     {% endif %}
                 </div>
-                <div class="weui-cell__bd">正确答案是:{{entry.answer}}<br/>解释:{{entry.explanation}}
-                </div>
+                <div class="weui-cell__bd">{% trans 'correct answer' %}: {{entry.answer}}<br/>{% trans 'explanation' %}: {{entry.explanation}}</div>
             </a>
 
             <div class="weui-btn-area">
-                <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="提交答案"/>
-                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">放弃此题</a>
+                <input type="submit" class="weui-btn weui-btn_primary" id="submitAnswer" value="{% trans 'submit answer' %}"/>
+                <a class="weui-btn weui-btn_default" href="javascript:" id="nextQuestion">{% trans 'pass to next question' %}</a>
             </div>
         </div>
     </form>
@@ -125,10 +125,11 @@
         $('#submitAnswer').attr('disabled', 'disabled').addClass('weui-btn_default').removeClass('weui-btn_primary')
         $('#explanation').show();
         $('#nextQuestion').addClass('weui-btn_primary').removeClass('weui-btn_default')
-        $('#nextQuestion').text('下一步')
+        $('#nextQuestion').text('{% trans 'next step' %}')
         {% else %}
         $('#submitAnswer').click(function(){
             $('#explanation').show();
+             console.warn(window.location.href)
         });
         {% endif %}
 

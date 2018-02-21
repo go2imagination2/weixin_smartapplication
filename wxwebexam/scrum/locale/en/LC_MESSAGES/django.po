@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 18:35+0800\n"
+"POT-Creation-Date: 2018-02-21 20:37+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,6 +30,7 @@ msgid "services"
 msgstr "Scrum Certification Training Consulting Agile Coaching"
 
 #: scrum/templates/scrum/enroll_page.html:6 scrum/templates/scrum/index.html:5
+#: scrum/templates/scrum/scoring.html:6 scrum/templates/scrum/single.html:5
 msgid "tooltips"
 msgstr "Tooltips"
 
@@ -39,9 +40,10 @@ msgstr "Enroll The Exam"
 
 #: scrum/templates/scrum/enroll_page.html:13
 msgid "will send you score"
-msgstr "We will send you score with your contact info after the exam, Reading <a target='_blank' "
-"href='https://www.uperform.cn/scrum-guide-english'>Scrum Guide</a> may "
-"increase your score."
+msgstr ""
+"We will send you score with your contact info after the exam, Reading <a "
+"target='_blank' href='https://www.uperform.cn/scrum-guide-english'>Scrum "
+"Guide</a> may increase your score."
 
 #: scrum/templates/scrum/enroll_page.html:19
 msgid "real name"
@@ -61,9 +63,11 @@ msgstr "Please input company name"
 
 #: scrum/templates/scrum/enroll_page.html:55
 msgid "agreement"
-msgstr "I have read and agree to <a href='http://www.uperform.cn'>terms and conditions</a>"
+msgstr ""
+"I have read and agree to <a target='_blank' href='http://www.uperform."
+"cn'>terms and conditions</a>"
 
-#: scrum/templates/scrum/enroll_page.html:61
+#: scrum/templates/scrum/enroll_page.html:60
 msgid "start the exam"
 msgstr "Start The Exam"
 
@@ -74,23 +78,24 @@ msgstr ""
 "href='https://www.uperform.cn/scrum-guide-english'>Scrum Guide</a> may "
 "increase your score."
 
-#: scrum/templates/scrum/index.html:14
+#: scrum/templates/scrum/index.html:14 scrum/templates/scrum/single.html:23
 msgid "Single Answer"
 msgstr "Single Answer"
 
-#: scrum/templates/scrum/index.html:19
+#: scrum/templates/scrum/index.html:19 scrum/templates/scrum/single.html:32
+#: scrum/templates/scrum/single.html:47
 msgid "option"
 msgstr "-"
 
-#: scrum/templates/scrum/index.html:32
+#: scrum/templates/scrum/index.html:32 scrum/templates/scrum/single.html:63
 msgid "correct answer"
 msgstr "Correct Answer"
 
-#: scrum/templates/scrum/index.html:32
+#: scrum/templates/scrum/index.html:32 scrum/templates/scrum/single.html:63
 msgid "explanation"
 msgstr "Explanation"
 
-#: scrum/templates/scrum/index.html:36
+#: scrum/templates/scrum/index.html:36 scrum/templates/scrum/single.html:67
 msgid "submit answer"
 msgstr "Submit Answer"
 
@@ -98,7 +103,69 @@ msgstr "Submit Answer"
 msgid "go ahead"
 msgstr "Go to the Exam!"
 
+#: scrum/templates/scrum/scoring.html:15
+msgid "Completion and score"
+msgstr "Completed the exam, guess your score? ~(≧▽≦)/~"
+
+#: scrum/templates/scrum/scoring.html:16
+msgid "leave your email"
+msgstr ""
+"Leave your email, we will send you the score and authoritative learning "
+"resource to your email. See <a target='_blank' href='http://www.uperform.cn/"
+"recent-public-course/'>recent Scrum certification public courses.</a>"
+
+#: scrum/templates/scrum/scoring.html:22
+msgid "email"
+msgstr "Email"
+
+#: scrum/templates/scrum/scoring.html:24
+msgid "plz input email"
+msgstr "Please input your Email"
+
+#: scrum/templates/scrum/scoring.html:27
+msgid "send me result"
+msgstr "Send me score and learning resource"
+
+#: scrum/templates/scrum/scoring.html:28
+msgid "will redirect"
+msgstr "Page will redirect after sending"
+
+#: scrum/templates/scrum/scoring.html:41
+#, python-format
+msgid "score is %(final_score)s"
+msgstr "Your score is %(final_score)s"
+
+#: scrum/templates/scrum/single.html:18
+#, python-format
+msgid "Question %(entry_id)s of %(entry_count)s"
+msgstr "Question %(entry_id)s of %(entry_count)s"
+
+#: scrum/templates/scrum/single.html:38
+msgid "Multiple Answer"
+msgstr "多选题"
+
+#: scrum/templates/scrum/single.html:68
+msgid "pass to next question"
+msgstr "Pass To Next Question"
+
+#: scrum/templates/scrum/single.html:128
+msgid "next step"
+msgstr "Next Step"
+
 #: scrum/views.py:29
 msgid "Earliest Scrum Consulting"
 msgstr ""
 "Which one is the earliest organization to promote Scrum in Greater China?"
+
+#: scrum/views.py:174
+msgid "msg subject"
+msgstr "Scrum Certification Training Pre-test Score And Learning Resource"
+
+#: scrum/views.py:176
+#, python-format
+msgid "msg body %(name)s %(score)s"
+msgstr "<p>Hi, %(name)s   </p>"
+"<p>Congratulation to you complete pre-test of Scrum certification training courses. You got %(score)s score. Keep reading <a href='http://www.uperform.cn/scrum-guide-english/'>The Scrum Guide</a>, to get your certification soon. Join alumni, learn and share with teacher and classmates, grow together with practicing towards senior career path.</p>"
+"<p>Best Regards,<br/><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</span>orm <span style='color:blue;'>Agile</span> Academy</b><br/>Promote Agile Since 2007 in Greater China<br/>"
+"Recent Scrum certification public courses (CSM/CSPO/CSD/A-CSM/CSP) and senior Agile Coaching service, see <a href='https://www.uperform.cn/recent-public-course/'>www.UPerform.CN/recent-public-course</a>"
+"</p>"

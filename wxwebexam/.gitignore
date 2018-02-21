@@ -2,4 +2,3 @@
 /static/
 migrations/
 db.sqlite3
-*.mo

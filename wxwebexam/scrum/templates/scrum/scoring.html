@@ -1,8 +1,9 @@
 {% extends 'scrum/_base.html' %}
+{% load i18n %}
 
 {% block main_content %}
 
-<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>
+<div class="weui-toptips weui-toptips_warn js_tooltips">{% trans 'tooltips' %}</div>
 <div class="container" id="container">
 
     <form class="" action="../finishing/" method="POST" id="finish">
@@ -11,21 +12,20 @@
             <div class="weui-msg">
                 <div class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></div>
                 <div class="weui-msg__text-area">
-                    <h2 class="weui-msg__title">考试完成获得了,嗯,到底是多少分呢? ~(≧▽≦)/~ <span id="final_score"></span></h2>
-                    <p class="weui-msg__desc">留下您的邮箱,我们将发送考试结果和一份权威学习资料到您的邮箱, 查看<a
-                            href="http://www.uperform.cn/recent-public-course/">近期敏捷Scrum认证公开班</a></p>
+                    <h2 class="weui-msg__title">{% trans 'Completion and score' %} <span id="final_score"></span></h2>
+                    <p class="weui-msg__desc">{% trans 'leave your email' %}</p>
                 </div>
             </div>
         </div>
         <div class="page__bd page__bd_spacing">
             <div class="weui-cell">
-                <div class="weui-cell__hd"><label class="weui-label">电子邮箱</label></div>
+                <div class="weui-cell__hd"><label class="weui-label">{% trans 'email' %}</label></div>
                 <div class="weui-cell__bd">
-                    <input class="weui-input" type="email" placeholder="请输入邮箱" name="email" required="required">
+                    <input class="weui-input" type="email" placeholder="{% trans 'plz input email' %}" name="email" required="required">
                 </div>
             </div>
-            <input type="submit" href="javascript:;" class="weui-btn weui-btn_primary" value="发给我成绩和学习资料吧"/>
-            <div class="weui-cell__bd">发送后会自动跳转网页</div>
+            <input type="submit" href="javascript:;" class="weui-btn weui-btn_primary" value="{% trans 'send me result' %}"/>
+            <div class="weui-cell__bd">{% trans 'will redirect' %}</div>
         </div>
     </form>
 
@@ -38,7 +38,7 @@
 {% block custom_scripts %}
 <script>
     $('#finish').submit(function( event ) {
-        $('.weui-msg__title').html("其实是{{final_score}}分哦~")
+        $('.weui-msg__title').html("{% blocktrans %}score is {{final_score}}{% endblocktrans %}")
         return true
     });
 

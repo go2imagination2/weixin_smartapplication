@@ -25,7 +25,7 @@ APP_SECRET = 'fc1956849a23315fec8b77d9beb28b8e'
 def index(request):
     question = '中国最早推广Scrum认证的机构是哪家?'
 
-    #FIXME
+    # FIXME
     i18n = _("Earliest Scrum Consulting")
     question = i18n
 
@@ -66,7 +66,7 @@ def enroll(request):
     request.session['current_entry_id'] = 1
     request.session['entry_count'] = paper.count()
 
-    return redirect('/single/')
+    return redirect('../single/')
 
 
 def single(request):
@@ -74,7 +74,7 @@ def single(request):
     entry_id = request.GET.get('entry_id', entry_id)
 
     if entry_id is None:
-        return redirect('/')
+        return redirect('../')
 
     entry_id = int(entry_id)
     request.session['current_entry_id'] = entry_id
@@ -102,12 +102,12 @@ def single(request):
 
 def answerit(request):
     if request.method != 'POST':
-        return redirect('/single/')
+        return redirect('../single/')
 
     entry_id = request.session['current_entry_id']
 
     if entry_id is None:
-        return redirect('/')
+        return redirect('../')
 
     entry = Entry.objects.get(pk=entry_id)
 
@@ -126,7 +126,7 @@ def answerit(request):
     exam_record.answers = ','.join(updated_answers)
     exam_record.save()
 
-    return redirect('/single/')
+    return redirect('../single/')
 
 
 def scoring(request):
@@ -171,22 +171,9 @@ def _send_email(name, email_addr, score):
     from email.mime.text import MIMEText
     from email.header import Header
 
-    msg_body = u"""
-<p>Hi, %s</p>
+    msg_subject = _("msg subject")
 
-<p>
-恭喜你完成Scrum认证培训课前测验,你获得了%s分.
-你还需要继续阅读<a href="http://www.uperform.cn/scrum-guide-2016-chinese/">《Scrum Guide》</a>.争取早日通过认证,加入学友会群,和老师同学们在敏捷实践中共同成长,继续向更高级的职业路径发展.
-
-</p>
-
-<p>
-Best Regards,<br/>
-<b><span style="color:blue;">UP</span>er<span style="color:blue;">f</span>orm 优普丰<span style="color:blue;">敏捷</span>学院</b>
-<br/>创立于2007年<br/>
-近期Scrum认证公开课(CSM/CSPO/CSD/ACSM)及资深敏捷教练服务,请点击 <a href="www.UPerform.CN">www.UPerform.CN</a>
-</p>
-""" % (name, score)
+    msg_body = _("msg body %(name)s %(score)s") % {'name': name, 'score': score}
 
     try:
         # smtpObj = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
@@ -195,7 +182,7 @@ Best Regards,<br/>
         message = MIMEText(msg_body, 'html', 'utf-8')
         message['From'] = Header("UPerform Agile Academy <%s>" % EMAIL_HOST_USER, 'utf-8')
         message['To'] = Header(email_addr, 'utf-8')
-        message['Subject'] = Header('Scrum认证培训课前测验结果', 'utf-8')
+        message['Subject'] = Header(msg_subject, 'utf-8')
 
         smtpObj.sendmail(EMAIL_HOST_USER, [email_addr], message.as_string())
         print "Successfully sent emails to: " % email_addr
