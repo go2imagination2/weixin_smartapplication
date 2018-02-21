@@ -129,11 +129,6 @@ MEDIA_URL = '/upload/'
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
-ugettext = lambda s: s
-LANGUAGES = (
-    ('cn', ugettext('China')),
-    ('en', ugettext('English')),
-)
 
 LOGGING = {
     'version': 1,
