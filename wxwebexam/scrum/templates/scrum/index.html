@@ -2,14 +2,17 @@
 {% load i18n %}
 {% block main_content %}
 
+{% get_current_language as LANGUAGE_CODE %}
+
 <div class="weui-toptips weui-toptips_warn js_tooltips">{% trans 'tooltips' %}</div>
 <div class="container" id="container">
-
     <div>
+
+        {% if LANGUAGE_CODE == 'zh-hans' %}
         <div class="page__hd">
+            <p align="right"><a href="../zh-hans/">[中文] </a> <a href="../en/"> [English]</a></p>
             <h1 class="page__title">{{question}}</h1>
             <p class="page__desc">{% trans 'pre-reading' %}</p>
-            <p align="right"><a href="../zh-hans/">中文 </a> <a href="../en/"> EN</a></p>
         </div>
         <div class="page__bd page__bd_spacing">
             <div class="weui-cells__title">{% trans 'Single Answer' %}</div>
@@ -38,6 +41,21 @@
                 <a class="weui-btn weui-btn_default" href="./enroll_page" id="goEnroll">{% trans 'go ahead' %}</a>
             </div>
         </div>
+
+        {% else %}
+
+        <div class="page__hd">
+            <p align="right"><a href="../zh-hans/">[中文] </a> <a href="../en/"> [English]</a></p>
+            <h1 class="page__title"><b><span style='color:blue;'>UP</span>er<span style='color:blue;'>f</span>orm</b> Agile Academy</h1>
+            <p class="page__desc">Special thanks to our global business partners including <b><span style='color:#ff575b;'>KnowledgeHut</span>, <span style='color:blue;'>Processworks</span>, <span style='color:#a30100;'>PM-ABC</span></b></p>
+        </div>
+        <div class="page__bd page__bd_spacing">
+            <div class="weui-btn-area">
+                <a class="weui-btn weui-btn_primary" href="./enroll_page" id="goEnroll">{% trans 'go ahead' %}</a>
+            </div>
+        </div>
+        {% endif %}
+
     </div>
 
 </div>
